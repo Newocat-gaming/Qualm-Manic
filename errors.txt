@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/options.rpy", line 68: invalid syntax
+    "RErideD opening full lower 2.mp3" fadein 4
+                                        ^
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Thu Jan 23 08:06:43 2025
