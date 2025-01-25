@@ -9,7 +9,7 @@ define nar = Character("")
 define i = Character("???", color= "#fdfefe")
 
 define manic = Character("Manic", color="#2e4053")
-define jay = Character("Jay", color="#2ecc71")
+define jay = Character("Jay", callback = talking_callback, cb_image_talking = "jay", color="#2ecc71")
 define kit = Character("Kit", color="#3498db")
 define andrea = Character("Andrea", color="#8e44ad")
 define vida = Character("Vida", color="#f1c40f")
@@ -33,7 +33,7 @@ label start:
 
     stop music fadeout 4
     scene bg blank
-    
+    show jay talk at right
     nar "I woke up with a start." 
     nar "It was that damn dream again."
     nar "I couldn't even describe what it was about. In my mind it was nothing but a gray blur."
@@ -42,6 +42,7 @@ label start:
     jay "I'm gonna be late for school."
 
     scene bg streetcorner
+    show jay talk at right
     play music "audio/background music 1.mp3" volume 0.5 fadein 2.0 
 
     nar "Soon, I was dashing down the street, the wind brushing against my white dress shirt and black pants. my shoes clopped on the ground as I ran over the crosswalk, I dodged out of the way of an incoming car that missed me by about an inch."
@@ -50,14 +51,14 @@ label start:
     nar "I am part of the newspaper club, where me and my only friends would go around and write about anything notable we encountered. I don't actually care about reporting or writing, I just like to slack off with my friends." 
     nar "Though I do like reading, or more accurately, love reading. Too much for my own good it turned out as reading all night long had thrown off my sleep schedule causing me to wake up later than usual."
     
-    call char_jay_update from _call_char_jay_update
+    call char_jay_update
 
     scene bg schoolexterior
-    
+    show jay talk at right
     nar "I arrived just in time at the front gates of the school. With a sigh of relief I walked through the door of Leadville high."
     
     scene bg classroom
-
+    show jay talk at right   
     nar "Even though I was almost late, I still had time to relax. My teacher for my first class was always a little late, so I wasn't worried when I walked into class."
 
     play music "audio/Chaos Head OST Uneven Dance.mp3" volume 0.5 fadeout 1.5 fadein 3.0
@@ -69,8 +70,8 @@ label start:
     show kit armscrossed at right
     nar "It was Kit, one of my friends from the newspaper club." 
 
-    call char_screen_update from _call_char_screen_update
-    call char_kit_update from _call_char_kit_update
+    call char_screen_update
+    call char_kit_update
 
     kit "..."
     show kit explaining 2 right at right
@@ -101,11 +102,11 @@ label start:
     nar "I whispered to the girl seated to the left of me, I think her name was Neda if I remembered correctly."
     show neda armhug at left
 
-    call char_neda_update from _call_char_neda_update
+    call char_neda_update
 
     jay "Hey, what's everyone talking about?" 
     nar "She leaned towards me and cupped her hand around the side of her mouth."
-    neda "You haven't heard? Did you not watch the news this morning or something?" 
+    neda "You haven't heard? Did you not watch the news this morning or something?"
     jay "No, I woke up late, what happened?"
 
     stop music fadeout 1.0
@@ -121,6 +122,7 @@ label start:
     $ renpy.movie_cutscene("images/videos/animation v03.webm", delay=None, loops=0, stop_music=True)
    
     scene bg cafiteria 
+    show jay talk at right
     play music "audio/Chaos Head OST Beginning Of Attachment.mp3" volume 0.5 fadein 2.0
 
     nar "I sat staring out the window during lunch as my nachos got cold." 
@@ -138,6 +140,7 @@ label start:
     nar "When I left lunch for my next class, I was hoping that the murderer was caught before I had to waste any time at an assembly." 
 
     scene bg classroom
+    show jay talk at right
 
     nar "When I sat down at my desk, I checked my watch, only to realize I had left it during my rush in the morning." 
     jay "Dammit"
@@ -149,6 +152,7 @@ label start:
     nar "I also think that I need them more than ever, after all it was only the start of the week and so much had happened already."
 
     scene bg hallway
+    show jay talk at right
 
     nar "I walked through the hallways after my last class of the day..."
     nar "I looked around at the walls, which were covered with signage for different school clubs."
@@ -167,19 +171,20 @@ label start:
     nar "I marched onwards toward the door with the hanging sign that read 'Newspaper Club'."
 
     scene bg classroom 2
+    show jay talk at right
     play music "audio/background music 1.mp3" volume 0.5 fadeout 0.5 fadein 1.0 
 
     nar "When I walked into the club room, most of the other members were already there." 
     show vida behindback at left
     nar "Vida leaned against the wall next to a rollable whiteboard."
 
-    call char_vida_update from _call_char_vida_update
+    call char_vida_update
 
     show andrea peacesign at center
     nar "Andrea was sitting in a chair at the rectangular table in the center of the room."
     show andrea onearmonhip at center
 
-    call char_andrea_update from _call_char_andrea_update
+    call char_andrea_update
 
     show kit armscrossed at right
     nar "Kit sitting atop the same table." 
@@ -284,6 +289,7 @@ label walk_out_of_the_room:
     hide andrea
     hide kit
     scene bg hallway
+    show jay talk at right
 
     nar "I left the club room..."
     nar "I couldn't handle this anymore..."
