@@ -33,7 +33,7 @@ label start:
 
     stop music fadeout 4
     scene bg blank
-    show jay animation_talk at right
+    show jay shut at right
     nar "I woke up with a start." 
     nar "It was that damn dream again."
     nar "I couldn't even describe what it was about. In my mind it was nothing but a gray blur."
@@ -42,7 +42,7 @@ label start:
     jay "I'm gonna be late for school."
 
     scene bg streetcorner
-    show jay animation_talk at right
+    show jay shut at right
     play music "audio/background music 1.mp3" volume 0.5 fadein 2.0 
 
     nar "Soon, I was dashing down the street, the wind brushing against my white dress shirt and black pants. my shoes clopped on the ground as I ran over the crosswalk, I dodged out of the way of an incoming car that missed me by about an inch."
@@ -54,11 +54,11 @@ label start:
     call char_jay_update
 
     scene bg schoolexterior
-    show jay animation_talk at right
+    show jay shut at right
     nar "I arrived just in time at the front gates of the school. With a sigh of relief I walked through the door of Leadville high."
     
     scene bg classroom
-    show jay animation_talk at right   
+    show jay shut at right   
     nar "Even though I was almost late, I still had time to relax. My teacher for my first class was always a little late, so I wasn't worried when I walked into class."
 
     play music "audio/Chaos Head OST Uneven Dance.mp3" volume 0.5 fadeout 1.5 fadein 3.0
@@ -122,7 +122,7 @@ label start:
     $ renpy.movie_cutscene("images/videos/animation v03.webm", delay=None, loops=0, stop_music=True)
    
     scene bg cafiteria 
-    show jay animation_talk at right
+    show jay shut at right
     play music "audio/Chaos Head OST Beginning Of Attachment.mp3" volume 0.5 fadein 2.0
 
     nar "I sat staring out the window during lunch as my nachos got cold." 
@@ -140,7 +140,7 @@ label start:
     nar "When I left lunch for my next class, I was hoping that the murderer was caught before I had to waste any time at an assembly." 
 
     scene bg classroom
-    show jay animation_talk at right
+    show jay shut at right
 
     nar "When I sat down at my desk, I checked my watch, only to realize I had left it during my rush in the morning." 
     jay "Dammit"
@@ -152,7 +152,7 @@ label start:
     nar "I also think that I need them more than ever, after all it was only the start of the week and so much had happened already."
 
     scene bg hallway
-    show jay animation_talk at right
+    show jay shut at right
 
     nar "I walked through the hallways after my last class of the day..."
     nar "I looked around at the walls, which were covered with signage for different school clubs."
@@ -171,7 +171,7 @@ label start:
     nar "I marched onwards toward the door with the hanging sign that read 'Newspaper Club'."
 
     scene bg classroom 2
-    show jay animation_talk at right
+    show jay shut at right
     play music "audio/background music 1.mp3" volume 0.5 fadeout 0.5 fadein 1.0 
 
     nar "When I walked into the club room, most of the other members were already there." 
@@ -289,7 +289,7 @@ label walk_out_of_the_room:
     hide andrea
     hide kit
     scene bg hallway
-    show jay animation_talk at right
+    show jay shut at right
 
     nar "I left the club room..."
     nar "I couldn't handle this anymore..."
