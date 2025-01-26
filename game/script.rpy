@@ -51,7 +51,7 @@ label start:
     nar "I am part of the newspaper club, where me and my only friends would go around and write about anything notable we encountered. I don't actually care about reporting or writing, I just like to slack off with my friends." 
     nar "Though I do like reading, or more accurately, love reading. Too much for my own good it turned out as reading all night long had thrown off my sleep schedule causing me to wake up later than usual."
     
-    call char_jay_update
+    call char_jay_update from _call_char_jay_update
 
     scene bg schoolexterior
     show jay shut at right
@@ -70,8 +70,8 @@ label start:
     show kit armscrossed at right
     nar "It was Kit, one of my friends from the newspaper club." 
 
-    call char_screen_update
-    call char_kit_update
+    call char_screen_update from _call_char_screen_update
+    call char_kit_update from _call_char_kit_update
 
     kit "..."
     show kit explaining 2 right at right
@@ -102,7 +102,7 @@ label start:
     nar "I whispered to the girl seated to the left of me, I think her name was Neda if I remembered correctly."
     show neda armhug at left
 
-    call char_neda_update
+    call char_neda_update from _call_char_neda_update
 
     jay "Hey, what's everyone talking about?" 
     nar "She leaned towards me and cupped her hand around the side of her mouth."
@@ -178,13 +178,13 @@ label start:
     show vida behindback at left
     nar "Vida leaned against the wall next to a rollable whiteboard."
 
-    call char_vida_update
+    call char_vida_update from _call_char_vida_update
 
     show andrea peacesign at center
     nar "Andrea was sitting in a chair at the rectangular table in the center of the room."
     show andrea onearmonhip at center
 
-    call char_andrea_update
+    call char_andrea_update from _call_char_andrea_update
 
     show kit armscrossed at right
     nar "Kit sitting atop the same table." 
