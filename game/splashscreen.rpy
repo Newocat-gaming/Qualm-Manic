@@ -12,7 +12,9 @@ image title = "images/splashscreen/Qualm_manic.png"
 label splashscreen:
     scene black
 
-    show splash1 at truecenter 
+    show splash1 at truecenter
+    show text "Made with"at truecenter:
+        yoffset(-180)
     with fadesplash
     with Pause(2)
 
@@ -20,6 +22,8 @@ label splashscreen:
     with fade
 
     show splash2 at truecenter
+    show text "Made with"at truecenter:
+        yoffset(-100)
     with fadesplash
     with Pause(2)
     

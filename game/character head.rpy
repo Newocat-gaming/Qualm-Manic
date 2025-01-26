@@ -13,3 +13,5 @@ init -50 python:
             renpy.show(image_talking + " animation_talk")
         elif event == "end": 
             renpy.show(image_talking + " shut")
+
+
