@@ -3,18 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("test", color="#fdfefe")
 
-define nar = Character("")
-define i = Character("???", color= "#fdfefe")
-
-define manic = Character("Manic", color="#2e4053")
-define jay = Character("Jay", callback = talking_callback, cb_image_talking = "jay", color="#2ecc71")
-define kit = Character("Kit", color="#3498db")
-define andrea = Character("Andrea", color="#8e44ad")
-define vida = Character("Vida", color="#f1c40f")
-
-define neda = Character("Neda", color= "#fdfefe")
 
 # The game starts here.
 label start:
@@ -33,7 +22,6 @@ label start:
 
     stop music fadeout 4
     scene bg blank
-    show jay shut at right
     nar "I woke up with a start." 
     nar "It was that damn dream again."
     nar "I couldn't even describe what it was about. In my mind it was nothing but a gray blur."
@@ -42,7 +30,6 @@ label start:
     jay "I'm gonna be late for school."
 
     scene bg streetcorner
-    show jay shut at right
     play music "audio/background music 1.mp3" volume 0.5 fadein 2.0 
 
     nar "Soon, I was dashing down the street, the wind brushing against my white dress shirt and black pants. my shoes clopped on the ground as I ran over the crosswalk, I dodged out of the way of an incoming car that missed me by about an inch."
@@ -54,11 +41,9 @@ label start:
     call char_jay_update from _call_char_jay_update
 
     scene bg schoolexterior
-    show jay shut at right
     nar "I arrived just in time at the front gates of the school. With a sigh of relief I walked through the door of Leadville high."
     
-    scene bg classroom
-    show jay shut at right   
+    scene bg classroom 
     nar "Even though I was almost late, I still had time to relax. My teacher for my first class was always a little late, so I wasn't worried when I walked into class."
 
     play music "audio/Chaos Head OST Uneven Dance.mp3" volume 0.5 fadeout 1.5 fadein 3.0
@@ -67,24 +52,23 @@ label start:
 
     i "Hey!" 
     nar "I turned my head towards the cheerful voice."
-    show kit armscrossed at right
+    show kit_model at right
     nar "It was Kit, one of my friends from the newspaper club." 
 
     call char_screen_update from _call_char_screen_update
     call char_kit_update from _call_char_kit_update
 
     kit "..."
-    show kit explaining 2 right at right
+    # show kit explaining 2 right at right
     kit "I saw you run by through the window... almost late it seems." 
     nar "Kit teased me."
     jay "Yeah, yeah"
     nar "I groaned as I slumped my face between my arms, which I had crossed on my desk." 
     jay "I spent all night reading."
-    show kit armscrossed at right
+    # show kit armscrossed at right
     kit "You sure do love your books, huh?" 
     nar "Kit sighed."
     nar "Before I could respond the door creaked open. Our teacher had just arrived to class earlier than she usually did." 
-    show kit sigh
     kit "Oh shit."
     nar "he turned back towards his own desk not wanting to get caught away from it. But before he got even a foot away from me he froze and turned his head back to me." 
     kit "By the way... I got some big info to share with everyone in the club tonight, be ready." 
@@ -122,7 +106,6 @@ label start:
     $ renpy.movie_cutscene("images/videos/animation v03.webm", delay=None, loops=0, stop_music=True)
    
     scene bg cafiteria 
-    show jay shut at right
     play music "audio/Chaos Head OST Beginning Of Attachment.mp3" volume 0.5 fadein 2.0
 
     nar "I sat staring out the window during lunch as my nachos got cold." 
@@ -140,7 +123,6 @@ label start:
     nar "When I left lunch for my next class, I was hoping that the murderer was caught before I had to waste any time at an assembly." 
 
     scene bg classroom
-    show jay shut at right
 
     nar "When I sat down at my desk, I checked my watch, only to realize I had left it during my rush in the morning." 
     jay "Dammit"
@@ -152,7 +134,6 @@ label start:
     nar "I also think that I need them more than ever, after all it was only the start of the week and so much had happened already."
 
     scene bg hallway
-    show jay shut at right
 
     nar "I walked through the hallways after my last class of the day..."
     nar "I looked around at the walls, which were covered with signage for different school clubs."
@@ -171,7 +152,6 @@ label start:
     nar "I marched onwards toward the door with the hanging sign that read 'Newspaper Club'."
 
     scene bg classroom 2
-    show jay shut at right
     play music "audio/background music 1.mp3" volume 0.5 fadeout 0.5 fadein 1.0 
 
     nar "When I walked into the club room, most of the other members were already there." 
@@ -289,7 +269,6 @@ label walk_out_of_the_room:
     hide andrea
     hide kit
     scene bg hallway
-    show jay shut at right
 
     nar "I left the club room..."
     nar "I couldn't handle this anymore..."
