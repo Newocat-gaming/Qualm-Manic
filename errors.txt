@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/blink_and_talk.rpy", line 189: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-                renpy.show(image_talking + " shut)
+File "game/script.rpy", line 7: expected 'simple_expression' not found.
+    xpos 
+         ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Fri Jan 31 12:15:11 2025
+Tue Apr  1 08:52:20 2025

@@ -1,11 +1,14 @@
-# The script of the game goes in this file.
+transform rightside:
+    yalign 1.0
+    xpos 1600
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+transform leftside:
+    yalign 1.0
+    xpos 320
 
 
 
-# The game starts here.
+
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
@@ -52,7 +55,10 @@ label start:
 
     i "Hey!" 
     nar "I turned my head towards the cheerful voice."
-    show kit_model at right
+
+    show kit_model_armscrossed at rightside
+    $ kit_pose = "armscrossed"
+
     nar "It was Kit, one of my friends from the newspaper club." 
 
     call char_screen_update from _call_char_screen_update
@@ -73,7 +79,7 @@ label start:
     nar "he turned back towards his own desk not wanting to get caught away from it. But before he got even a foot away from me he froze and turned his head back to me." 
     kit "By the way... I got some big info to share with everyone in the club tonight, be ready." 
     nar "He smirked and continued to his desk before the teacher started to take attendance."
-    hide kit
+    hide kit_model_armscrossed
     nar "Kit always had interesting things to bring up during club, but this time he said this in a more uneasy tone than that was his usual voice." 
     nar "I assumed he was adding more intrigue to really get me riled up. Knowing Kit, he had probably already riled up the others in their club as well. One thing I was expecting was that they weren't getting any work done for the newspaper today."
     nar "I was almost too lost in thought that I almost missed my cue when my name was called for attendance. After my name was called I relaxed back in my chair and continued to observe my classmates." 
@@ -84,7 +90,9 @@ label start:
     nar "Our teacher started out annoyed at all the chatter, throwing a few 'Quiet down' or 'stop that's at the troublemaking students but gradually gave up on trying to make the class listen to her with less and less objections as the class went on." 
     nar "When I had noticed that the only authority in the room had abandoned all attempts at regulation I started to feel left out on whatever this was."
     nar "I whispered to the girl seated to the left of me, I think her name was Neda if I remembered correctly."
-    show neda armhug at left
+
+    show neda_model_armhug at leftside
+    $ neda_pose = "armhug"
 
     call char_neda_update from _call_char_neda_update
 
@@ -166,7 +174,7 @@ label start:
 
     call char_andrea_update from _call_char_andrea_update
 
-    show kit armscrossed at right
+    show kit_model armscrossed at rightside
     nar "Kit sitting atop the same table." 
     nar "While I entered the cluttered room, he looked around and noticed that someone was missing." 
     jay "Where's James?"
@@ -176,22 +184,25 @@ label start:
     andrea "He hasn't come in yet." 
     nar "She was tapping away at her phone. She leaned back in her chair with her legs on the table in the center of the room."
     vida "No one's seen him all day."
-    show kit shrug at right
+    show kit_model closed shrug at rightside
+
     kit "He might be sick."
     nar "Kit said while smiling at me, though to me the smile looked more like a frown. As Kit was lying on his back with his head hanging over the edge of the table."
     nar "Kit continued to smile at me, then when he got no feedback on his quirky position he tried again with Andrea and Vida."
-    show kit sigh at right
+    show kit_model armscrossed at rightside
     kit "Y'all are no fun..."
+    hide kit_model
     show kit hurt at right
     show andrea smug at center
     nar "He turned over onto his stomach, only to be kicked on the head by Andrea, who showed her full appreciation to Kits stunt with a smug grin of her own."
-    show kit angry at right
+    hide kit
+    show kit_model armscrossed open lookleft_semi at right
     nar "While the two friends bickered in the background, Vida turned to me."
     vida "I hope it isn't bad."
     jay "Huh? Oh right, James..."
     nar "I was briefly distracted by the argument happening beside us."
     jay "Knowing him, it won't keep him down for lon-"
-    show kit explaining right at right
+    show kit_model gestureright shut normal at rightside
     show andrea onearmonhip at center
     kit "Alrighty then!" 
     nar "Kit shouted, cutting me off." 

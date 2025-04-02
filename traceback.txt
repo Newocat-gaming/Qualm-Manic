@@ -1,42 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-Exception: store.character_button is being given a default a second time.
+Executing ATL code at game/script.rpy:2
+  File "game/script.rpy", line 61, in script
+    nar "It was Kit, one of my friends from the newspaper club."
+TypeError: cannot unpack non-iterable float object
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\main.py", line 652, in main
-    run(restart)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\main.py", line 148, in run
-    renpy.execution.run_context(True)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\execution.py", line 958, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
-    i.execute_default(start)
-  File "game/custom_screens.rpyc", line 16, in execute_default
-Exception: store.character_button is being given a default a second time.
+  File "game/script.rpy", line 61, in script
+    nar "It was Kit, one of my friends from the newspaper club."
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 2579, in execute
+    Say.execute(self)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\transform.py", line 1054, in render
+    self.update_state()
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\transform.py", line 1235, in update_state
+    fr = self.execute(self, fst, fat)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\atl.py", line 798, in execute
+    action, arg, pause = block.execute(trans, timebase, self.atl_state, events)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\atl.py", line 1043, in execute
+    action, arg, pause = stmt.execute(trans, target - start, child_state, events)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\atl.py", line 1490, in execute
+    setattr(newts, k, v)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\transform.py", line 553, in set_align
+    self.xanchor, self.yanchor = value
+TypeError: cannot unpack non-iterable float object
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.4.24120703
 Qualm;Manic 0.4.5.5
-Fri Jan 31 04:43:01 2025
+Tue Apr  1 08:48:41 2025
