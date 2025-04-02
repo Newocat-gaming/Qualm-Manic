@@ -56,8 +56,8 @@ label start:
     i "Hey!" 
     nar "I turned my head towards the cheerful voice."
 
-    show kit_model_armscrossed at rightside
     $ kit_pose = "armscrossed"
+    show kit_model at rightside
 
     nar "It was Kit, one of my friends from the newspaper club." 
 
@@ -65,13 +65,17 @@ label start:
     call char_kit_update from _call_char_kit_update
 
     kit "..."
-    # show kit explaining 2 right at right
+    
+    $ kit_pose = "explaining"
+
     kit "I saw you run by through the window... almost late it seems." 
     nar "Kit teased me."
     jay "Yeah, yeah"
     nar "I groaned as I slumped my face between my arms, which I had crossed on my desk." 
     jay "I spent all night reading."
-    # show kit armscrossed at right
+    
+    $ kit_pose = "armscrossed"
+
     kit "You sure do love your books, huh?" 
     nar "Kit sighed."
     nar "Before I could respond the door creaked open. Our teacher had just arrived to class earlier than she usually did." 
@@ -79,7 +83,9 @@ label start:
     nar "he turned back towards his own desk not wanting to get caught away from it. But before he got even a foot away from me he froze and turned his head back to me." 
     kit "By the way... I got some big info to share with everyone in the club tonight, be ready." 
     nar "He smirked and continued to his desk before the teacher started to take attendance."
-    hide kit_model_armscrossed
+    
+    hide kit_model
+
     nar "Kit always had interesting things to bring up during club, but this time he said this in a more uneasy tone than that was his usual voice." 
     nar "I assumed he was adding more intrigue to really get me riled up. Knowing Kit, he had probably already riled up the others in their club as well. One thing I was expecting was that they weren't getting any work done for the newspaper today."
     nar "I was almost too lost in thought that I almost missed my cue when my name was called for attendance. After my name was called I relaxed back in my chair and continued to observe my classmates." 
@@ -91,9 +97,9 @@ label start:
     nar "When I had noticed that the only authority in the room had abandoned all attempts at regulation I started to feel left out on whatever this was."
     nar "I whispered to the girl seated to the left of me, I think her name was Neda if I remembered correctly."
 
-    show neda_model_armhug at leftside
     $ neda_pose = "armhug"
-
+    show neda_model at leftside
+    
     call char_neda_update from _call_char_neda_update
 
     jay "Hey, what's everyone talking about?" 
@@ -174,7 +180,7 @@ label start:
 
     call char_andrea_update from _call_char_andrea_update
 
-    show kit_model armscrossed at rightside
+    # show kit_model at rightside
     nar "Kit sitting atop the same table." 
     nar "While I entered the cluttered room, he looked around and noticed that someone was missing." 
     jay "Where's James?"
@@ -184,7 +190,7 @@ label start:
     andrea "He hasn't come in yet." 
     nar "She was tapping away at her phone. She leaned back in her chair with her legs on the table in the center of the room."
     vida "No one's seen him all day."
-    show kit_model closed shrug at rightside
+    # show kit_model closed shrug at rightside
 
     kit "He might be sick."
     nar "Kit said while smiling at me, though to me the smile looked more like a frown. As Kit was lying on his back with his head hanging over the edge of the table."

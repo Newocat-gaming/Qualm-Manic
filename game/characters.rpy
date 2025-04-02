@@ -10,24 +10,12 @@ define nar = Character("")
 ## unknown character
 define i = Character("???", color= "#fdfefe")
 
-
-## manic
 define manic = Character("Manic", callback = talking_callback, cb_image_talking = "manic_model", color="#2e4053")
-
 
 define jay = Character("Jay", color="#2ecc71")
 
-## kit ##
 define kit = Character("Kit", callback = talking_callback, cb_image_talking = "kit_model", color="#3498db")
-
-
-
-
-
-
-
 define andrea = Character("Andrea", callback = talking_callback, cb_image_talking = "andrea_model", color="#8e44ad")
-
 define vida = Character("Vida", callback = talking_callback, cb_image_talking = "vida_model", color="#f1c40f")
 
 
