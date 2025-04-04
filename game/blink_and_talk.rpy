@@ -1,7 +1,5 @@
 
 ##
-## Explanatory comments have been added all throughout this file.
-##
 ## If you use this code in your projects, credit me as Feniks @ feniksdev.com
 ##
 
@@ -23,23 +21,82 @@ init -50 python:
             renpy.show(image_talking + " shut")
 
 
+
+## manic ##
+
+image manic_animation_talk:
+    "images/characters/manic/manic_[manic_pose]/manic_[manic_pose]_mouth_open.png" with dissolve
+    0.2
+    "images/characters/manic/manic_[manic_pose]/manic_[manic_pose]_mouth_shut.png" with dissolve
+    0.2
+    repeat
+
+layeredimage manic_model:
+
+    group pose:
+        xanchor 0.5
+        attribute armscrossed default:
+            "manic_[manic_pose]"
+           
+    group mouth:
+        xanchor 0.5
+        attribute shut default:
+            "manic_[manic_pose]_mouth_shut"
+        attribute open:
+            "manic_[manic_pose]_mouth_open"
+        attribute talking:
+            "manic_animation_talk"
+
+    group eyes:
+        xanchor 0.5
+       
+        attribute normal default EasyBlink(
+            path="manic_[manic_pose]_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+        )
+        attribute semi EasyBlink(
+            path="manic_[manic_pose]_eyes_{img}", img="semi",
+            mid_eye_frames=["closed"],
+        )
+        attribute lookleft EasyBlink(
+            path="manic_[manic_pose]_eyes_{img}", img="lookleft_normal",
+            reverse=True, mid_eye_frames=["lookleft_semi", "closed"],
+        )
+        attribute lookleft_semi EasyBlink(
+            path="manic_[manic_pose]_eyes_{img}", img="lookleft_semi",
+            mid_eye_frames=["closed"],
+        )
+        attribute lookright EasyBlink(
+            path="manic_[manic_pose]_eyes_{img}", img="lookright_normal",
+            reverse=True, mid_eye_frames=["lookright_semi", "closed"],
+        )
+        attribute lookright_semi EasyBlink(
+            path="manic_[manic_pose]_eyes_{img}", img="lookright_semi",
+            mid_eye_frames=["closed"],
+        )
+
+        attribute closed "manic_[manic_pose]_eyes_closed"
+
+        attribute normal_dissolve EasyBlink(
+            path="manic_[manic_pose]_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+            transitions=Dissolve(0.4),
+            blink_framerate=0.1,
+        )
+
+    group hair:
+        xanchor 0.5
+        attribute hair default:
+            "manic_[manic_pose]_hair_base"
+
 ## kit ##
 
-
-image kit_armscrossed_animation_talk:
-    "images/characters/kit/kit_armscrossed/kit_armscrossed_mouth_open.png" with dissolve
+image kit_animation_talk:
+    "images/characters/kit/kit_[kit_pose]/kit_[kit_pose]_mouth_open.png" with dissolve
     0.2
-    "images/characters/kit/kit_armscrossed/kit_armscrossed_mouth_shut.png" with dissolve 
-    0.2
-    repeat 
-
-image kit_explaining_animation_talk:
-    "images/characters/kit/kit_explaining/kit_explaining_mouth_open.png" with dissolve
-    0.2
-    "images/characters/kit/kit_explaining/kit_explaining_mouth_shut.png" with dissolve 
+    "images/characters/kit/kit_[kit_pose]/kit_[kit_pose]_mouth_shut.png" with dissolve 
     0.2
     repeat 
-
 
 layeredimage kit_model:
 
@@ -55,7 +112,7 @@ layeredimage kit_model:
         attribute open:
             "kit_[kit_pose]_mouth_open"
         attribute talking:
-            "kit_[kit_pose]_animation_talk"
+            "kit_animation_talk"
 
     group eyes:
         xanchor 0.5
@@ -87,7 +144,6 @@ layeredimage kit_model:
 
         attribute closed "kit_[kit_pose]_eyes_closed"
 
-
         attribute normal_dissolve EasyBlink(
             path="kit_[kit_pose]_eyes_{img}", img="normal",
             reverse=True, mid_eye_frames=["semi", "closed"],
@@ -100,14 +156,149 @@ layeredimage kit_model:
         attribute hair default:
             "kit_[kit_pose]_hair_base"
  
+## andrea ##
+
+image andrea_animation_talk:
+    "images/characters/andrea/andrea_[andrea_pose]/andrea_[andrea_pose]_mouth_open.png" with dissolve
+    0.2
+    "images/characters/andrea/andrea_[andrea_pose]/andrea_[andrea_pose]_mouth_shut.png" with dissolve
+    0.2
+    repeat
+
+layeredimage andrea_model:
+
+    group pose:
+        xanchor 0.5
+        attribute armscrossed default:
+            "andrea_[andrea_pose]"
+           
+    group mouth:
+        xanchor 0.5
+        attribute shut default:
+            "andrea_[andrea_pose]_mouth_shut"
+        attribute open:
+            "andrea_[andrea_pose]_mouth_open"
+        attribute talking:
+            "andrea_animation_talk"
+
+    group eyes:
+        xanchor 0.5
+       
+        attribute normal default EasyBlink(
+            path="andrea_[andrea_pose]_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+        )
+        attribute semi EasyBlink(
+            path="andrea_[andrea_pose]_eyes_{img}", img="semi",
+            mid_eye_frames=["closed"],
+        )
+        attribute lookleft EasyBlink(
+            path="andrea_[andrea_pose]_eyes_{img}", img="lookleft_normal",
+            reverse=True, mid_eye_frames=["lookleft_semi", "closed"],
+        )
+        attribute lookleft_semi EasyBlink(
+            path="andrea_[andrea_pose]_eyes_{img}", img="lookleft_semi",
+            mid_eye_frames=["closed"],
+        )
+        attribute lookright EasyBlink(
+            path="andrea_[andrea_pose]_eyes_{img}", img="lookright_normal",
+            reverse=True, mid_eye_frames=["lookright_semi", "closed"],
+        )
+        attribute lookright_semi EasyBlink(
+            path="andrea_[andrea_pose]_eyes_{img}", img="lookright_semi",
+            mid_eye_frames=["closed"],
+        )
+
+        attribute closed "andrea_[andrea_pose]_eyes_closed"
+
+        attribute normal_dissolve EasyBlink(
+            path="andrea_[andrea_pose]_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+            transitions=Dissolve(0.4),
+            blink_framerate=0.1,
+        )
+
+    group hair:
+        xanchor 0.5
+        attribute hair default:
+            "andrea_[andrea_pose]_hair_base"
+ 
+## vida ##
+
+image vida_animation_talk:
+    "images/characters/vida/vida_[vida_pose]/vida_[vida_pose]_mouth_open.png" with dissolve
+    0.2
+    "images/characters/vida/vida_[vida_pose]/vida_[vida_pose]_mouth_shut.png" with dissolve
+    0.2
+    repeat
+
+layeredimage vida_model:
+
+    group pose:
+        xanchor 0.5
+        attribute armscrossed default:
+            "vida_[vida_pose]"
+           
+    group mouth:
+        xanchor 0.5
+        attribute shut default:
+            "vida_[vida_pose]_mouth_shut"
+        attribute open:
+            "vida_[vida_pose]_mouth_open"
+        attribute talking:
+            "vida_animation_talk"
+
+    group eyes:
+        xanchor 0.5
+       
+        attribute normal default EasyBlink(
+            path="vida_[vida_pose]_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+        )
+        attribute semi EasyBlink(
+            path="vida_[vida_pose]_eyes_{img}", img="semi",
+            mid_eye_frames=["closed"],
+        )
+        attribute lookleft EasyBlink(
+            path="vida_[vida_pose]_eyes_{img}", img="lookleft_normal",
+            reverse=True, mid_eye_frames=["lookleft_semi", "closed"],
+        )
+        attribute lookleft_semi EasyBlink(
+            path="vida_[vida_pose]_eyes_{img}", img="lookleft_semi",
+            mid_eye_frames=["closed"],
+        )
+        attribute lookright EasyBlink(
+            path="vida_[vida_pose]_eyes_{img}", img="lookright_normal",
+            reverse=True, mid_eye_frames=["lookright_semi", "closed"],
+        )
+        attribute lookright_semi EasyBlink(
+            path="vida_[vida_pose]_eyes_{img}", img="lookright_semi",
+            mid_eye_frames=["closed"],
+        )
+
+        attribute closed "vida_[vida_pose]_eyes_closed"
+
+        attribute normal_dissolve EasyBlink(
+            path="vida_[vida_pose]_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+            transitions=Dissolve(0.4),
+            blink_framerate=0.1,
+        )
+
+    group hair:
+        xanchor 0.5
+        attribute hair default:
+            "vida_[vida_pose]_hair_base"
+
+
 
 
 ## neda ##
 
-image neda_armhug_animation_talk:
-    "images/characters/neda/neda_armhug/neda_armhug_mouth_open.png" with dissolve
+image neda_animation_talk:
+    "images/characters/neda/neda_[neda_pose]/neda_[neda_pose]_mouth_open.png" with dissolve
     0.2
-    "images/characters/neda/neda_armhug/neda_armhug_mouth_shut.png" with dissolve 
+    "images/characters/neda/neda_[neda_pose]/neda_[neda_pose]_mouth_shut.png" with dissolve 
     0.2
     repeat 
 
@@ -125,7 +316,7 @@ layeredimage neda_model:
         attribute open:
             "neda_[neda_pose]_mouth_open"
         attribute talking:
-            "neda_[neda_pose]_animation_talk"
+            "neda_animation_talk"
 
     group eyes:
         xanchor 0.5

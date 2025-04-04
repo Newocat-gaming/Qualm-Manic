@@ -6,10 +6,16 @@ transform leftside:
     yalign 1.0
     xpos 320
 
-
-
-
 label start:
+
+
+
+    $ kit_pose = "thinking"
+    show kit_model at rightside
+    nar "rauivuyrheya"
+    kit "cvfaiuvfauihbraewv"
+
+
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
