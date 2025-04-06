@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/character_info_screen.rpy", line 167: add expects a non-empty block.
-    add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600: 
-                                                                     ^
+File "game/script.rpy", line 307: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    show andrea_model lookleftdown frown
+    ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Apr  6 02:34:37 2025
+Sun Apr  6 04:51:29 2025

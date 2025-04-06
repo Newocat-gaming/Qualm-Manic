@@ -18,6 +18,11 @@ define kit = Character("Kit", callback = talking_callback, cb_image_talking = "k
 define vida = Character("Vida", callback = talking_callback, cb_image_talking = "vida_model", color="#f1c40f")
 define andrea = Character("Andrea", callback = talking_callback, cb_image_talking = "andrea_model", color="#8e44ad")
 
+## hidden from view characters ##
+
+define vida2 = Character("Vida", color="#f1c40f")
+
+
 
 
 define neda = Character("Neda", callback = talking_callback, cb_image_talking = "neda_model", color= "#fdfefe")

@@ -26,7 +26,7 @@ layeredimage jay_model:
 
     group pose:
         xanchor 0.5
-        attribute armscrossed default:
+        attribute pose default:
             "jay_[jay_pose]"
            
     group mouth:
@@ -59,7 +59,6 @@ layeredimage jay_model:
         attribute hair default:
             "jay_[jay_pose]_hair_base"
 
-
 ## manic ##
 
 image manic_animation_talk:
@@ -73,7 +72,7 @@ layeredimage manic_model:
 
     group pose:
         xanchor 0.5
-        attribute armscrossed default:
+        attribute pose default:
             "manic_[manic_pose]"
            
     group mouth:
@@ -140,7 +139,7 @@ layeredimage kit_model:
 
     group pose:
         xanchor 0.5
-        attribute armscrossed default:
+        attribute pose default:
             "kit_[kit_pose]"
             
     group mouth:
@@ -149,6 +148,8 @@ layeredimage kit_model:
             "kit_[kit_pose]_mouth_shut"
         attribute open:
             "kit_[kit_pose]_mouth_open"
+        attribute grin:
+            "kit_[kit_pose]_mouth_grin"
         attribute talking:
             "kit_animation_talk"
 
@@ -207,7 +208,7 @@ layeredimage vida_model:
 
     group pose:
         xanchor 0.5
-        attribute armscrossed default:
+        attribute pose default:
             "vida_[vida_pose]"
            
     group mouth:
@@ -216,6 +217,8 @@ layeredimage vida_model:
             "vida_[vida_pose]_mouth_shut"
         attribute open:
             "vida_[vida_pose]_mouth_open"
+        attribute frown:
+            "vida_[vida_pose]_mouth_frown"
         attribute talking:
             "vida_animation_talk"
 
@@ -244,6 +247,14 @@ layeredimage vida_model:
         )
         attribute lookright_semi EasyBlink(
             path="vida_[vida_pose]_eyes_{img}", img="lookright_semi",
+            mid_eye_frames=["closed"],
+        )
+        attribute lookleftdown EasyBlink(
+            path="vida_[vida_pose]_eyes_{img}", img="lookleftdown_normal",
+            reverse=True, mid_eye_frames=["lookleftdown_semi", "closed"],
+        )
+        attribute lookleftdown_semi EasyBlink(
+            path="vida_[vida_pose]_eyes_{img}", img="lookleftdown_semi",
             mid_eye_frames=["closed"],
         )
 
@@ -281,7 +292,7 @@ layeredimage andrea_model:
 
     group pose:
         xanchor 0.5
-        attribute armscrossed default:
+        attribute pose default:
             "andrea_[andrea_pose]"
            
     group mouth:
@@ -290,6 +301,10 @@ layeredimage andrea_model:
             "andrea_[andrea_pose]_mouth_shut"
         attribute open:
             "andrea_[andrea_pose]_mouth_open"
+        attribute smile:
+            "andrea_[andrea_pose]_mouth_smile"
+        attribute frown:
+            "andrea_[andrea_pose]_mouth_frown"
         attribute talking:
             "andrea_animation_talk"
 
@@ -318,6 +333,14 @@ layeredimage andrea_model:
         )
         attribute lookright_semi EasyBlink(
             path="andrea_[andrea_pose]_eyes_{img}", img="lookright_semi",
+            mid_eye_frames=["closed"],
+        )
+        attribute lookleftdown EasyBlink(
+            path="andrea_[andrea_pose]_eyes_{img}", img="lookleftdown_normal",
+            reverse=True, mid_eye_frames=["lookleftdown_semi", "closed"],
+        )
+        attribute lookleftdown_semi EasyBlink(
+            path="andrea_[andrea_pose]_eyes_{img}", img="lookleftdown_semi",
             mid_eye_frames=["closed"],
         )
 
@@ -350,7 +373,7 @@ layeredimage neda_model:
 
     group pose:
         xanchor 0.5
-        attribute armscrossed default:
+        attribute pose default:
             "neda_[neda_pose]"
             
     group mouth:

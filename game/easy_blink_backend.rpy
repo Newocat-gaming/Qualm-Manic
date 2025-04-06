@@ -35,7 +35,7 @@ init -250 python in blink_config:
     blink_framerate = 0.04
     ## How many seconds to wait before blinking again, in the format:
     ## (min time, max time)
-    blink_repeat = (1.8, 4.5)
+    blink_repeat = (2.1, 5.5)
     ## How often the character should blink twice in quick succession.
     ## 0.1 is 10%. If this is 0.0 then the character will never blink twice
     ## in a row.

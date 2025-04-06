@@ -65,7 +65,7 @@ define config.default_sfx_volume = 0.5
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "RErideD opening full lower 2.mp3"
+define config.main_menu_music = "Made_In_Japan_YoshiStudios lower.mp3"
 
 
 ## Transitions #################################################################
