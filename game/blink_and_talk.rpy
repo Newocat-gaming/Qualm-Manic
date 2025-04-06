@@ -4,7 +4,7 @@
 ##
 
 
-
+define jay_pose = "armonhip"
 define manic_pose = "armscrossed"
 define kit_pose = "armscrossed"
 define andrea_pose = "peacesign"
@@ -20,6 +20,44 @@ init -50 python:
         elif event == "end":
             renpy.show(image_talking + " shut")
 
+## jay ##
+
+layeredimage jay_model:
+
+    group pose:
+        xanchor 0.5
+        attribute armscrossed default:
+            "jay_[jay_pose]"
+           
+    group mouth:
+        xanchor 0.5
+        attribute shut default:
+            "jay_[jay_pose]_mouth_shut"
+
+    group eyes:
+        xanchor 0.5
+        attribute normal default EasyBlink(
+            path="jay_[jay_pose]_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+        )
+        attribute semi EasyBlink(
+            path="jay_[jay_pose]_eyes_{img}", img="semi",
+            mid_eye_frames=["closed"],
+        )
+
+        attribute closed "jay_[jay_pose]_eyes_closed"
+
+        attribute normal_dissolve EasyBlink(
+            path="jay_[jay_pose]_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+            transitions=Dissolve(0.4),
+            blink_framerate=0.1,
+        )
+
+    group hair:
+        xanchor 0.5
+        attribute hair default:
+            "jay_[jay_pose]_hair_base"
 
 
 ## manic ##

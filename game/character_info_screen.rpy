@@ -96,7 +96,10 @@ screen character_screen():
             ysize 1080
             xsize 500
 
-    add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 xanchor 0.5        
+    if persistent.selectedCharacter.imageName == "locked profile":
+        add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 xanchor 0.5
+    else:
+        add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600  
 
 screen side_character_screen():
     tag menu
@@ -161,7 +164,10 @@ screen side_character_screen():
             ysize 1080
             xsize 500   
 
-    add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 xanchor 0.5 
+    if persistent.selectedCharacter.imageName == "locked profile":
+        add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 xanchor 0.5
+    else:
+        add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 
        
 style character_button_text:
     xalign 0.5
