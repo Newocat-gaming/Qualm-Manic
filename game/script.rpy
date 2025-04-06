@@ -10,10 +10,10 @@ label start:
 
 
 
-    $ kit_pose = "thinking"
-    show kit_model at rightside
+    $ vida_pose = "shush"
+    show vida_model at rightside
     nar "rauivuyrheya"
-    kit "cvfaiuvfauihbraewv"
+    vida "cvfaiuvfauihbraewv"
 
 
 

@@ -309,7 +309,7 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Character Profiles") action ShowMenu("character_screen")
+        textbutton _("Characters") action ShowMenu("character_screen")
 
         textbutton _("Preferences") action ShowMenu("preferences")
         

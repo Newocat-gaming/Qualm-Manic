@@ -11,7 +11,7 @@
             align (1.0, 0.0)
             offset (-10, 10)
 
-            textbutton "Character Profiles" action ShowMenu('character_screen')
+            textbutton "Characters" action ShowMenu('character_screen')
 
 default character_button = False
 
@@ -27,11 +27,13 @@ screen character_screen():
     tag menu
     add "bg/bg sky.png"
     hbox:
-        
+        ysize 1080
+        xsize 1920
+
         frame:
             background None
             ysize 1080
-            xsize 420
+            xsize 400
             vbox:
                 xpos gui.navigation_xpos 
                 yalign 0.5
@@ -51,14 +53,12 @@ screen character_screen():
 
                 action Return()
     
-    
-        ## LEFT FRAME
         frame:
-            #Remove hashtag in the next line to remove the black and blue background
+            # Remove hashtag in the next line to remove the black and blue background
             background None
             style_prefix "character"
             ysize 1080
-            xsize 300
+            xsize 420
             vbox:
                 xalign 0.5
                 yalign 0.5
@@ -78,11 +78,10 @@ screen character_screen():
                     action SetVariable("persistent.selectedCharacter", persistent.manic_profile)
                     xsize 200
 
-        ## RIGHT FRAME
         frame:
             background None
             ysize 1080
-            xsize 500
+            xsize 600
             vbox:
                 xalign 0.0
                 xsize 500
@@ -91,18 +90,25 @@ screen character_screen():
                 spacing 20
                 text "Name: [persistent.selectedCharacter.name]"
                 text "Info: [persistent.selectedCharacter.desc]"
-               
-    add persistent.selectedCharacter.imageName pos(1500, 540) anchor(0.5, 0.5)        
+
+        frame:
+            background None
+            ysize 1080
+            xsize 500
+
+    add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 xanchor 0.5        
 
 screen side_character_screen():
     tag menu
     add "bg/bg sky.png"
     hbox:
-        
+        ysize 1080
+        xsize 1920
+
         frame:
             background None
             ysize 1080
-            xsize 420
+            xsize 400
             vbox:
                 xpos gui.navigation_xpos 
                 yalign 0.5
@@ -128,7 +134,7 @@ screen side_character_screen():
             background None
             style_prefix "character"
             ysize 1080
-            xsize 300
+            xsize 420
             vbox:
                 xalign 0.5
                 yalign 0.5
@@ -140,7 +146,7 @@ screen side_character_screen():
         frame:
             background None
             ysize 1080
-            xsize 500
+            xsize 600
             vbox:
                 xalign 0.0
                 xsize 500
@@ -149,8 +155,13 @@ screen side_character_screen():
                 spacing 20
                 text "Name: [persistent.selectedCharacter.name]"
                 text "Info: [persistent.selectedCharacter.desc]"
-               
-    add persistent.selectedCharacter.imageName pos(1500, 540) anchor(0.5, 0.5) 
+
+        frame:
+            background None
+            ysize 1080
+            xsize 500   
+
+    add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 xanchor 0.5 
        
 style character_button_text:
     xalign 0.5
@@ -159,8 +170,9 @@ python early:
     class CharacterProfile:
         def __init__(self, name = "???", imageName = "", desc = "", trueName = ""):
             self.name = name
-            #The portraits are located in game/images/characters folder
-            self.imageName = "character profiles/"+ imageName + ".png"
+            #### The portraits are located in game/images/characters folder
+            #### self.imageName = "character profiles/"+ imageName + ".png"
+            self.imageName = imageName
             self.desc = desc
             self.trueName = trueName
 
