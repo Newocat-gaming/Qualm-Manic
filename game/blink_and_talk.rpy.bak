@@ -428,3 +428,37 @@ layeredimage neda_model:
         attribute hair default:
             "neda_[neda_pose]_hair_base"
 
+
+
+
+
+
+
+
+
+
+## This is a short screen that shows how you can make a preference toggle
+## to turn blinking on/off on a global basis.
+screen toggle_blinking():
+    textbutton "Turn blinking {}".format("off" if persistent.blinking_on else "on"):
+        background "#000" text_color "#fff" text_hover_color "#bbb"
+        align (0.5, 0.0)
+        action ToggleField(persistent, "blinking_on")
+
+label test_blinks():
+    scene expression "#21212d"
+    ## This screen has a button to toggle blinking on and off. It's for
+    ## demonstration purposes; usually you'd have this in your settings screen.
+    show screen toggle_blinking()
+    "Blink test, normal expression."
+    show kit_model head_only at right
+    "test"
+    show kit_model gestureright at right
+    "test"
+    show kit_model shrug at right
+    "test"
+    ## Jump to the examples for the extra files, if present.
+    if renpy.has_label("test_blinks_auto"):
+        call test_blinks_auto()
+
+    jump test_blinks

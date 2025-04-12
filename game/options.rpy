@@ -159,7 +159,7 @@ init python:
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "ChaosManicv01-1727634883"
+define config.save_directory = "QualmManic-1727634883"
 
 
 ## Icon ########################################################################
