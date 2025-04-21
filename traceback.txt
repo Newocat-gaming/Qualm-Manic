@@ -1,39 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 299, in script
-    show andrea_model lookleftdown frown
-Exception: DynamicImage 'andrea_[andrea_pose]_mouth_frown': could not find image. ('andrea_armsonhips_mouth_frown')
+  File "renpy/common/00start.rpy", line 195, in script
+    python:
+  File "renpy/common/00start.rpy", line 195, in script
+    python:
+  File "renpy/common/00start.rpy", line 196, in <module>
+    renpy.execute_default_statement(True)
+Exception: store.character_button is being given a default a second time.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 299, in script
-    show andrea_model lookleftdown frown
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 1117, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 1080, in show_imspec
-    renpy.config.show(name,
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\exports\displayexports.py", line 503, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\scenelists.py", line 477, in add
-    thing.visit_all(lambda d : None)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  [Previous line repeated 1 more time]
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 424, in visit_all
-    for d in self.visit():
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\image.py", line 785, in visit
-    self.find_target()
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\image.py", line 683, in find_target
-    raise Exception(error)
-Exception: DynamicImage 'andrea_[andrea_pose]_mouth_frown': could not find image. ('andrea_armsonhips_mouth_frown')
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 195, in script
+    python:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "renpy/common/00start.rpy", line 195, in script
+    python:
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 196, in <module>
+    renpy.execute_default_statement(True)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
+    i.execute_default(start)
+  File "game/character_info_screen.rpyc", line 16, in execute_default
+Exception: store.character_button is being given a default a second time.
 
 Windows-10-10.0.26100 AMD64
-Ren'Py 8.3.4.24120703
-Qualm;Manic 0.4.5.5
-Sun Apr  6 04:38:01 2025
+Ren'Py 8.3.7.25031702
+Qualm;Manic 0.5.0.1
+Mon Apr 21 05:13:58 2025
