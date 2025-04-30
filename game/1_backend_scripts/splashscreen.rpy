@@ -4,7 +4,7 @@ define config.end_splash_transition = Fade(2.0, 0.0, 2.0)
 define fadesplash = Fade(2.0, 0.0, 2.0)
 define titlefadesplash = Fade(3.0, 0.0, 3.0)
 
-image splash1 = "images/splashscreen/Ren’Py_Logo nc.png" 
+image splash1 = "images/splashscreen/Ren'Py_Logo nc.png" 
 image splash2 = "images/splashscreen/Mannequin_Logo nc.png" 
 image splash3 = "images/splashscreen/BCOF_Logo small nc.png" 
 image title = "images/splashscreen/Qualm_manic.png"

@@ -1,42 +1,62 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 195, in script
+  File "renpy/common/00start.rpy", line 282, in script
     python:
-  File "renpy/common/00start.rpy", line 195, in script
-    python:
-  File "renpy/common/00start.rpy", line 196, in <module>
-    renpy.execute_default_statement(True)
-Exception: store.character_button is being given a default a second time.
+  File "renpy/common/00start.rpy", line 284, in <module>
+    renpy.call_in_new_context(_restart[2])
+Exception: DynamicImage 'vida_[vida_pose]_mouth_frown': could not find image. ('vida_shush_mouth_frown')
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\main.py", line 652, in main
-    run(restart)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\main.py", line 148, in run
-    renpy.execution.run_context(True)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\execution.py", line 958, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 195, in script
-    python:
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "renpy/common/00start.rpy", line 195, in script
+  File "renpy/common/00start.rpy", line 282, in script
     python:
   File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 834, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "D:\renpy\renpy-8.3.4-sdk\renpy\python.py", line 1187, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 196, in <module>
-    renpy.execute_default_statement(True)
-  File "D:\renpy\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
-    i.execute_default(start)
-  File "game/character_info_screen.rpyc", line 16, in execute_default
-Exception: store.character_button is being given a default a second time.
+  File "renpy/common/00start.rpy", line 284, in <module>
+    renpy.call_in_new_context(_restart[2])
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\game.py", line 377, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2218, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\core.py", line 2748, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  [Previous line repeated 5 more times]
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\displayable.py", line 424, in visit_all
+    for d in self.visit():
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\image.py", line 785, in visit
+    self.find_target()
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\display\image.py", line 683, in find_target
+    raise Exception(error)
+Exception: DynamicImage 'vida_[vida_pose]_mouth_frown': could not find image. ('vida_shush_mouth_frown')
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Qualm;Manic 0.5.0.1
-Mon Apr 21 05:13:58 2025
+Tue Apr 22 05:24:56 2025

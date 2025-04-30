@@ -10,6 +10,8 @@ define nar = Character("")
 ## unknown character
 define i = Character("???", color= "#fdfefe")
 
+## main characters ##
+
 define manic = Character("Manic", callback = talking_callback, cb_image_talking = "manic_model", color="#2e4053")
 
 define jay = Character("Jay", color="#2ecc71")
@@ -24,7 +26,7 @@ define vida2 = Character("Vida", color="#f1c40f")
 
 
 
-
+## side characters ##
 define neda = Character("Neda", callback = talking_callback, cb_image_talking = "neda_model", color= "#fdfefe")
 
 

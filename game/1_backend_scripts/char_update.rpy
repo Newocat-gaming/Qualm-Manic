@@ -24,7 +24,7 @@ label char_jay_update:
     $ char_jay_checkpoint =+ 1
        
     if char_jay_checkpoint == 1:
-        $ persistent.jay_profile = CharacterProfile(name="Jay", imageName="jay_model", desc = "test", trueName = "jay")
+        $ persistent.jay_profile = CharacterProfile(name="Jay", imageName="jay_model normal shut ", desc = "test", trueName = "jay")
         return
 
 label char_kit_update:
