@@ -19,11 +19,43 @@ default character_button = False
 ## the player has not explicitly hidden the interface.
 init python:
 
+    import copy
+    def copy_pose_var(from_name, to_name):
+        setattr(store, to_name, copy.deepcopy(getattr(store, from_name)))
+
     config.overlay_screens.append("character_UI")
 
 
+
+default manic_pose_temp = "armscrossed"
+define kit_pose_temp = "armscrossed"
+define andrea_pose_temp = "peacesign"
+define vida_pose_temp = "shush"
+
+define neda_pose_temp = "armhug"
+
 ## Character UI
 screen character_screen():
+    #####
+    on "show" action [
+        Function(copy_pose_var, "manic_pose", "manic_pose_temp"),
+        Function(copy_pose_var, "kit_pose", "kit_pose_temp"),
+        Function(copy_pose_var, "andrea_pose", "andrea_pose_temp"),
+        Function(copy_pose_var, "vida_pose", "vida_pose_temp"),
+
+        Function(copy_pose_var, "neda_pose", "neda_pose_temp"),
+    ]
+    #####
+    on "show" action [
+        SetVariable('manic_pose', "armscrossed"),
+        SetVariable('kit_pose', "armscrossed"),
+        SetVariable('andrea_pose', "peacesign"),
+        SetVariable('vida_pose', "shush"),
+
+        SetVariable('neda_pose', "armhug"),
+    ]
+    #####
+
     tag menu
     add "bg/bg sky.png"
     hbox:
@@ -51,8 +83,20 @@ screen character_screen():
                 xpos gui.navigation_xpos
                 yalign 1.0
                 yoffset -45
+                #######################################################
+                action [
 
-                action Return()
+                    print(manic_pose_temp),
+
+                    SetVariable('manic_pose', manic_pose_temp), 
+                    SetVariable('kit_pose', kit_pose_temp), 
+                    SetVariable('andrea_pose', andrea_pose_temp),
+                    SetVariable('vida_pose', vida_pose_temp), 
+                    
+                    SetVariable('neda_pose', neda_pose_temp),
+
+                    Return(),
+                ]
     
         frame:
             # Remove hashtag in the next line to remove the black and blue background
@@ -129,8 +173,21 @@ screen side_character_screen():
                 xpos gui.navigation_xpos
                 yalign 1.0
                 yoffset -45
+                #########################################################
+                action [
 
-                action Return()
+                    print("hello2"),
+
+                    SetVariable('manic_pose', manic_pose_temp), 
+                    SetVariable('kit_pose', kit_pose_temp), 
+                    SetVariable('andrea_pose', andrea_pose_temp), 
+                    SetVariable('vida_pose', vida_pose_temp), 
+
+                    SetVariable('neda_pose', neda_pose_temp),
+
+                    Return(),
+                ]
+                    
     
     
         ## LEFT FRAME
@@ -170,7 +227,7 @@ screen side_character_screen():
         add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 xanchor 0.5
     else:
         add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 
-       
+
 style character_button_text:
     xalign 0.5
 

@@ -3,6 +3,8 @@
 While running game code:
   File "renpy/common/00start.rpy", line 282, in script
     python:
+  File "renpy/common/00start.rpy", line 282, in script
+    python:
   File "renpy/common/00start.rpy", line 284, in <module>
     renpy.call_in_new_context(_restart[2])
 Exception: DynamicImage 'vida_[vida_pose]_mouth_frown': could not find image. ('vida_shush_mouth_frown')
@@ -10,6 +12,17 @@ Exception: DynamicImage 'vida_[vida_pose]_mouth_frown': could not find image. ('
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "D:\renpy\renpy-8.3.4-sdk\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 282, in script
+    python:
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
   File "renpy/common/00start.rpy", line 282, in script
     python:
   File "D:\renpy\renpy-8.3.4-sdk\renpy\ast.py", line 834, in execute
@@ -58,5 +71,5 @@ Exception: DynamicImage 'vida_[vida_pose]_mouth_frown': could not find image. ('
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
-Qualm;Manic 0.5.0.1
-Tue Apr 22 05:24:56 2025
+Qualm;Manic 0.5.0.2
+Sun Jun 15 02:58:08 2025
