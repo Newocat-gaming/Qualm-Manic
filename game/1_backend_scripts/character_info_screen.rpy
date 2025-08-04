@@ -13,10 +13,11 @@
 
             textbutton "Characters" action ShowMenu('character_screen')
 
-default character_button = False
+define character_button = False
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
+
 init python:
 
     import copy
@@ -27,16 +28,22 @@ init python:
 
 
 
-default manic_pose_temp = "armscrossed"
+define manic_pose_temp = "armscrossed"
 define kit_pose_temp = "armscrossed"
 define andrea_pose_temp = "peacesign"
 define vida_pose_temp = "shush"
 
 define neda_pose_temp = "armhug"
 
+
+
 ## Character UI
+
+
 screen character_screen():
-    #####
+    tag menu
+    add "bg/bg sky.png"
+
     on "show" action [
         Function(copy_pose_var, "manic_pose", "manic_pose_temp"),
         Function(copy_pose_var, "kit_pose", "kit_pose_temp"),
@@ -55,13 +62,14 @@ screen character_screen():
         SetVariable('neda_pose', "armhug"),
     ]
     #####
+    on "show" action [
+        ShowMenu('main_character_screen'),
+        SetVariable("persistent.selectedCharacter", persistent.jay_profile)
+    ]
 
-    tag menu
-    add "bg/bg sky.png"
     hbox:
         ysize 1080
         xsize 1920
-
         frame:
             background None
             ysize 1080
@@ -71,33 +79,41 @@ screen character_screen():
                 yalign 0.5
                 spacing 20
                 textbutton "Main characters":
-                    action ShowMenu("character_screen"), SetVariable("persistent.selectedCharacter", persistent.jay_profile)
+                    action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter", persistent.jay_profile)
                     xsize 300
                 textbutton "Side characters":
-                    action ShowMenu("side_character_screen"), SetVariable("persistent.selectedCharacter", persistent.neda_profile)
+                    action ShowMenu('side_character_screen'), SetVariable("persistent.selectedCharacter", persistent.neda_profile)
                     xsize 300
-
 
             textbutton "Return":
                 style "return_button"
                 xpos gui.navigation_xpos
                 yalign 1.0
                 yoffset -45
-                #######################################################
                 action [
-
-                    print(manic_pose_temp),
-
+                    Hide("main_character_screen"),
+                    Hide("side_character_screen"),
                     SetVariable('manic_pose', manic_pose_temp), 
                     SetVariable('kit_pose', kit_pose_temp), 
                     SetVariable('andrea_pose', andrea_pose_temp),
                     SetVariable('vida_pose', vida_pose_temp), 
-                    
+                        
                     SetVariable('neda_pose', neda_pose_temp),
 
                     Return(),
                 ]
-    
+
+screen main_character_screen():
+    on "show" action Hide("side_character_screen")
+
+    hbox:
+        ysize 1080
+        xsize 1920
+        frame:
+            background None
+            ysize 1080
+            xsize 400
+            
         frame:
             # Remove hashtag in the next line to remove the black and blue background
             background None
@@ -147,8 +163,7 @@ screen character_screen():
         add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600  
 
 screen side_character_screen():
-    tag menu
-    add "bg/bg sky.png"
+    on "show" action Hide("main_character_screen")
     hbox:
         ysize 1080
         xsize 1920
@@ -157,39 +172,7 @@ screen side_character_screen():
             background None
             ysize 1080
             xsize 400
-            vbox:
-                xpos gui.navigation_xpos 
-                yalign 0.5
-                spacing 20
-                textbutton "Main characters":
-                    action ShowMenu("character_screen"), SetVariable("persistent.selectedCharacter", persistent.jay_profile)
-                    xsize 300
-                textbutton "Side characters":
-                    action ShowMenu("side_character_screen"), SetVariable("persistent.selectedCharacter", persistent.neda_profile)
-                    xsize 300
-
-            textbutton "Return":
-                style "return_button"
-                xpos gui.navigation_xpos
-                yalign 1.0
-                yoffset -45
-                #########################################################
-                action [
-
-                    print("hello2"),
-
-                    SetVariable('manic_pose', manic_pose_temp), 
-                    SetVariable('kit_pose', kit_pose_temp), 
-                    SetVariable('andrea_pose', andrea_pose_temp), 
-                    SetVariable('vida_pose', vida_pose_temp), 
-
-                    SetVariable('neda_pose', neda_pose_temp),
-
-                    Return(),
-                ]
-                    
-    
-    
+        
         ## LEFT FRAME
         frame:
             #Remove hashtag in the next line to remove the black and blue background
@@ -263,8 +246,9 @@ default persistent.kit_profile = CharacterProfile(name="???", imageName="locked 
 default persistent.vida_profile = CharacterProfile(name="???", imageName="locked profile", desc = "???", trueName = "vida")
 default persistent.andrea_profile = CharacterProfile(name="???", imageName="locked profile", desc = "???", trueName = "andrea")
 
-
 default persistent.manic_profile = CharacterProfile(name="???", imageName="locked profile", desc = "???", trueName = "manic")
+
+
 
 default persistent.neda_profile = CharacterProfile(name="???", imageName="locked profile", desc = "???", trueName = "neda")
 
