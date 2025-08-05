@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/character_info_screen.rpy", line 66: 'ShowMenu' is not a keyword argument or valid child of the screen statement.
-    ShowMenu('main_character_screen'),
-            ^
+File "game/1_backend_scripts/screens.rpy", line 312: '(' was never closed
+    textbutton _("Characters") action ShowMenu("character_screen"), ShowMenu('[persistent.char_menu_type]_character_screen")
+                                                                            ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Mon Aug  4 09:26:07 2025
+Tue Aug  5 05:21:17 2025

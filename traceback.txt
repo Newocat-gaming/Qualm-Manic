@@ -1,117 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/style.pyx", line 808, in renpy.style.rebuild
-  File "game/1_backend_scripts/character_info_screen.rpy", line 43, in prepare_screen
-    screen character_screen():
-  File "game/1_backend_scripts/character_info_screen.rpy", line 43, in prepare
-    screen character_screen():
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in prepare
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in prepare
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in <module>
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: _execute_python_hide.<locals>.Set.__init__() missing 1 required positional argument: 'value'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "game/1_backend_scripts/character_info_screen.rpy", line 43, in prepare_screen
-    screen character_screen():
-  File "game/1_backend_scripts/character_info_screen.rpy", line 43, in prepare
-    screen character_screen():
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in prepare
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in prepare
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in <module>
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: _execute_python_hide.<locals>.Set.__init__() missing 1 required positional argument: 'value'
+Exception: '[char_menu_type]_character_screen' is not a screen or a label.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "renpy/common/00start.rpy", line 201, in script
-    python:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
   File "renpy/ast.py", line 1187, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1260, in py_exec_bytecode
     exec(bytecode, globals, locals)
     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/00start.rpy", line 202, in <module>
-    _init_language()
-    ~~~~~~~~~~~~~~^^
-  File "renpy/common/00start.rpy", line 83, in _init_language
-    renpy.change_language(language, force=True)
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/translation/__init__.py", line 841, in change_language
-    renpy.style.rebuild()
-    ~~~~~~~~~~~~~~~~~~~^^
-  File "renpy/style.pyx", line 808, in renpy.style.rebuild
-  File "renpy/display/screen.py", line 1035, in prepare_screens
-    s.ast.prepare_screen()
-    ~~~~~~~~~~~~~~~~~~~~^^
-  File "game/1_backend_scripts/character_info_screen.rpy", line 43, in prepare_screen
-    screen character_screen():
-  File "game/1_backend_scripts/character_info_screen.rpy", line 43, in prepare
-    screen character_screen():
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in prepare
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in prepare
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-  File "renpy/python.py", line 1285, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in <module>
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/00action_data.rpy", line 89, in __init__
-    super(Variable, self).__init__(store, name, *args, **kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/00action_data.rpy", line 70, in __init__
-    super(Field, self).__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-TypeError: _execute_python_hide.<locals>.Set.__init__() missing 1 required positional argument: 'value'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "renpy/bootstrap.py", line 376, in bootstrap
-    renpy.main.main()
-    ~~~~~~~~~~~~~~~^^
-  File "renpy/main.py", line 614, in main
-    run(restart)
-    ~~~^^^^^^^^^
-  File "renpy/main.py", line 137, in run
-    renpy.execution.run_context(True)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
-  File "renpy/execution.py", line 1022, in run_context
-    context.run()
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
     ~~~~~~~~~~~^^
-  File "renpy/common/00start.rpy", line 201, in script
-    python:
-  File "renpy/common/00start.rpy", line 201, in script
-    python:
-  File "renpy/display/error.py", line 135, in report_exception
-    renpy.game.invoke_in_new_context(
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        call_exception_screen,
-        ^^^^^^^^^^^^^^^^^^^^^^
-    ...<4 lines>...
-        ignore_action=ignore_action,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/game.py", line 301, in invoke_in_new_context
-    return callable(*args, **kwargs)
-           ~~~~~~~~^^^^^^^^^^^^^^^^^
-  File "renpy/display/error.py", line 44, in call_exception_screen
-    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
-           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/ui.py", line 304, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -125,35 +32,44 @@ Traceback (most recent call last):
         ^^^^^^^^^
     )  # type: ignore
     ^                
-  File "renpy/display/core.py", line 2450, in interact_core
-    renpy.display.screen.prepare_screens()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "renpy/display/screen.py", line 1035, in prepare_screens
-    s.ast.prepare_screen()
-    ~~~~~~~~~~~~~~~~~~~~^^
-  File "game/1_backend_scripts/character_info_screen.rpy", line 43, in prepare_screen
-    screen character_screen():
-  File "game/1_backend_scripts/character_info_screen.rpy", line 43, in prepare
-    screen character_screen():
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in prepare
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in prepare
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-  File "renpy/python.py", line 1285, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/1_backend_scripts/character_info_screen.rpy", line 65, in <module>
-    on "show" action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter")
-                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/00action_data.rpy", line 89, in __init__
-    super(Variable, self).__init__(store, name, *args, **kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/00action_data.rpy", line 70, in __init__
-    super(Field, self).__init__(*args, **kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
-TypeError: _execute_python_hide.<locals>.Set.__init__() missing 1 required positional argument: 'value'
+  File "renpy/display/core.py", line 3302, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1284, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1284, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1284, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 805, in event
+    rv = self.child.event(ev, x, y, st)
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1284, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1284, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/behavior.py", line 1184, in event
+    return handle_click(self.clicked)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "renpy/display/behavior.py", line 1107, in handle_click
+    rv = run(action)
+         ~~~^^^^^^^^
+  File "renpy/display/behavior.py", line 404, in run
+    new_rv = run(i, *args, **kwargs)
+             ~~~^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/behavior.py", line 411, in run
+    return action(*args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^
+  File "renpy/common/00action_menu.rpy", line 117, in __call__
+    raise Exception("%r is not a screen or a label." % orig_screen)
+Exception: '[char_menu_type]_character_screen' is not a screen or a label.
 
 Windows-11-10.0.26100-SP0 AMD64
 Ren'Py 8.4.1.25072401
 Qualm;Manic 0.5.0.2
-Mon Aug  4 09:21:12 2025
+Tue Aug  5 05:35:02 2025

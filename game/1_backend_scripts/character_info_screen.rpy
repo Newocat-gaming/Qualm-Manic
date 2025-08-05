@@ -11,7 +11,7 @@
             align (1.0, 0.0)
             offset (-10, 10)
 
-            textbutton "Characters" action ShowMenu('character_screen')
+            textbutton "Characters" action ShowMenu('character_screen'), ShowMenu('main_character_screen')
 
 define character_button = False
 
@@ -62,10 +62,6 @@ screen character_screen():
         SetVariable('neda_pose', "armhug"),
     ]
     #####
-    on "show" action [
-        ShowMenu('main_character_screen'),
-        SetVariable("persistent.selectedCharacter", persistent.jay_profile)
-    ]
 
     hbox:
         ysize 1080
@@ -251,6 +247,7 @@ default persistent.manic_profile = CharacterProfile(name="???", imageName="locke
 
 
 default persistent.neda_profile = CharacterProfile(name="???", imageName="locked profile", desc = "???", trueName = "neda")
+
 
 default persistent.selectedCharacter = persistent.jay_profile
 

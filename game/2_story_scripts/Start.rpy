@@ -22,6 +22,11 @@ transform leftsidestill:
 
 label start:
 
+    ###############################
+    # jump start_minigame
+    ##################################
+
+
     stop music fadeout 4
     scene bg blank
     nar "I wake up with a start." 
