@@ -126,6 +126,30 @@ layeredimage manic_model:
         attribute hair default:
             "manic_[manic_pose]_hair_base"
 
+layeredimage manic_model_profile:
+    
+    group pose:
+        xanchor 0.5
+        attribute pose default:
+            "manic_armscrossed"
+            
+    group mouth:
+        xanchor 0.5
+        attribute shut default:
+            "manic_armscrossed_mouth_shut"
+
+    group eyes:
+        xanchor 0.5
+        attribute normal default EasyBlink(
+            path="manic_armscrossed_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+        )
+        
+    group hair:
+        xanchor 0.5
+        attribute hair default:
+            "manic_armscrossed_hair_base"
+
 ## kit ##
 
 image kit_animation_talk:
@@ -194,6 +218,31 @@ layeredimage kit_model:
         xanchor 0.5
         attribute hair default:
             "kit_[kit_pose]_hair_base"
+
+layeredimage kit_model_profile:
+    
+    group pose:
+        xanchor 0.5
+        attribute pose default:
+            "kit_armscrossed"
+            
+    group mouth:
+        xanchor 0.5
+        attribute shut default:
+            "kit_armscrossed_mouth_shut"
+
+    group eyes:
+        xanchor 0.5
+        attribute normal default EasyBlink(
+            path="kit_armscrossed_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+        )
+        
+    group hair:
+        xanchor 0.5
+        attribute hair default:
+            "kit_armscrossed_hair_base"
+
 
 ## vida ##
 
@@ -279,6 +328,30 @@ layeredimage vida_model:
         attribute hair default:
             "vida_[vida_pose]_hair_base"
 
+layeredimage vida_model_profile:
+    
+    group pose:
+        xanchor 0.5
+        attribute pose default:
+            "vida_shush"
+            
+    group mouth:
+        xanchor 0.5
+        attribute shut default:
+            "vida_shush_mouth_shut"
+
+    group eyes:
+        xanchor 0.5
+        attribute normal default EasyBlink(
+            path="vida_shush_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+        )
+        
+    group hair:
+        xanchor 0.5
+        attribute hair default:
+            "vida_shush_hair_base"
+
 ## andrea ##
 
 image andrea_animation_talk:
@@ -358,7 +431,29 @@ layeredimage andrea_model:
         attribute hair default:
             "andrea_[andrea_pose]_hair_base"
 
+layeredimage andrea_model_profile:
+    
+    group pose:
+        xanchor 0.5
+        attribute pose default:
+            "andrea_peacesign"
+            
+    group mouth:
+        xanchor 0.5
+        attribute shut default:
+            "andrea_peacesign_mouth_shut"
 
+    group eyes:
+        xanchor 0.5
+        attribute normal default EasyBlink(
+            path="andrea_peacesign_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+        )
+        
+    group hair:
+        xanchor 0.5
+        attribute hair default:
+            "andrea_peacesign_hair_base"
 
 ## neda ##
 
@@ -428,3 +523,26 @@ layeredimage neda_model:
         attribute hair default:
             "neda_[neda_pose]_hair_base"
 
+layeredimage neda_model_profile:
+    
+    group pose:
+        xanchor 0.5
+        attribute pose default:
+            "neda_armhug"
+            
+    group mouth:
+        xanchor 0.5
+        attribute shut default:
+            "neda_armhug_mouth_shut"
+
+    group eyes:
+        xanchor 0.5
+        attribute normal default EasyBlink(
+            path="neda_armhug_eyes_{img}", img="normal",
+            reverse=True, mid_eye_frames=["semi", "closed"],
+        )
+        
+    group hair:
+        xanchor 0.5
+        attribute hair default:
+            "neda_armhug_hair_base"

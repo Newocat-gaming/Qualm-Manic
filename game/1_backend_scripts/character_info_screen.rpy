@@ -11,7 +11,7 @@
             align (1.0, 0.0)
             offset (-10, 10)
 
-            textbutton "Characters" action ShowMenu('character_screen'), ShowMenu('main_character_screen')
+            textbutton "Characters" action ShowMenu('character_screen')
 
 define character_button = False
 
@@ -28,184 +28,70 @@ init python:
 
 
 
-define manic_pose_temp = "armscrossed"
-define kit_pose_temp = "armscrossed"
-define andrea_pose_temp = "peacesign"
-define vida_pose_temp = "shush"
-
-define neda_pose_temp = "armhug"
-
-
-
 ## Character UI
-
-
 screen character_screen():
     tag menu
-    add "bg/bg sky.png"
 
-    on "show" action [
-        Function(copy_pose_var, "manic_pose", "manic_pose_temp"),
-        Function(copy_pose_var, "kit_pose", "kit_pose_temp"),
-        Function(copy_pose_var, "andrea_pose", "andrea_pose_temp"),
-        Function(copy_pose_var, "vida_pose", "vida_pose_temp"),
+    use game_menu("Characters"):
 
-        Function(copy_pose_var, "neda_pose", "neda_pose_temp"),
-    ]
-    #####
-    on "show" action [
-        SetVariable('manic_pose', "armscrossed"),
-        SetVariable('kit_pose', "armscrossed"),
-        SetVariable('andrea_pose', "peacesign"),
-        SetVariable('vida_pose', "shush"),
-
-        SetVariable('neda_pose', "armhug"),
-    ]
-    #####
-
-    hbox:
-        ysize 1080
-        xsize 1920
-        frame:
-            background None
+        hbox:
             ysize 1080
-            xsize 400
-            vbox:
-                xpos gui.navigation_xpos 
-                yalign 0.5
-                spacing 20
-                textbutton "Main characters":
-                    action ShowMenu('main_character_screen'), SetVariable("persistent.selectedCharacter", persistent.jay_profile)
-                    xsize 300
-                textbutton "Side characters":
-                    action ShowMenu('side_character_screen'), SetVariable("persistent.selectedCharacter", persistent.neda_profile)
-                    xsize 300
+            xsize 1520
+            frame:
+                # Remove hashtag in the next line to remove the black and blue background
+                background None
+                style_prefix "character"
+                ysize 1080
+                xsize 400
+                viewport:
+                    area (100, 100, 300, 500)
+                    mousewheel True
+                    scrollbars "vertical"
+                    vbox:
+                        textbutton [persistent.jay_profile.name]:
+                            action SetVariable("persistent.selectedCharacter", persistent.jay_profile)
+                            xsize 200
+                        textbutton [persistent.kit_profile.name]:
+                            action SetVariable("persistent.selectedCharacter", persistent.kit_profile)
+                            xsize 200
+                        textbutton [persistent.vida_profile.name]:
+                            action SetVariable("persistent.selectedCharacter", persistent.vida_profile)
+                            xsize 200
+                        textbutton [persistent.andrea_profile.name]:
+                            action SetVariable("persistent.selectedCharacter", persistent.andrea_profile)
+                            xsize 200
+                        textbutton [persistent.manic_profile.name]:
+                            action SetVariable("persistent.selectedCharacter", persistent.manic_profile)
+                            xsize 200
+                            ######################################################################################################
+                        textbutton [persistent.neda_profile.name]:
+                            action SetVariable("persistent.selectedCharacter", persistent.neda_profile)
+                            xsize 200
 
-            textbutton "Return":
-                style "return_button"
-                xpos gui.navigation_xpos
-                yalign 1.0
-                yoffset -45
-                action [
-                    Hide("main_character_screen"),
-                    Hide("side_character_screen"),
-                    SetVariable('manic_pose', manic_pose_temp), 
-                    SetVariable('kit_pose', kit_pose_temp), 
-                    SetVariable('andrea_pose', andrea_pose_temp),
-                    SetVariable('vida_pose', vida_pose_temp), 
-                        
-                    SetVariable('neda_pose', neda_pose_temp),
+            frame:
+                background None
+                ysize 1080
+                xsize 600
+                vbox:
+                    xalign 0.0
+                    xsize 500
+                    spacing 20
+                    xoffset 50
+                    text "Name: [persistent.selectedCharacter.name]"
+                    text "Info: [persistent.selectedCharacter.desc]"
 
-                    Return(),
-                ]
+            frame:
+                background None
+                ysize 1080
+                xsize 520
 
-screen main_character_screen():
-    on "show" action Hide("side_character_screen")
+        if persistent.selectedCharacter.imageName == "locked profile":
+            add persistent.selectedCharacter.imageName pos(1.0, 1.0)  xanchor 0.5
+        else:
+            add persistent.selectedCharacter.imageName pos(1.0, 1.0) anchor(0.5, 1.0) yoffset 45
+                 
 
-    hbox:
-        ysize 1080
-        xsize 1920
-        frame:
-            background None
-            ysize 1080
-            xsize 400
-            
-        frame:
-            # Remove hashtag in the next line to remove the black and blue background
-            background None
-            style_prefix "character"
-            ysize 1080
-            xsize 420
-            vbox:
-                xalign 0.5
-                yalign 0.5
-                textbutton [persistent.jay_profile.name]:
-                    action SetVariable("persistent.selectedCharacter", persistent.jay_profile)
-                    xsize 200
-                textbutton [persistent.kit_profile.name]:
-                    action SetVariable("persistent.selectedCharacter", persistent.kit_profile)
-                    xsize 200
-                textbutton [persistent.vida_profile.name]:
-                    action SetVariable("persistent.selectedCharacter", persistent.vida_profile)
-                    xsize 200
-                textbutton [persistent.andrea_profile.name]:
-                    action SetVariable("persistent.selectedCharacter", persistent.andrea_profile)
-                    xsize 200
-                textbutton [persistent.manic_profile.name]:
-                    action SetVariable("persistent.selectedCharacter", persistent.manic_profile)
-                    xsize 200
-
-        frame:
-            background None
-            ysize 1080
-            xsize 600
-            vbox:
-                xalign 0.0
-                xsize 500
-                xoffset 0
-                yoffset 200
-                spacing 20
-                text "Name: [persistent.selectedCharacter.name]"
-                text "Info: [persistent.selectedCharacter.desc]"
-
-        frame:
-            background None
-            ysize 1080
-            xsize 500
-
-    if persistent.selectedCharacter.imageName == "locked profile":
-        add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 xanchor 0.5
-    else:
-        add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600  
-
-screen side_character_screen():
-    on "show" action Hide("main_character_screen")
-    hbox:
-        ysize 1080
-        xsize 1920
-
-        frame:
-            background None
-            ysize 1080
-            xsize 400
-        
-        ## LEFT FRAME
-        frame:
-            #Remove hashtag in the next line to remove the black and blue background
-            background None
-            style_prefix "character"
-            ysize 1080
-            xsize 420
-            vbox:
-                xalign 0.5
-                yalign 0.5
-                textbutton [persistent.neda_profile.name]:
-                    action SetVariable("persistent.selectedCharacter", persistent.neda_profile)
-                    xsize 200
-
-        ## RIGHT FRAME
-        frame:
-            background None
-            ysize 1080
-            xsize 600
-            vbox:
-                xalign 0.0
-                xsize 500
-                xoffset 0
-                yoffset 200
-                spacing 20
-                text "Name: [persistent.selectedCharacter.name]"
-                text "Info: [persistent.selectedCharacter.desc]"
-
-        frame:
-            background None
-            ysize 1080
-            xsize 500   
-
-    if persistent.selectedCharacter.imageName == "locked profile":
-        add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 xanchor 0.5
-    else:
-        add persistent.selectedCharacter.imageName yalign 1.0 xpos 1600 
+   
 
 style character_button_text:
     xalign 0.5

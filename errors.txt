@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/screens.rpy", line 312: '(' was never closed
-    textbutton _("Characters") action ShowMenu("character_screen"), ShowMenu('[persistent.char_menu_type]_character_screen")
-                                                                            ^
+File "game/1_backend_scripts/character_info_screen.rpy", line 47: the yoffset keyword argument was not given a value.
+    yoffset
+            ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Tue Aug  5 05:21:17 2025
+Thu Aug 21 05:38:24 2025

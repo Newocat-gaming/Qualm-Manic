@@ -37,7 +37,10 @@ screen minigame:
     else:
         key "K_SPACE" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
         key "mousedown_1" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
- 
+
+
+
+
 screen timer_left:
     timer 0.0001 repeat True action [If(minigame_bar >= -90, SetVariable("minigame_bar", minigame_bar - 1)),If(minigame_bar == -90, Hide("timer_left"), Show("timer_right")), If(minigame_bar == -90, SetVariable("you_press_button", 0))]
 screen timer_right:
