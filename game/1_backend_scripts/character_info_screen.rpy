@@ -19,11 +19,6 @@ define character_button = False
 ## the player has not explicitly hidden the interface.
 
 init python:
-
-    import copy
-    def copy_pose_var(from_name, to_name):
-        setattr(store, to_name, copy.deepcopy(getattr(store, from_name)))
-
     config.overlay_screens.append("character_UI")
 
 
@@ -44,7 +39,7 @@ screen character_screen():
                 ysize 1080
                 xsize 400
                 viewport:
-                    area (100, 100, 300, 500)
+                    area (100, 100, 300, 600)
                     mousewheel True
                     scrollbars "vertical"
                     vbox:
@@ -71,7 +66,7 @@ screen character_screen():
             frame:
                 background None
                 ysize 1080
-                xsize 600
+                xsize 500
                 vbox:
                     xalign 0.0
                     xsize 500
@@ -83,7 +78,7 @@ screen character_screen():
             frame:
                 background None
                 ysize 1080
-                xsize 520
+                xsize 620
 
         if persistent.selectedCharacter.imageName == "locked profile":
             add persistent.selectedCharacter.imageName pos(1.0, 1.0)  xanchor 0.5

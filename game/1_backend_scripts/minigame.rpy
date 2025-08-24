@@ -78,4 +78,56 @@ label end_minigame: #End minigame. And jump continue game
     hide screen timer_right
     $ renpy.pause(0.3)
     return #continue game
+
+############### my stuff ############################
+
+screen minigame2(options = 2, ):
+    add "minigame/bar.png" align(0.5,0.5)
+    add "minigame/point.png" at point_move(minigame_bar)
+    text "[minigame_score]SCORE" align(0.5,0.1)
+    text "[minigame_bar]bar" align(0.5,0.2)
+    text "[you_press_button]button = pressed" align(0.5,0.3)
  
+    if minigame_bar >= -14 and minigame_bar <= 14:
+        key "K_SPACE":
+            if you_press_button == 0:
+                if minigame_score < 14:
+                    action [SetVariable("minigame_score", minigame_score + 1), SetVariable("you_press_button", you_press_button + 1), Show("you_press_button_good")]
+                else:
+                    action Jump("end")
+            elif you_press_button == 1:
+                action SetVariable("minigame_score", minigame_score + 0)
+        key "mousedown_1":
+            if you_press_button == 0:
+                if minigame_score < 14:
+                    action [SetVariable("minigame_score", minigame_score + 1), SetVariable("you_press_button", you_press_button + 1), Show("you_press_button_good")]
+                else:
+                    action Jump("end")
+            elif you_press_button == 1:
+                action SetVariable("minigame_score", minigame_score + 0)
+    else:
+        key "K_SPACE" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
+        key "mousedown_1" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
+
+
+
+label minigame_test:
+    show screen timer_left
+    call screen minigame
+
+    if minigame_score == 1:
+        jump option1
+    if minigame_score == 2:
+        jump option2
+
+
+
+
+
+
+python early:
+    class MinigameScore:
+            def __init__(self, score = 0):
+                self.name = name
+                self.score = score
+        
