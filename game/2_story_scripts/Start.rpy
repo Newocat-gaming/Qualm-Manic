@@ -23,7 +23,7 @@ transform leftsidestill:
 label start:
 
     ###############################
-    jump minigame_test
+    # jump minigame_test
     ##################################
 
 

@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.5.0.2"
+define config.version = "0.5.0.3"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -65,8 +65,7 @@ define config.default_sfx_volume = 0.5
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "Made_In_Japan_YoshiStudios lower.mp3"
-
+define config.main_menu_music = "audio/Made_In_Japan_YoshiStudios lower.mp3" 
 
 ## Transitions #################################################################
 ##
@@ -97,6 +96,7 @@ define config.end_game_transition = dissolve
 
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.
+
 
 
 ## Window management ###########################################################

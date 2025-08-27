@@ -361,6 +361,7 @@ screen main_menu():
 
     add gui.main_menu_background
 
+
     ## This empty frame darkens the main menu.
     frame:
         style "main_menu_frame"

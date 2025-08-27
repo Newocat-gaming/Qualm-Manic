@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/character_info_screen.rpy", line 47: the yoffset keyword argument was not given a value.
-    yoffset
-            ^
+File "game/1_backend_scripts/screens.rpy", line 365: 'renpy' is not a keyword argument or valid child of the screen statement.
+    renpy.music.play("audio/Made_In_Japan_YoshiStudios lower.mp3", loop = True)
+         ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Thu Aug 21 05:38:24 2025
+Wed Aug 27 05:36:00 2025
