@@ -38,7 +38,7 @@ label start:
     jay "I'm gonna be late for school."
 
     scene bg street_summer_day
-    play music "audio/background music 1.mp3" volume 0.5 fadein 2.0 
+    play music "audio/vntrack01.mp3" volume 0.5 fadein 2.0 
 
     nar "Soon, I'm dashing down the street, the wind brushing against my white dress-shirt and black pants. My shoes clop on the ground as I run over the crosswalk, dodging out of the way of an oncoming car that misses me by about an inch."
     nar "I barely pay any attention to the honking cars, however, as my one and only focus is getting to the high school on time. If I get caught by any of the teachers for being late, I will most certainly be sent to detention after school, and that would be catastrophic, not even just for the normal reasons." 
@@ -54,7 +54,7 @@ label start:
     scene bg classroom 1
     nar "Even though I'm almost late, I still have time to relax. My teacher for my first class is often a little late too, so when I walk into class and see everyone chilling and messing around, I stop worrying about the time."
 
-    play music "audio/Chaos Head OST Uneven Dance.mp3" volume 0.5 fadeout 1.5 fadein 3.0
+    play music "audio/The Protagonist.wav" volume 0.5 fadeout 1.5 fadein 3.0
 
     nar "I slump into my chair. My classmates appear to be mingling and chatting as usual, but something is off about the atmosphere of the room, and I can't seem to place what it is."
 
@@ -132,7 +132,7 @@ label start:
     $ renpy.movie_cutscene("images/videos/animation v03.webm", delay=None, loops=0, stop_music=True)
    
     scene bg cafeteria 1
-    play music "audio/Chaos Head OST Beginning Of Attachment.mp3" volume 0.5 fadein 2.0
+    play music "audio/vntrack12.mp3" volume 0.5 fadein 2.0
 
     nar "I sit staring out the window during lunch as my nachos get cold." 
     nar "I shiver again as I have done many times since my first class. The human kebab is what is on my mind." 
@@ -172,13 +172,13 @@ label start:
     nar "Although no one seems to care that it is absent so I think 'why bother?'" 
     nar "I continue to scan the board until I see the words 'Human Kebab'."
     
-    play music "audio/Chaos Head OST Qualm.mp3" volume 0.25 fadeout 2.0 fadein 3.0
+    play music "audio/Dark Atmosphere to Synth.wav" volume 0.25 fadeout 2.0 fadein 3.0
 
     nar "I lower my head to the ground and turn down the rest of the hallway. I can't deal with whatever else it says, I just can't handle it right now." 
     nar "I march onwards toward the door with the hanging sign that reads 'Newspaper Club'."
 
     scene bg classroom 2 reverse
-    play music "audio/background music 1.mp3" volume 0.5 fadeout 0.5 fadein 1.0 
+    play music "audio/vntrack01.mp3" volume 0.5 fadeout 0.5 fadein 1.0 
 
     nar "When I walk into the club room, most of the other members are already there." 
 
@@ -291,7 +291,7 @@ label start:
     jay "Well what is the topic?" 
     nar "I ask, annoyed with Kit's shenanigans."
 
-    play  music "audio/Chaos Head OST Qualm.mp3" volume 0.25 fadeout 2.0 fadein 5.0
+    play  music "audio/Dark Atmosphere to Synth.wav" volume 0.25 fadeout 2.0 fadein 5.0
 
     $ kit_pose = "armscrossed" 
     show kit_model normal at rightside
@@ -420,13 +420,13 @@ label hear_what_kit_has_to_say:
     hide vida_model
     scene bg blank
 
-    
+    return ############################################################################################
     ###################################################################################################
 
     nar "The next day, all four of us are standing on the rooftop of a building during sunset."
 
     scene bg rooftop
-    play  music "audio/rooftop wind sound.mp3" volume 0.5 fadeout 2.0 fadein 2.0
+    play  music "audio/Night_1.mp3" volume 0.5 fadeout 2.0 fadein 2.0
 
     jay "I can't believe you convinced me to do this..." 
 
@@ -498,7 +498,7 @@ label jump_along_rooftops:
     nar "Kit took a few more steps, turned around and smiled."
     kit "We're here."
 
-    play  music "audio/Chaos Head OST Qualm.mp3" volume 0.5 fadeout 2.0 fadein 3.0
+    play  music "audio/Dark Atmosphere to Synth.wav" volume 0.5 fadeout 2.0 fadein 3.0
 
     nar "We stood at the edge of a rooftop with an alleyway down below behind us. Kit and Andrea crouched down and peered over the edge looking into the darkness below." 
     hide kit
