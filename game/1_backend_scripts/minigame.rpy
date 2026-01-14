@@ -149,12 +149,12 @@ screen minigame:
                 frame: 
                     ysize 100
                     xsize ((bar_length / bar_choice_num) * 10)
-                    #background "images/test_choice_1.png"
+                    # background "images/test_choice_1.png"
             if bar_choice_num >= 2:
                 frame:
                     ysize 100
                     xsize ((bar_length / bar_choice_num) * 10)
-                    # "images/test_choice_2.png"
+                    # background "images/test_choice_2.png"
             if bar_choice_num >= 3:
                 frame:
                     ysize 100
@@ -201,16 +201,6 @@ define choice_text_2 = ""
 
 
 
-label minigame_test:
-
-    $ choice_bar_1 = 5
-    $ choice_text_1 = "test1"
-    $ choice_bar_2 = 5
-    $ choice_text_2 = "test2"
-
-
-
-    call screen minigame
 
 
 

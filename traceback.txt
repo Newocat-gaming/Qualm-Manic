@@ -1,33 +1,119 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/1_backend_scripts/options.rpy", line 68, in script
-    define config.main_menu_music = opening
-  File "game/1_backend_scripts/options.rpy", line 68, in <module>
-    define config.main_menu_music = opening
-                                    ^^^^^^^
-NameError: name 'opening' is not defined
+  File "game/2_story_scripts/Start.rpy", line 26, in script call
+    call test
+  File "game/1_backend_scripts/minigame2.rpy", line 11, in script call
+    call minigame_testing
+  File "game/1_backend_scripts/minigame2.rpy", line 128, in script
+    call screen minigame_new
+  File "game/1_backend_scripts/minigame2.rpy", line 132, in execute
+    screen minigame_new:
+  File "game/1_backend_scripts/minigame2.rpy", line 132, in execute
+    screen minigame_new:
+  File "game/1_backend_scripts/minigame2.rpy", line 135, in execute
+    if bar_choice_num == 0:
+  File "game/1_backend_scripts/minigame2.rpy", line 138, in execute
+    hbox:
+  File "game/1_backend_scripts/minigame2.rpy", line 153, in execute
+    if bar_choice_num >= 2:
+  File "game/1_backend_scripts/minigame2.rpy", line 154, in execute
+    frame:
+  File "game/1_backend_scripts/minigame2.rpy", line 154, in keywords
+    frame:
+  File "game/1_backend_scripts/minigame2.rpy", line 156, in <module>
+    xfill false
+          ^^^^^
+NameError: name 'false' is not defined. Did you mean: 'False'?
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/1_backend_scripts/options.rpy", line 68, in script
-    define config.main_menu_music = opening
-  File "renpy/ast.py", line 2452, in execute
-    self.set()
-    ~~~~~~~~^^
-  File "renpy/ast.py", line 2464, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1285, in py_eval_bytecode
+  File "game/2_story_scripts/Start.rpy", line 26, in script call
+    call test
+  File "game/1_backend_scripts/minigame2.rpy", line 11, in script call
+    call minigame_testing
+  File "game/1_backend_scripts/minigame2.rpy", line 128, in script
+    call screen minigame_new
+  File "renpy/ast.py", line 2241, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2195, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 695, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 348, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2154, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2700, in interact_core
+    root_widget.visit_all(lambda d: d.per_interact())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 457, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 457, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 457, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[Previous line repeated 1 more time]
+  File "renpy/display/screen.py", line 503, in visit_all
+    callback(self)
+    ~~~~~~~~^^^^^^
+  File "renpy/display/core.py", line 2700, in <lambda>
+    root_widget.visit_all(lambda d: d.per_interact())
+                                    ~~~~~~~~~~~~~~^^ 
+  File "renpy/display/screen.py", line 514, in per_interact
+    self.update()
+    ~~~~~~~~~~~^^
+  File "renpy/display/screen.py", line 715, in update
+    self.screen.function(**self.scope)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "game/1_backend_scripts/minigame2.rpy", line 132, in execute
+    screen minigame_new:
+  File "game/1_backend_scripts/minigame2.rpy", line 132, in execute
+    screen minigame_new:
+  File "game/1_backend_scripts/minigame2.rpy", line 135, in execute
+    if bar_choice_num == 0:
+  File "game/1_backend_scripts/minigame2.rpy", line 138, in execute
+    hbox:
+  File "game/1_backend_scripts/minigame2.rpy", line 153, in execute
+    if bar_choice_num >= 2:
+  File "game/1_backend_scripts/minigame2.rpy", line 154, in execute
+    frame:
+  File "game/1_backend_scripts/minigame2.rpy", line 154, in keywords
+    frame:
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
     return eval(bytecode, globals, locals)
            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/1_backend_scripts/options.rpy", line 68, in <module>
-    define config.main_menu_music = opening
-                                    ^^^^^^^
-NameError: name 'opening' is not defined
+  File "game/1_backend_scripts/minigame2.rpy", line 156, in <module>
+    xfill false
+          ^^^^^
+NameError: name 'false' is not defined. Did you mean: 'False'?
 
-Windows-11-10.0.26100-SP0 AMD64
-Ren'Py 8.4.1.25072401
-Qualm;Manic 0.5.0.2
-Wed Aug 27 05:29:51 2025
+Windows-11-10.0.26200-SP0 AMD64
+Ren'Py 8.5.2.26010301
+Qualm;Manic 0.5.0.3.1
+Tue Jan 13 20:15:58 2026

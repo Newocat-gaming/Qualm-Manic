@@ -361,6 +361,9 @@ screen main_menu():
 
     add gui.main_menu_background
 
+    add "images/qualm manic def small.png":  
+        align (0.8, 0.0)
+
 
     ## This empty frame darkens the main menu.
     frame:
