@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/minigame2.rpy", line 166: Line is indented, but the preceding xfill statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    xmaximum 200
-    ^
+File "game/1_backend_scripts/minigame2.rpy", line 147: the xmaximum keyword argument was not given a value.
+    xmaximum
+             ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue Jan 13 20:12:31 2026
+Tue Jan 13 20:42:39 2026

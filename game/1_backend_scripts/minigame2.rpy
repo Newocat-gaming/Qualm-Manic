@@ -105,46 +105,50 @@ define choice_1 = None
 define choice_2 = None
 define choice_3 = None
 define choice_4 = None
-define choice_5 = None
-
 
 define bar_choice_num = 0
-
 
 define choice_text_1 = ""
 define choice_text_2 = ""
 define choice_text_3 = ""
-
+define choice_text_4 = ""
 
 
 label minigame_testing:
 
-    $ bar_choice_num = 3
+    $ bar_choice_num = 4
     $ choice_text_1 = "test1"
     $ choice_text_2 = "test2"
     $ choice_text_3 = "test3"
+    $ choice_text_4 = "test4"
 
-
-    call screen minigame_new
+    call screen minigame
 
 ##################################################
 
-screen minigame_new:
+screen minigame:
    
-
     if bar_choice_num == 0:
         text "error"
     else:
         hbox:
-            ysize 100
-            xsize 700
+            xysize(1200, 100)
             yalign 0.5
             xalign 0.5
 
             if bar_choice_num >= 1:
                 frame: 
                     ysize 100
-                    xfill False
+                    xfill True
+
+                    if bar_choice_num == 1:
+                        xmaximum 1200
+                    elif bar_choice_num == 2:
+                        xmaximum 600
+                    elif bar_choice_num == 3:
+                        xmaximum 400
+                    else:
+                        xmaximum 300   
                     
                     size_group "minigame_option"
                     text choice_text_1:
@@ -153,7 +157,14 @@ screen minigame_new:
             if bar_choice_num >= 2:
                 frame:
                     ysize 100
-                    xfill False
+                    xfill True
+
+                    if bar_choice_num == 2:
+                        xmaximum 600
+                    elif bar_choice_num == 3:
+                        xmaximum 400
+                    else:
+                        xmaximum 300
 
                     size_group "minigame_option"
                     text choice_text_2:
@@ -162,18 +173,33 @@ screen minigame_new:
             if bar_choice_num >= 3:
                 frame:
                     ysize 100 
-                    xfill False
-                    
+                    xfill True
+
+                    if bar_choice_num == 3:
+                        xmaximum 400
+                    else:
+                        xmaximum 300
+
                     size_group "minigame_option"
                     text choice_text_3:
                         align(0.5, 0.5)  
                     background "#7235ff" 
+            if bar_choice_num >= 4:
+                frame:
+                    ysize 100 
+                    xfill True
+
+                    xmaximum 300
+
+                    size_group "minigame_option"
+                    text choice_text_4:
+                        align(0.5, 0.5)  
+                    background "#358dff" 
 
 
 
 
-    text "[bar_choice_num]" align(0.5,0.1)
-    text "[choice_text_1]" align(0.5,0.3)
+    text "test: [bar_choice_num]" align(0.5,0.1)
     
         
 

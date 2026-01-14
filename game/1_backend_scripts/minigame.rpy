@@ -109,7 +109,7 @@ screen minigame2(options = 2, ):
         key "K_SPACE" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
         key "mousedown_1" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
 
-screen minigame:
+screen minigame1:
   
     $ bar_length = 0
     $ bar_choice_num = 0
