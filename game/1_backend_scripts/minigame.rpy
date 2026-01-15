@@ -1,202 +1,251 @@
-init 15 python:
-    minigame_bar = 90
-    minigame_score = 0
-    you_press_button = 0
 
-init:
-    transform point_move(frp):
+label test:
+
+    $ manic_pose = "armscrossed"
+    show manic_model at middle
+
+    manic "test"
+    jay "holy hell" 
+    manic "I know right"
+
+
+    #############################
+
+    $ bar_choice_num = 3
+
+    $ choice_1 = "hear_what_kit_has_to_say"
+    $ choice_text_1 = "listen"
+
+    $ choice_2 = "walk_out_of_the_room"
+    $ choice_text_2 = "walk"
+
+    $ choice_3 = "wait_for_vida"
+    $ choice_text_3 = "wait"
+
+    $ choice_4 = None
+    $ choice_text_4 = "test4"
+
+
+    jump minigame_start
+
+
+#########################################################################
+
+define choice_1 = ""
+define choice_2 = ""
+define choice_3 = ""
+define choice_4 = ""
+
+define choice_text_1 = ""
+define choice_text_2 = ""
+define choice_text_3 = ""
+define choice_text_4 = ""
+
+
+define bar_choice_num = 0
+
+define minigame_point_pos = 1560
+define minigame_speed = 5      # can only be whole numbers?
+define minigame_outcome = "test"
+define random_text = "test"
+
+init: 
+    transform minigame_point_move(frp):
+        xpos frp
         subpixel True
-        rotate_pad True
-        align(0.5,1.22)
-        rotate frp
+        anchor(0.5, 1.0)
+        ypos 500
 
-screen minigameold:
-    add "minigame/bar.png" align(0.5,0.5)
-    add "minigame/point.png" at point_move(minigame_bar)
-    text "[minigame_score]SCORE" align(0.5,0.1)
-    text "[minigame_bar]bar" align(0.5,0.2)
-    text "[you_press_button]button = pressed" align(0.5,0.3)
-
-    if minigame_bar >= -14 and minigame_bar <= 14:
-        key "K_SPACE":
-            if you_press_button == 0:
-                if minigame_score < 14:
-                    action [SetVariable("minigame_score", minigame_score + 1), SetVariable("you_press_button", you_press_button + 1), Show("you_press_button_good")]
-                else:
-                    action Jump("end")
-            elif you_press_button == 1:
-                action SetVariable("minigame_score", minigame_score + 0)
-        key "mousedown_1":
-            if you_press_button == 0:
-                if minigame_score < 14:
-                    action [SetVariable("minigame_score", minigame_score + 1), SetVariable("you_press_button", you_press_button + 1), Show("you_press_button_good")]
-                else:
-                    action Jump("end")
-            elif you_press_button == 1:
-                action SetVariable("minigame_score", minigame_score + 0)
-    else:
-        key "K_SPACE" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
-        key "mousedown_1" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
+transform minigame_result:
+    xalign 0.75
+    ypos 750
 
 
+label minigame_start:
+    $ random_text = renpy.random.randint(1, 7)
 
-
-screen timer_left:
-    timer 0.0001 repeat True action [If(minigame_bar >= -90, SetVariable("minigame_bar", minigame_bar - 1)),If(minigame_bar == -90, Hide("timer_left"), Show("timer_right")), If(minigame_bar == -90, SetVariable("you_press_button", 0))]
-screen timer_right:
-    timer 0.0001 repeat True action [If(minigame_bar <= 90, SetVariable("minigame_bar", minigame_bar + 1)),If(minigame_bar == 90, Hide("timer_right"), Show("timer_left")), If(minigame_bar == 90, SetVariable("you_press_button", 0))]
- 
-screen you_press_button_good:
-    text "{color=#1e8e00}Good Work!{/color}" at move_good
-    timer 1.0 action Hide("you_press_button_good")
-
-screen you_press_button_bad:
-    #hbox at move_bad:
-    text "{color=#950000}Ups...\nTry Again.{/color}" at move_bad
-    timer 1.0 action Hide("you_press_button_bad")
-
-transform move_good:
-    align(0.5,0.5)
-    linear 0.05 zoom 1.3
-    linear 0.5 zoom 1.0 alpha 0.0
-
-transform move_bad:
-    align(0.5,0.5)
-    linear 0.04 xalign 0.5
-    linear 0.06 xalign 0.495
-    linear 0.06 xalign 0.515
-    linear 0.06 xalign 0.5
-    linear 0.5 alpha 0.0
-################################################################################
-label start_minigame:
     show screen timer_left
-    call screen minigame
-################################################################################
-label end_minigame: #End minigame. And jump continue game
-    hide screen minigame
-    hide screen timer_left
-    hide screen timer_right
-    $ renpy.pause(0.3)
-    return #continue game
+    call screen minigame_control
 
-############### my stuff ############################
+label minigame_end:
+    $ renpy.pause(1.0)
 
-screen minigame2(options = 2, ):
-    add "minigame/bar.png" align(0.5,0.5)
-    add "minigame/point.png" at point_move(minigame_bar)
-    text "[minigame_score]SCORE" align(0.5,0.1)
-    text "[minigame_bar]bar" align(0.5,0.2)
-    text "[you_press_button]button = pressed" align(0.5,0.3)
- 
-    if minigame_bar >= -14 and minigame_bar <= 14:
-        key "K_SPACE":
-            if you_press_button == 0:
-                if minigame_score < 14:
-                    action [SetVariable("minigame_score", minigame_score + 1), SetVariable("you_press_button", you_press_button + 1), Show("you_press_button_good")]
-                else:
-                    action Jump("end")
-            elif you_press_button == 1:
-                action SetVariable("minigame_score", minigame_score + 0)
-        key "mousedown_1":
-            if you_press_button == 0:
-                if minigame_score < 14:
-                    action [SetVariable("minigame_score", minigame_score + 1), SetVariable("you_press_button", you_press_button + 1), Show("you_press_button_good")]
-                else:
-                    action Jump("end")
-            elif you_press_button == 1:
-                action SetVariable("minigame_score", minigame_score + 0)
+    if minigame_outcome == choice_1:
+        jump expression choice_1
+    elif minigame_outcome == choice_2:
+        jump expression choice_2
+    elif minigame_outcome == choice_3:
+        jump expression choice_3
+    elif minigame_outcome == choice_4:
+        jump expression choice_4
     else:
-        key "K_SPACE" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
-        key "mousedown_1" action [SetVariable("minigame_score", 0), Show("you_press_button_bad")]
+        show minigame_error
 
-screen minigame1:
-  
-    $ bar_length = 0
-    $ bar_choice_num = 0
-   
+
+screen minigame_control:
     
-    if choice_bar_1 is not None:
-        $ bar_length += choice_bar_1
-        $ bar_choice_num += 1
-
-    if choice_bar_2 is not None:
-        $ bar_length += choice_bar_2
-        $ bar_choice_num += 1
-
-    if choice_bar_3 is not None:
-        $ bar_length += choice_bar_3
-        $ bar_choice_num += 1
-
-    if choice_bar_4 is not None:
-        $ bar_length += choice_bar_4
-        $ bar_choice_num += 1
-
-    if choice_bar_5 is not None:
-        $ bar_length += choice_bar_5
-        $ bar_choice_num += 1
-
-    if bar_length == None:
-        text "error"
-    elif bar_choice_num == 0:
+    if bar_choice_num == 0:
         text "error"
     else:
         hbox:
-            ysize 100
-            xsize (bar_length * 10)
+            xysize(1200, 100)
             yalign 0.5
             xalign 0.5
+
             if bar_choice_num >= 1:
                 frame: 
                     ysize 100
-                    xsize ((bar_length / bar_choice_num) * 10)
-                    # background "images/test_choice_1.png"
+                    xfill True
+
+                    if bar_choice_num == 1:
+                        xmaximum 1200
+                    elif bar_choice_num == 2:
+                        xmaximum 600
+                    elif bar_choice_num == 3:
+                        xmaximum 400
+                    else:
+                        xmaximum 300   
+                    
+                    size_group "minigame_option"
+                    text choice_text_1:
+                        align(0.5, 0.5)
+                    background "#ff3535"
             if bar_choice_num >= 2:
                 frame:
                     ysize 100
-                    xsize ((bar_length / bar_choice_num) * 10)
-                    # background "images/test_choice_2.png"
+                    xfill True
+
+                    if bar_choice_num == 2:
+                        xmaximum 600
+                    elif bar_choice_num == 3:
+                        xmaximum 400
+                    else:
+                        xmaximum 300
+
+                    size_group "minigame_option"
+                    text choice_text_2:
+                        align(0.5, 0.5)  
+                    background "#35ff46" 
             if bar_choice_num >= 3:
                 frame:
-                    ysize 100
-                    xsize ((bar_length / bar_choice_num) * 10)
-                    #background "images/test_choice_2.png"
+                    ysize 100 
+                    xfill True
+
+                    if bar_choice_num == 3:
+                        xmaximum 400
+                    else:
+                        xmaximum 300
+
+                    size_group "minigame_option"
+                    text choice_text_3:
+                        align(0.5, 0.5)  
+                    background "#7235ff" 
             if bar_choice_num >= 4:
                 frame:
-                    ysize 100
-                    xsize ((bar_length / bar_choice_num) * 10)
-                    #background "images/test_choice_2.png"
-            if bar_choice_num >= 5:
-                frame:
-                    ysize 100
-                    xsize ((bar_length / bar_choice_num) * 10)
-                    #background "images/test_choice_2.png"
+                    ysize 100 
+                    xfill True
+
+                    xmaximum 300
+
+                    size_group "minigame_option"
+                    text choice_text_4:
+                        align(0.5, 0.5)  
+                    background "#358dff" 
+
+    text "test: [bar_choice_num]" align(0.5,0.1)
+    text "test: [minigame_speed]" align(0.5, 0.2)
 
 
+    add "minigame/point.png" at minigame_point_move(minigame_point_pos)
+    
+    if bar_choice_num == 1:
+        if minigame_point_pos >= 360 and minigame_point_pos <= 1560:
+            key "k_SPACE":
+                action [SetVariable("minigame_outcome", choice_1), Show("minigame_result"), Jump("stop_minigame")]
+        else:
+            key "K_SPACE":
+                action Show("minigame_error")
+
+    elif bar_choice_num == 2:
+        if minigame_point_pos >= 360 and minigame_point_pos < 920:
+            key "K_SPACE":
+                action [SetVariable("minigame_outcome", choice_1), Show("minigame_result"), Jump("stop_minigame")]
+        elif minigame_point_pos > 920 and minigame_point_pos <= 1560:
+            key "K_SPACE":
+                action [SetVariable("minigame_outcome", choice_2), Show("minigame_result"), Jump("stop_minigame")]
+        else:
+            key "K_SPACE":
+                action Show("minigame_error")
+        
+    elif bar_choice_num == 3:
+        if minigame_point_pos >= 360 and minigame_point_pos < 760:
+            key "K_SPACE":
+                action [SetVariable("minigame_outcome", choice_1), Show("minigame_result"), Jump("stop_minigame")]
+        elif minigame_point_pos > 760 and minigame_point_pos < 1160:
+            key "K_SPACE":
+                action [SetVariable("minigame_outcome", choice_2), Show("minigame_result"), Jump("stop_minigame")]
+        elif minigame_point_pos > 1160 and minigame_point_pos <= 1560:
+            key "K_SPACE":
+                action [SetVariable("minigame_outcome", choice_3), Show("minigame_result"), Jump("stop_minigame")]
+        else:
+            key "K_SPACE":
+                action Show("minigame_error")
+
+    elif bar_choice_num == 4:
+        if minigame_point_pos >= 360 and minigame_point_pos < 660:
+            key "K_SPACE":
+                action [SetVariable("minigame_outcome", choice_1), Show("minigame_result"), Jump("stop_minigame")]
+        elif minigame_point_pos > 660 and minigame_point_pos < 960:
+            key "K_SPACE":
+                action [SetVariable("minigame_outcome", choice_2), Show("minigame_result"), Jump("stop_minigame")]
+        elif minigame_point_pos > 960 and minigame_point_pos < 1260:
+            key "K_SPACE":
+                action [SetVariable("minigame_outcome", choice_3), Show("minigame_result"), Jump("stop_minigame")]
+        elif minigame_point_pos > 1260 and minigame_point_pos <= 1560:
+            key "K_SPACE":
+                action [SetVariable("minigame_outcome", choice_4), Show("minigame_result"), Jump("stop_minigame")]
+        else:
+            key "K_SPACE":
+                action Show("minigame_error")
 
 
-    text "[bar_choice_num]" align(0.5,0.1)
-    text "[bar_length]" align(0.5,0.2)
-    text "[choice_bar_1]" align(0.5,0.3)
+screen timer_left:
+    timer 0.0001 repeat True action [If(minigame_point_pos >= 360, SetVariable("minigame_point_pos", minigame_point_pos - minigame_speed)),If(minigame_point_pos == 360, Hide("timer_left"), Show("timer_right"))]
+screen timer_right:
+    timer 0.0001 repeat True action [If(minigame_point_pos <= 1560, SetVariable("minigame_point_pos", minigame_point_pos + minigame_speed)),If(minigame_point_pos == 1560, Hide("timer_right"), Show("timer_left"))]
 
+screen minigame_error:
+    text "{color=#e66a6a}ERROR!{/color}" at minigame_result
+    timer 0.5 action Hide("minigame_error")
+
+screen minigame_result:
+    if random_text == 1:
+        text "{color=#e66a6a}You did this to yourself{/color}" at minigame_result
+    elif random_text == 2:
+        text "{color=#e66a6a}Good choice?{/color}" at minigame_result
+    elif random_text == 3:
+        text "{color=#e66a6a}{/color}" at minigame_result
+    elif random_text == 4:
+        text "{color=#e66a6a}{/color}" at minigame_result
+    elif random_text == 5:
+        text "{color=#e66a6a}{/color}" at minigame_result
+    elif random_text == 6:
+        text "{color=#e66a6a}{/color}" at minigame_result
+    else:
+        text "{color=#e66a6a}{/color}" at minigame_result
+      
+    timer 1.0 action Hide("minigame_result")
+
+label stop_minigame: 
+    hide screen minigame_control
+    hide screen timer_left
+    hide screen timer_right
+    jump minigame_end
         
 
 
 
 
-
-
-
-define choice_bar_1 = None
-define choice_bar_2 = None
-define choice_bar_3 = None
-define choice_bar_4 = None
-define choice_bar_5 = None
-
-define bar_length = 10.0
-define bar_choice_num = 0.0
-
-define choice_text_1 = ""
-define choice_text_2 = ""
 
 
 

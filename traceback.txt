@@ -1,23 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/2_story_scripts/Start.rpy", line 26, in script call
-    call test
-  File "game/1_backend_scripts/minigame2.rpy", line 11, in script call
-    call minigame_testing
-  File "game/1_backend_scripts/minigame2.rpy", line 125, in script
-    call screen minigame_new
-renpy.display.screen.ScreenNotFound: Screen 'minigame_new' is not known. Did you mean: 'minigameold'?
+  File "game/1_backend_scripts/minigame2.rpy", line 68, in script
+    call screen minigame_control
+  File "game/1_backend_scripts/minigame2.rpy", line 87, in execute
+    screen minigame_control:
+  File "game/1_backend_scripts/minigame2.rpy", line 87, in execute
+    screen minigame_control:
+  File "game/1_backend_scripts/minigame2.rpy", line 163, in execute
+    if bar_choice_num == 1:
+  File "game/1_backend_scripts/minigame2.rpy", line 183, in execute
+    if minigame_point_pos >= 360 and minigame_point_pos < 760:
+  File "game/1_backend_scripts/minigame2.rpy", line 187, in execute
+    key "K_SPACE":
+  File "game/1_backend_scripts/minigame2.rpy", line 187, in keywords
+    key "K_SPACE":
+  File "game/1_backend_scripts/minigame2.rpy", line 188, in <module>
+    action [SetVariable("minigame_outcome", choice_2), Show("minigame_result"), jump("stop_minigame")]
+                                                                                ^^^^                  
+NameError: name 'jump' is not defined. Did you mean: 'Jump'?
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/2_story_scripts/Start.rpy", line 26, in script call
-    call test
-  File "game/1_backend_scripts/minigame2.rpy", line 11, in script call
-    call minigame_testing
-  File "game/1_backend_scripts/minigame2.rpy", line 125, in script
-    call screen minigame_new
+  File "game/1_backend_scripts/minigame2.rpy", line 68, in script
+    call screen minigame_control
   File "renpy/ast.py", line 2241, in execute
     self.call("execute")
     ~~~~~~~~~^^^^^^^^^^^
@@ -30,14 +37,70 @@ Traceback (most recent call last):
   File "renpy/common/000statements.rpy", line 695, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/exports/statementexports.py", line 334, in call_screen
-    renpy.exports.show_screen(_screen_name, *args, _transient=True, **kwargs)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/screen.py", line 1355, in show_screen
-    raise ScreenNotFound(name[0])
-renpy.display.screen.ScreenNotFound: Screen 'minigame_new' is not known. Did you mean: 'minigameold'?
+  File "renpy/exports/statementexports.py", line 348, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2154, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2700, in interact_core
+    root_widget.visit_all(lambda d: d.per_interact())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 457, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 457, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 457, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 503, in visit_all
+    callback(self)
+    ~~~~~~~~^^^^^^
+  File "renpy/display/core.py", line 2700, in <lambda>
+    root_widget.visit_all(lambda d: d.per_interact())
+                                    ~~~~~~~~~~~~~~^^ 
+  File "renpy/display/screen.py", line 514, in per_interact
+    self.update()
+    ~~~~~~~~~~~^^
+  File "renpy/display/screen.py", line 715, in update
+    self.screen.function(**self.scope)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "game/1_backend_scripts/minigame2.rpy", line 87, in execute
+    screen minigame_control:
+  File "game/1_backend_scripts/minigame2.rpy", line 87, in execute
+    screen minigame_control:
+  File "game/1_backend_scripts/minigame2.rpy", line 163, in execute
+    if bar_choice_num == 1:
+  File "game/1_backend_scripts/minigame2.rpy", line 183, in execute
+    if minigame_point_pos >= 360 and minigame_point_pos < 760:
+  File "game/1_backend_scripts/minigame2.rpy", line 187, in execute
+    key "K_SPACE":
+  File "game/1_backend_scripts/minigame2.rpy", line 187, in keywords
+    key "K_SPACE":
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/1_backend_scripts/minigame2.rpy", line 188, in <module>
+    action [SetVariable("minigame_outcome", choice_2), Show("minigame_result"), jump("stop_minigame")]
+                                                                                ^^^^                  
+NameError: name 'jump' is not defined. Did you mean: 'Jump'?
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.2.26010301
 Qualm;Manic 0.5.0.3.1
-Tue Jan 13 20:44:06 2026
+Wed Jan 14 21:38:17 2026

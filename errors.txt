@@ -2,9 +2,77 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/minigame2.rpy", line 147: the xmaximum keyword argument was not given a value.
-    xmaximum
-             ^
+File "game/1_backend_scripts/minigame2.rpy", line 74: end of line expected.
+    hide minigame_result"
+                                                                                                                                                                                                                                                                                                                                                                                                   ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 156: end of line expected.
+    text "test: [bar_choice_num]" align(0.5,0.1)
+                                  ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 157: end of line expected.
+    text "test: [minigame_speed]" align(0.5, 0.2)
+                                  ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 160: end of line expected.
+    add "minigame/point.png" at minigame_point_move(minigame_point_pos)
+                             ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 164: end of line expected.
+    key "k_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 167: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 172: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 175: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 178: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 183: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 186: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 189: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 192: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 197: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 200: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 203: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 206: end of line expected.
+    key "K_SPACE":
+                 ^
+
+File "game/1_backend_scripts/minigame2.rpy", line 209: end of line expected.
+    key "K_SPACE":
+                 ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue Jan 13 20:42:39 2026
+Wed Jan 14 21:44:00 2026
