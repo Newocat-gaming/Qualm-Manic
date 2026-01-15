@@ -10,9 +10,11 @@ label test:
 
 
     #############################
+    $ difficulty = 1
+
 
     $ bar_choice_num = 3
-
+   
     $ choice_1 = "hear_what_kit_has_to_say"
     $ choice_text_1 = "listen"
 
@@ -45,7 +47,9 @@ define choice_text_4 = ""
 define bar_choice_num = 0
 
 define minigame_point_pos = 1560
-define minigame_speed = 5      # can only be whole numbers?
+
+define minigame_speed = 3      # can only be whole numbers?
+
 define minigame_outcome = "test"
 define random_text = "test"
 
@@ -55,10 +59,11 @@ init:
         subpixel True
         anchor(0.5, 1.0)
         ypos 500
-
+            
 transform minigame_result:
     xalign 0.75
     ypos 750
+
 
 
 label minigame_start:
@@ -207,12 +212,14 @@ screen minigame_control:
         else:
             key "K_SPACE":
                 action Show("minigame_error")
+   
 
 
 screen timer_left:
     timer 0.0001 repeat True action [If(minigame_point_pos >= 360, SetVariable("minigame_point_pos", minigame_point_pos - minigame_speed)),If(minigame_point_pos == 360, Hide("timer_left"), Show("timer_right"))]
 screen timer_right:
     timer 0.0001 repeat True action [If(minigame_point_pos <= 1560, SetVariable("minigame_point_pos", minigame_point_pos + minigame_speed)),If(minigame_point_pos == 1560, Hide("timer_right"), Show("timer_left"))]
+
 
 screen minigame_error:
     text "{color=#e66a6a}ERROR!{/color}" at minigame_result
