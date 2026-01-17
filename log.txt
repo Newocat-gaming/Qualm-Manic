@@ -1,26 +1,938 @@
-2026-01-16 01:01:54 UTC
+2026-01-17 01:03:45 UTC
 Windows-11-10.0.26200-SP0
 Ren'Py 8.5.2.26010301
 
-Early init took 28 ms
-Loading error handling took 13 ms
-Loading script took 97 ms
-Loading save slot metadata took 14 ms
+Early init took 26 ms
+Loading error handling took 11 ms
+Loading script took 55 ms
+Loading save slot metadata took 13 ms
 Loading persistent took 0 ms
 Running init code took 28 ms
 Loading analysis data took 3 ms
 Analyze and compile ATL took 1 ms
 Reloading save slot metadata took 5 ms
-Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
 Dump and make backups took 23 ms
 Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 22 ms
+Making clean stores took 0 ms
+Initial gc took 20 ms
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 137 ms
 Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 9 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 207 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 9 ms
+Loading script took 95 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 0 ms
+Running init code took 20 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 22 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 26 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 5 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 133 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 60 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 140: unmatched ']'
+    timer 2.0 repeat True action IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+                                                                                                              ^
+DPI scale factor: 1.000000
+Interface start took 80 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 4 ms
+Loading script took 90 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 42 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 36 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 139 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 73 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 1 ms
+Running init code took 25 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 4 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 148 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 3 ms
+Loading script took 59 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 136: '[' was never closed
+    timer 3.0 repeat True action [IncrementVariable("minigame_speed")
+                                 ^
+DPI scale factor: 1.000000
+Interface start took 90 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 86 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 45 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 27 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 27 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 4 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 1 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 166 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 5 ms
+Loading script took 59 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 132: unmatched ']'
+    timer 4.0 repeat True action IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+                                                                                                              ^
+DPI scale factor: 1.000000
+Interface start took 78 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 5 ms
+Loading script took 91 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+Running init code took 28 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 29 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 1 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 153 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 82 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+Running init code took 28 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 26 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 35 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 145 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 4 ms
+Loading script took 80 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+Running init code took 25 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 157 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 82 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 28 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 38 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 1 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 158 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 4 ms
+Loading script took 86 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 26 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 3 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 144 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 4 ms
+Loading script took 77 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 25 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 2 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 149 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 76 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 0 ms
+Running init code took 25 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 3 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 152 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 62 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 127: '[' was never closed
+    timer 6.0 action [SetVariable("minigame_grace_period", False)
+                     ^
+DPI scale factor: 1.000000
+Interface start took 79 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 90 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 45 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 153 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 5 ms
+Loading script took 84 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+Running init code took 26 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 37 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 153 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 4 ms
+Loading script took 60 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 123: unmatched ']'
+    timer 7.0 action SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed")]
+                                                                                                     ^
+DPI scale factor: 1.000000
+Interface start took 87 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 85 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 42 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 26 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 30 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 2 ms
+Running _start took 0 ms
+Interface start took 162 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 50 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 24 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Dump and make backups took 21 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 9 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 146 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 61 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 123: unmatched ']'
+    timer 7.0 action SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed")]
+                                                                                                     ^
+DPI scale factor: 1.000000
+Interface start took 82 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 5 ms
+Loading script took 61 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 26 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Dump and make backups took 22 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 27 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 9 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 159 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 73 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 0 ms
+Running init code took 27 ms
+Loading analysis data took 1 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 153 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 77 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 24 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 149 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 81 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 26 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 22 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 36 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 146 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 81 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 0 ms
+Running init code took 27 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 28 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 36 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 147 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 82 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 26 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
 Cleaning stores took 0 ms
 Load screen analysis took 1 ms
 Analyze screens took 4 ms
@@ -28,7 +940,677 @@ Save screen analysis took 6 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
 Running _start took 1 ms
-Interface start took 195 ms
+Interface start took 149 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 82 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 25 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 37 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 151 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 5 ms
+Loading script took 89 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 27 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 160 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 88 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 28 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 26 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 40 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 3 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 167 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 84 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+Running init code took 27 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 39 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 3 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 157 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 85 ms
+Loading save slot metadata took 16 ms
+Loading persistent took 0 ms
+Running init code took 28 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 36 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 161 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 4 ms
+Loading script took 59 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 136: '[' was never closed
+    timer 3.0 repeat True action [IncrementVariable("minigame_speed")
+                                 ^
+DPI scale factor: 1.000000
+Interface start took 97 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 87 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+Running init code took 40 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 26 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 164 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 5 ms
+Loading script took 84 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+Running init code took 28 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 43 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 172 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 4 ms
+Loading script took 60 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 140: unmatched ']'
+    timer 2.0 repeat True action IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+                                                                                                              ^
+DPI scale factor: 1.000000
+Interface start took 118 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 5 ms
+Loading script took 87 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 41 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 1 ms
+Load screen analysis took 0 ms
+Analyze screens took 4 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 155 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 4 ms
+Loading script took 62 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 134: unmatched ']'
+    timer 6.0 action SetVariable("minigame_grace_period", False)IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+                                                                                                                                             ^
+DPI scale factor: 1.000000
+Interface start took 85 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 5 ms
+Loading script took 64 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 134: unmatched ']'
+    timer 6.0 action SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+                                                                                                                                               ^
+DPI scale factor: 1.000000
+Interface start took 83 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 88 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 30 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 37 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 159 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 58 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+
+File "game/1_backend_scripts/minigame.rpy", line 130: unmatched ']'
+    timer 7.0 action SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+                                                                                                                                               ^
+DPI scale factor: 1.000000
+Interface start took 93 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 83 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 0 ms
+Running init code took 27 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 4 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 155 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 5 ms
+Loading script took 86 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 27 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 41 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 152 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4 ms
+Loading error handling took 4 ms
+Loading script took 86 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+Running init code took 26 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 38 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 162 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 86 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 0 ms
+Running init code took 25 ms
+Loading analysis data took 1 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 27 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 40 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 170 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 4 ms
+Loading script took 79 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 1 ms
+Running init code took 27 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 38 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 166 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 581.80'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 4 ms
+Loading script took 88 ms
+Loading save slot metadata took 10 ms
+Loading persistent took 0 ms
+Running init code took 27 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Backing up script files to 'C:\\Users\\newod\\AppData\\Roaming/RenPy/backups\\QualmManic':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 37 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 154 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)

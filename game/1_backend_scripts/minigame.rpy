@@ -8,21 +8,23 @@ label test:
     jay "holy hell" 
     manic "I know right"
 
+    hide manic_model
+
 
     #############################
-    $ difficulty = 1
 
+    $ minigame_difficulty = 3
 
     $ bar_choice_num = 3
    
     $ choice_1 = "walk_out_of_the_room"
-    $ choice_text_1 = "walk"
+    $ choice_text_1 = "Hear what Kit has to say."
 
     $ choice_2 = "walk_out_of_the_room"
-    $ choice_text_2 = "walk"
+    $ choice_text_2 = "Hear what Kit has to say."
 
     $ choice_3 = "wait_for_vida"
-    $ choice_text_3 = "wait"
+    $ choice_text_3 = "Hear what Kit has to say."
 
     $ choice_4 = None
     $ choice_text_4 = "test4"
@@ -32,6 +34,10 @@ label test:
 
 
 #########################################################################
+define test_text = 0
+
+
+
 
 define choice_1 = ""
 define choice_2 = ""
@@ -43,17 +49,20 @@ define choice_text_2 = ""
 define choice_text_3 = ""
 define choice_text_4 = ""
 
+define minigame_difficulty = 1
 
 define bar_choice_num = 0
 
 define minigame_point_pos = 360
 define minigame_point_end_pos = 0
 
+define minigame_grace_period = True
 define minigame_speed = 3      # can only be whole numbers?
 
+define minigame_speed_text = minigame_speed - 2
 define minigame_outcome = "test"
 define random_text = "test"
- 
+
     
 transform minigame_point_move(frp):
     xpos frp
@@ -65,16 +74,21 @@ transform minigame_result_text:
     xalign 0.75
     ypos 750
 
+image minigame_pointer:
+    "minigame/point.png"
 image minigame_pointer_selection:
-    "minigame/point2.png" with Dissolve(1.5) # do not change number
+    "minigame/point2.png" 
+
+init python:
+    import random # DO NOT REMOVE
 
 
 label minigame_start:
-    $ random_text = renpy.random.randint(1, 7)
+    $ random_text = random.randint(1, 7) 
 
-    $ minigame_point_pos = renpy.random.randint(360, 1560)
+    $ minigame_point_pos = random.randint(360, 1560)
 
-
+    $ minigame_grace_period = True
 
     show screen timer_right
     show screen minigame_choice_bar
@@ -88,7 +102,7 @@ label minigame_end:
     hide screen timer_right
     hide screen minigame_control
     show minigame_pointer_selection onlayer overlay at minigame_point_move(minigame_point_pos) 
-    $ renpy.pause(1.0)                  # do not change number
+    $ renpy.pause(1.0)
     hide screen minigame_pointer
     hide screen minigame_choice_bar 
 
@@ -106,12 +120,26 @@ label minigame_end:
 
 screen minigame_control:
     
-    text "test: [bar_choice_num]" align(0.5,0.1)
-    text "test: [minigame_speed]" align(0.5, 0.2)
+    text "test: length [bar_choice_num]" align(0.5, 0.1)
+    text "test: speed [minigame_speed_text]" align(0.5, 0.2)
+    text "test: timer [test_text]" align(0.5, 0.3)
+    timer 1.0 repeat True action IncrementVariable("test_text")
 
 
-    
-    
+    if minigame_difficulty == 1:
+        timer 7.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+        if minigame_grace_period == False:
+            timer 4.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+    if minigame_difficulty == 2:
+        timer 6.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+        if minigame_grace_period == False:
+            timer 3.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+    if minigame_difficulty == 3:
+        timer 5.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+        if minigame_grace_period == False:
+            timer 2.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+
+
     if bar_choice_num == 1:
         if minigame_point_pos >= 360 and minigame_point_pos <= 1560:
             key "K_SPACE":
@@ -163,12 +191,12 @@ screen minigame_control:
                 action Show("minigame_error")
    
 screen timer_left:
-    timer 0.0001 repeat True action [If(minigame_point_pos >= 360, SetVariable("minigame_point_pos", minigame_point_pos - minigame_speed)),If(minigame_point_pos == 360, Hide("timer_left"), Show("timer_right"))]
+    timer 0.0001 repeat True action [If(minigame_point_pos >= 360, SetVariable("minigame_point_pos", minigame_point_pos - minigame_speed)),If(minigame_point_pos <= 360, Hide("timer_left"), Show("timer_right"))]
 screen timer_right:
-    timer 0.0001 repeat True action [If(minigame_point_pos <= 1560, SetVariable("minigame_point_pos", minigame_point_pos + minigame_speed)),If(minigame_point_pos == 1560, Hide("timer_right"), Show("timer_left"))]
+    timer 0.0001 repeat True action [If(minigame_point_pos <= 1560, SetVariable("minigame_point_pos", minigame_point_pos + minigame_speed)),If(minigame_point_pos >= 1560, Hide("timer_right"), Show("timer_left"))]
 
 screen minigame_pointer:
-    add "minigame/point.png" at minigame_point_move(minigame_point_pos)
+    add "minigame_pointer" at minigame_point_move(minigame_point_pos)
 
 screen minigame_choice_bar:
     if bar_choice_num == 0:
@@ -183,6 +211,7 @@ screen minigame_choice_bar:
                 frame: 
                     ysize 100
                     xfill True
+                    
 
                     if bar_choice_num == 1:
                         xmaximum 1200
