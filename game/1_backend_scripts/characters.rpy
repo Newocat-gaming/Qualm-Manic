@@ -4,7 +4,7 @@
 ## test char
 define e = Character("test", color="#fdfefe")
 
-## narator, may be unessesary
+## narator, may be unnessesary
 define nar = Character("")
 
 ## unknown character
@@ -22,7 +22,7 @@ define andrea = Character("Andrea", callback = talking_callback, cb_image_talkin
 
 ## hidden from view characters ##
 
-define vida2 = Character("Vida", color="#f1c40f")
+define vida_hidden = Character("Vida", color="#f1c40f")
 
 
 

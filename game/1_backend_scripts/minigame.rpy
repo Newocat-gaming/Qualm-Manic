@@ -1,6 +1,7 @@
 
 label test:
-
+    stop music
+    scene bg classroom 2 reverse
     $ manic_pose = "armscrossed"
     show manic_model at middle
 
@@ -13,7 +14,11 @@ label test:
 
     #############################
 
-    $ minigame_difficulty = 3
+    $ minigame_char = None
+    $ minigame_text = "test"
+        
+
+    $ minigame_difficulty = 4
 
     $ bar_choice_num = 3
    
@@ -36,8 +41,8 @@ label test:
 #########################################################################
 define test_text = 0
 
-
-
+define minigame_text = "test" 
+define minigame_char = "test"
 
 define choice_1 = ""
 define choice_2 = ""
@@ -68,22 +73,25 @@ transform minigame_point_move(frp):
     xpos frp
     subpixel True
     anchor(0.5, 1.0)
-    ypos 500 
+    ypos 510 
               
 transform minigame_result_text:
     xalign 0.75
     ypos 750
 
 image minigame_pointer:
-    "minigame/point.png"
+    "minigame/point_small.png"
 image minigame_pointer_selection:
-    "minigame/point2.png" 
+    "minigame/point_small2.png" 
 
 init python:
     import random # DO NOT REMOVE
 
 
 label minigame_start:
+
+    
+
     $ random_text = random.randint(1, 7) 
 
     $ minigame_point_pos = random.randint(360, 1560)
@@ -94,6 +102,7 @@ label minigame_start:
     show screen minigame_choice_bar
     show screen minigame_pointer
     call screen minigame_control
+    
 
 
 label minigame_end:
@@ -138,7 +147,10 @@ screen minigame_control:
         timer 5.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
         if minigame_grace_period == False:
             timer 2.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
-
+    if minigame_difficulty == 4:
+        timer 3.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+        if minigame_grace_period == False:
+            timer 1.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
 
     if bar_choice_num == 1:
         if minigame_point_pos >= 360 and minigame_point_pos <= 1560:
@@ -199,6 +211,11 @@ screen minigame_pointer:
     add "minigame_pointer" at minigame_point_move(minigame_point_pos)
 
 screen minigame_choice_bar:
+    if minigame_char is not None:
+        use minigame_say(who= "[minigame_char]", what="[minigame_text]")
+    else:
+        use minigame_say(who= None, what="[minigame_text]")
+
     if bar_choice_num == 0:
         text "error"
     else:

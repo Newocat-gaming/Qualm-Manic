@@ -20,10 +20,15 @@ transform leftsidestill:
     xpos 320
     xanchor 0.5
 
+
+image bird_sticker:
+    "images/Bird_sticker_temp_3.png"
+
+
 label start:
 
     ###############################
-    jump test
+    # jump test
     ##################################
 
 
@@ -344,16 +349,25 @@ label start:
     kit "I haven't yet shared what I told you all about this morning..."
     show kit_model grin at rightside
 
-    menu:
-        "I feel uneasy, so I decide to..."
-        
-        # A #
-        "Hear what Kit has to say.":
-            jump hear_what_kit_has_to_say
-        # B #
-        "Walk out of the room.":
-            jump walk_out_of_the_room
 
+
+    ###############################
+
+    $ minigame_char = None
+    $ minigame_text = "I feel uneasy, so I decide to..."
+
+    $ minigame_difficulty = 2
+
+    $ bar_choice_num = 2
+   
+    $ choice_1 = "hear_what_kit_has_to_say"
+    $ choice_text_1 = "Hear what Kit has to say."
+
+    $ choice_2 = "walk_out_of_the_room"
+    $ choice_text_2 = "Walk out of the room."
+
+    jump minigame_start
+        
 
 label hear_what_kit_has_to_say:
 
@@ -402,6 +416,8 @@ label hear_what_kit_has_to_say:
     kit "I saw a sign in the background that had a sticker on it."
 
     $ kit_pose = "gesture"
+    show bird_sticker:
+        pos(1200, 590) 
 
     nar "Kit reaches into his pocket and pulls out a sticker with a bird emblem on it."
     kit "This sticker." 
@@ -409,6 +425,7 @@ label hear_what_kit_has_to_say:
     kit "This is from the same pack of stickers I had as a kid. I used to take a shortcut to school through some alleyways and placed these stickers along the way in case I got lost."
     kit "So years ago I must have placed that sticker next to where the murder recently took place."
 
+    hide bird_sticker
     $ kit_pose = "raisedarms"
 
     nar "He leans back in his chair and pumps both his hands in the air."
@@ -420,7 +437,8 @@ label hear_what_kit_has_to_say:
     hide vida_model
     scene bg blank
 
-    return ############################################################################################
+    #######################################################
+    jump playtesting_end
     ###################################################################################################
 
     nar "The next day, all four of us are standing on the rooftop of a building during sunset."
@@ -550,17 +568,26 @@ label walk_out_of_the_room:
     nar "I leave the club room..."
     nar "I can't handle this anymore..."
     nar "My friends whom I have usually found comfort in had started to make me uncomfortable."
-    vida2 "Jay!"
-    vida2 "Wait up!"
+    vida_hidden "Jay!"
+    vida_hidden "Wait up!"
 
-    menu:
-        jay "..."
-        # BA #
-        "Wait for Vida":
-            jump wait_for_vida
-        # BB #
-        "Leave":
-            jump walk_out_of_school  
+
+    ####################################
+
+    $ minigame_char = "jay"
+    $ minigame_text = "..."
+
+    $ minigame_difficulty = 2
+
+    $ bar_choice_num = 2
+   
+    $ choice_1 = "wait_for_vida"
+    $ choice_text_1 = "Wait for Vida"
+
+    $ choice_2 = "walk_out_of_school"
+    $ choice_text_2 = "Leave"
+
+    jump minigame_start 
 
 ##
 define wait_for_vida = False
@@ -586,29 +613,32 @@ label wait_for_vida:
     vida "How about we go back to the club room and at least listen to what he has to say."
     vida "Ok?" 
 
-    menu:
-        nar "I think about it and decide to..."
-        # A #
-        "Walk back to the club room":
-            jump hear_what_kit_has_to_say
-        # BAB #
-        "Leave":
-            jump walk_out_of_school
+    ####################################
+
+    $ minigame_char = None
+    $ minigame_text = "I think about it and decide to..."
+
+    $ minigame_difficulty = 2
+
+    $ bar_choice_num = 2
+   
+    $ choice_1 = "hear_what_kit_has_to_say"
+    $ choice_text_1 = "Walk back to the club room"
+
+    $ choice_2 = "walk_out_of_school"
+    $ choice_text_2 = "Leave"
+
+    jump minigame_start 
 
 label walk_out_of_school:
 
-
-    ########################################################################################
-    return
-    #########################################################################################
+    if wait_for_vida == False:
+        show vida_model at middle
 
     jay "I'm sorry vida... but I need some fresh air right now."
     vida "Ok then. Well I'll see you later, maybe tomorrow."
     vida "Bye for now... and stay safe."
 
-
-
-
-    e "Not done yet."
-
-    return 
+    ########################################################################################
+    jump playtesting_end
+    #########################################################################################

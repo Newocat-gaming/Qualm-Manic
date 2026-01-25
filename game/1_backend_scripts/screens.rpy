@@ -162,6 +162,35 @@ style say_dialogue:
 
     adjust_spacing False
 
+
+## Minigame Say Screen ##########################################################
+
+screen minigame_say(who, what):
+
+    window:
+        id "window"
+
+        if who is not None:
+
+            window:
+                id "namebox"
+                style "namebox"
+                text who id "who"
+
+        text what id "what" style "minigame_say_text"
+
+
+style minigame_say_text:
+    
+    color"#ffffff"
+    xpos gui.dialogue_xpos
+    xsize gui.dialogue_width
+    ypos gui.dialogue_ypos
+
+    adjust_spacing False
+
+    
+
 ## Input screen ################################################################
 ##
 ## This screen is used to display renpy.input. The prompt parameter is used to
@@ -311,8 +340,6 @@ screen navigation():
         textbutton _("Load") action ShowMenu("load")
 
         
-
-
         textbutton _("Preferences") action ShowMenu("preferences")
         
         if _in_replay:
@@ -341,7 +368,7 @@ style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
 style navigation_button:
-    size_group "navigation"
+    # size_group "navigation"
     properties gui.button_properties("navigation_button")
 
 style navigation_button_text:
@@ -361,17 +388,40 @@ screen main_menu():
 
     add gui.main_menu_background
 
-    add "images/qualm manic def small.png":  
-        align (0.8, 0.0)
+    add "images/qualm manic def small trimmed background.png":
+        align (0.5, 0.2)
+          
 
+    add "images/qualm manic def small trimmed.png":  
+        align (0.5, 0.2)
 
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    
 
-    ## The use statement includes another screen inside this one. The actual
-    ## contents of the main menu are in the navigation screen.
-    use navigation
+    vbox:
+        if main_menu:
+            style_prefix "main_menu"
+        else:
+            style_prefix "navigation"
+        xalign 0.5
+        yalign 0.75
+
+        spacing gui.navigation_spacing
+
+        textbutton _("Start") action Start() 
+        textbutton _("Load") action ShowMenu("load") 
+
+        textbutton _("Preferences") action ShowMenu("preferences") 
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton _("Controls") action ShowMenu("help") 
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and
+            ## Web.
+            textbutton _("Quit") action Quit(confirm=not main_menu) 
 
     if gui.show_name:
 
@@ -391,18 +441,21 @@ style main_menu_text is gui_text
 style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
+style main_menu_button is navigation_button:
+    xalign 0.5
+
 style main_menu_frame:
     xsize 420
     yfill True
 
     background "gui/overlay/main_menu.png"
 
-style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
-    xmaximum 1200
-    yalign 1.0
-    yoffset -30
+#style main_menu_vbox:
+#    xalign 1.0
+#    xoffset -30
+#    xmaximum 1200
+#    yalign 1.0
+#    yoffset -30
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)

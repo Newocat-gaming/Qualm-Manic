@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/minigame.rpy", line 130: unmatched ']'
-    timer 7.0 action SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
-                                                                                                                                               ^
+File "game/2_story_scripts/Start.rpy", line 636: expected 'image_name_component' not found.
+    show
+         ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Fri Jan 16 20:09:15 2026
+Sat Jan 24 21:40:09 2026

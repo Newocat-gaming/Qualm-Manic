@@ -87,7 +87,7 @@ define gui.title_text_size = 100
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = Movie(play="images/videos/film_grain_slower.webm")
+define gui.main_menu_background = Movie(play="images/videos/Film_Grain_Slow_Dark.webm")
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -161,7 +161,7 @@ define gui.button_tile = False
 define gui.button_text_font = gui.interface_text_font
 
 ## The size of the text used by the button.
-define gui.button_text_size = gui.interface_text_size
+define gui.button_text_size = 45
 
 ## The color of button text in various states.
 define gui.button_text_idle_color = gui.idle_color
