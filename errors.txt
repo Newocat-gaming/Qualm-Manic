@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/2_story_scripts/Start.rpy", line 636: expected 'image_name_component' not found.
-    show
-         ^
+File "game/1_backend_scripts/splashscreen.rpy", line 17: expected expression
+    image splashscreen_animationtest =
+                                       ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Sat Jan 24 21:40:09 2026
+Sat Jan 31 18:23:42 2026
