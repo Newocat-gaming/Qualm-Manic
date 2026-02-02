@@ -18,7 +18,7 @@ image splashscreen_animationtest = "images/splashscreen/Qualm_manic.png"
 
 screen presplashskip:
     zorder 10
-    textbutton "Skip =>" action Return() align(.95, .95)
+    textbutton "Skip ->" action Return() align(.95, .95)
 
 
 label splashscreen:

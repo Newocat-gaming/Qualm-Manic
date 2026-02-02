@@ -417,6 +417,8 @@ screen main_menu():
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Controls") action ShowMenu("help") 
 
+        textbutton _("Credits") action ShowMenu("about")
+
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
@@ -622,9 +624,14 @@ screen about():
             label "[config.name!t]"
             text _("Version [config.version!t]\n")
 
+            text "Playtesting Alpha: incomplete credits"
+            text "Character models made using {a=https://ar14.works/mannequin/}Mannequin Character Creator{/a} \nEasyblink code make by Feniks at {a=https://feniksdev.com/}feniksdev.com{/a}"
+            text "Backgrounds by: Pandita Studio and Noraneko Games"
+            text "Music:\n Main Theme: \n  Made In Japan by Yoshi Studios Music \n Background: \n  Dark Atmosphere to Synth by Tim Beek \n  The Protagonist by Tim Beck \n  Waiting (Night 1) by Rest! (Ricardo Cuello) \n  vntrack 1 by TERNOX \n  vntrack 12 by TERNOX \n  vntrack 14 by TERNOX \n"
+        
             ## gui.about is usually set in options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
+            # if gui.about:
+            #     text "[gui.about!t]\n"
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
