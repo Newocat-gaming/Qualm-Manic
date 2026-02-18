@@ -1,4 +1,4 @@
-define config.end_splash_transition = Fade(2.0, 0.0, 2.0)
+define config.end_splash_transition = Fade(1.0, 0.0, 1.0)
 
 define fadesplash = Fade(2.0, 2.5, 2.0)
 define titlefadesplash = Fade(3.0, 3.5, 3.0)
@@ -18,7 +18,7 @@ image splashscreen_animationtest = "images/splashscreen/Qualm_manic.png"
 
 screen presplashskip:
     zorder 10
-    textbutton "Skip ->" action Return() align(.95, .95)
+    textbutton "Skip ->" action [Return(), Hide("presplashskip")] align(.95, .95)
 
 
 label splashscreen:

@@ -410,6 +410,12 @@ screen main_menu():
         textbutton _("Start") action Start() 
         textbutton _("Load") action ShowMenu("load") 
 
+        if persistent.minigame_levels_unlock == True:
+            textbutton _("Minigame") action Start("minigame_levels_start")
+        else:
+            text "{color=#000000}Minigame{/color}" size 45 xalign 0.5
+
+
         textbutton _("Preferences") action ShowMenu("preferences") 
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
@@ -439,7 +445,9 @@ screen main_menu():
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
-style main_menu_text is gui_text
+style main_menu_text is gui_text:
+    xalign 0.5
+    
 style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
@@ -1090,7 +1098,7 @@ screen keyboard_help():
 
     hbox:
         label _("Space")
-        text _("Advances dialogue without selecting choices.")
+        text _("Advances dialogue and selects choices.")
 
     hbox:
         label _("Arrow Keys")

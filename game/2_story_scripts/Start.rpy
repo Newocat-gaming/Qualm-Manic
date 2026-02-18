@@ -21,10 +21,6 @@ transform leftsidestill:
     xanchor 0.5
 
 
-image bird_sticker:
-    "images/Bird_sticker_temp_3.png"
-
-
 label start:
 
     ###############################
@@ -134,7 +130,9 @@ label start:
     hide neda
     scene bg blank
 
-    $ renpy.movie_cutscene("images/videos/animation v03.webm", delay=None, loops=0, stop_music=True)
+
+    # ADD CHAPTER 1 SCREEN #TODO
+    # $ renpy.movie_cutscene("images/videos/animation v03.webm", delay=None, loops=0, stop_music=True)
    
     scene bg cafeteria 1
     play music "audio/vntrack12.mp3" volume 0.5 fadein 2.0
@@ -157,7 +155,7 @@ label start:
 
     nar "When I sit down at my desk, I check my watch, only to realize I had left it during my rush in the morning." 
     jay "Dammit"
-    nar "I take out my flip phone to check the time instead." 
+    nar "I take out my cell phone to check the time instead." 
     nar "1:03."
     nar "Only 2 more classes until I am free form this torture and can forget all of today's absurdity." 
     nar "I let my mind wander to my friends, Kit, Vida, Andrea, and James, all laughing at some stupid joke together." 
@@ -352,6 +350,9 @@ label start:
 
 
     ###############################
+
+    call minigame_tutorial
+
 
     $ minigame_char = None
     $ minigame_text = "I feel uneasy, so I decide to..."

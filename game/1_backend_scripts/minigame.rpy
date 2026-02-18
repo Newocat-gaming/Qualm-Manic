@@ -68,6 +68,7 @@ define minigame_speed_text = minigame_speed - 2
 define minigame_outcome = "test"
 define random_text = "test"
 
+
     
 transform minigame_point_move(frp):
     xpos frp
@@ -83,6 +84,10 @@ image minigame_pointer:
     "minigame/point_small.png"
 image minigame_pointer_selection:
     "minigame/point_small2.png" 
+
+image minigame_choice_bar_border:
+    "images/minigame/bar_border.png"
+
 
 init python:
     import random # DO NOT REMOVE
@@ -138,7 +143,8 @@ screen minigame_control:
     if minigame_difficulty == 1:
         timer 7.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
         if minigame_grace_period == False:
-            timer 4.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+            if minigame_speed <= 40:
+                timer 4.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
     if minigame_difficulty == 2:
         timer 6.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
         if minigame_grace_period == False:
@@ -151,6 +157,9 @@ screen minigame_control:
         timer 3.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
         if minigame_grace_period == False:
             timer 1.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+
+
+    
 
     if bar_choice_num == 1:
         if minigame_point_pos >= 360 and minigame_point_pos <= 1560:
@@ -170,7 +179,7 @@ screen minigame_control:
         else:
             key "K_SPACE":
                 action Show("minigame_error")
-        
+    
     elif bar_choice_num == 3:
         if minigame_point_pos >= 360 and minigame_point_pos < 760:
             key "K_SPACE":
@@ -201,7 +210,8 @@ screen minigame_control:
         else:
             key "K_SPACE":
                 action Show("minigame_error")
-   
+
+
 screen timer_left:
     timer 0.0001 repeat True action [If(minigame_point_pos >= 360, SetVariable("minigame_point_pos", minigame_point_pos - minigame_speed)),If(minigame_point_pos <= 360, Hide("timer_left"), Show("timer_right"))]
 screen timer_right:
@@ -285,6 +295,11 @@ screen minigame_choice_bar:
                         align(0.5, 0.5)  
                     background "#358dff" 
 
+        add "minigame_choice_bar_border":
+            align (0.5, 0.5)
+
+
+
 screen minigame_error:
     text "{color=#e66a6a}ERROR!{/color}" at minigame_result_text
     timer 0.5 action Hide("minigame_error")
@@ -295,24 +310,94 @@ screen minigame_result:
     elif random_text == 2:
         text "{color=#e66a6a}Good choice?{/color}" at minigame_result_text
     elif random_text == 3:
-        text "{color=#e66a6a}{/color}" at minigame_result_text
+        text "{color=#e66a6a}Wait... really?{/color}" at minigame_result_text
     elif random_text == 4:
-        text "{color=#e66a6a}{/color}" at minigame_result_text
+        text "{color=#e66a6a}Whatever...{/color}" at minigame_result_text
     elif random_text == 5:
-        text "{color=#e66a6a}{/color}" at minigame_result_text
+        text "{color=#e66a6a}Not my choice.{/color}" at minigame_result_text
     elif random_text == 6:
-        text "{color=#e66a6a}{/color}" at minigame_result_text
+        text "{color=#e66a6a}Is that what you wanted?{/color}" at minigame_result_text
     else:
         text "{color=#e66a6a}{/color}" at minigame_result_text
       
     timer 1.0 action Hide("minigame_result")
 
 
-        
+#######################################################################################################       
+##### Minigame levels #####
 
+define persistent.minigame_levels_unlock = False
+define minigame_levels_active = False
+define levels_choice = 1
+define levels_score = 0
 
+label minigame_levels_start:
+    $ minigame_levels_active = True
+    show screen minigame_levels
+    $ minigame_char = None
+    $ minigame_text = "Target: [levels_choice] Score: [levels_score]"
 
+    $ minigame_difficulty = 1
 
+    $ bar_choice_num = 4
+   
+    $ choice_text_1 = "1"
+    $ choice_text_2 = "2"
+    $ choice_text_3 = "3"
+    $ choice_text_4 = "4"
+
+    $ random_text = 7
+
+    $ minigame_point_pos = random.randint(360, 1560)
+
+    $ minigame_grace_period = False
+
+    $ levels_choice = random.randint(1, 4)
+    if levels_choice == 1:
+        $ choice_1 = "levels_good"
+        $ choice_2 = "levels_bad"
+        $ choice_3 = "levels_bad"
+        $ choice_4 = "levels_bad"
+    if levels_choice == 2:
+        $ choice_1 = "levels_bad"
+        $ choice_2 = "levels_good"
+        $ choice_3 = "levels_bad"
+        $ choice_4 = "levels_bad"
+    if levels_choice == 3:
+        $ choice_1 = "levels_bad"
+        $ choice_2 = "levels_bad"
+        $ choice_3 = "levels_good"
+        $ choice_4 = "levels_bad"
+    if levels_choice == 4:
+        $ choice_1 = "levels_bad"
+        $ choice_2 = "levels_bad"
+        $ choice_3 = "levels_bad"
+        $ choice_4 = "levels_good"  
+    
+    show screen timer_right
+    show screen minigame_choice_bar
+    show screen minigame_pointer
+    call screen minigame_control
+
+screen minigame_levels:
+    tag menu
+    add "images/bg/bg cafeteria 1.png" 
+    vbox:
+        style_prefix "navigation"
+
+        xpos gui.navigation_xpos
+        yalign 0.0
+
+        spacing gui.navigation_spacing
+
+        textbutton _("Return") action [MainMenu(confirm=False), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar")]
+
+label levels_good:
+    $ levels_score + 1
+    jump minigame_levels_start 
+label levels_bad:
+    $ levels_score - 1
+    jump minigame_levels_start
 
 
 
