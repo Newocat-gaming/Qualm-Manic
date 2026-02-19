@@ -136,10 +136,10 @@ label minigame_end:
 
 screen minigame_control:
     
-    text "test: length [bar_choice_num]" align(0.5, 0.1)
-    text "test: speed [minigame_speed_text]" align(0.5, 0.2)
-    text "test: timer [test_text]" align(0.5, 0.3)
-    timer 1.0 repeat True action IncrementVariable("test_text")
+    # text "test: length [bar_choice_num]" align(0.5, 0.1)
+    # text "test: speed [minigame_speed_text]" align(0.5, 0.2)
+    # text "test: timer [test_text]" align(0.5, 0.3)
+    # timer 1.0 repeat True action IncrementVariable("test_text")
 
 
     if minigame_difficulty == 1:
