@@ -5,6 +5,8 @@ label test:
     $ manic_pose = "armscrossed"
     show manic_model at middle
 
+    i "Target: [levels_choice] Score: [levels_score]"
+
     manic "test"
     jay "holy hell" 
     manic "I know right"
@@ -221,10 +223,13 @@ screen minigame_pointer:
     add "minigame_pointer" at minigame_point_move(minigame_point_pos)
 
 screen minigame_choice_bar:
-    if minigame_char is not None:
+    if minigame_levels_active == True:
+        use minigame_say(who= None, what="Target: [levels_choice] Score: [levels_score]")
+    elif minigame_char is not None:
         use minigame_say(who= "[minigame_char]", what="[minigame_text]")
     else:
         use minigame_say(who= None, what="[minigame_text]")
+
 
     if bar_choice_num == 0:
         text "error"
@@ -335,7 +340,7 @@ label minigame_levels_start:
     $ minigame_levels_active = True
     show screen minigame_levels
     $ minigame_char = None
-    $ minigame_text = "Target: [levels_choice] Score: [levels_score]"
+    #$ minigame_text = "Target: [levels_choice] Score: [levels_score]"
 
     $ minigame_difficulty = 1
 
@@ -358,22 +363,23 @@ label minigame_levels_start:
         $ choice_2 = "levels_bad"
         $ choice_3 = "levels_bad"
         $ choice_4 = "levels_bad"
-    if levels_choice == 2:
+    elif levels_choice == 2:
         $ choice_1 = "levels_bad"
         $ choice_2 = "levels_good"
         $ choice_3 = "levels_bad"
         $ choice_4 = "levels_bad"
-    if levels_choice == 3:
+    elif levels_choice == 3:
         $ choice_1 = "levels_bad"
         $ choice_2 = "levels_bad"
         $ choice_3 = "levels_good"
         $ choice_4 = "levels_bad"
-    if levels_choice == 4:
+    elif levels_choice == 4:
         $ choice_1 = "levels_bad"
         $ choice_2 = "levels_bad"
         $ choice_3 = "levels_bad"
         $ choice_4 = "levels_good"  
     
+
     show screen timer_right
     show screen minigame_choice_bar
     show screen minigame_pointer
@@ -381,7 +387,7 @@ label minigame_levels_start:
 
 screen minigame_levels:
     tag menu
-    add "images/bg/bg cafeteria 1.png" 
+    add "images/bg/bg cafeteria 1.png"
     vbox:
         style_prefix "navigation"
 
@@ -393,10 +399,10 @@ screen minigame_levels:
         textbutton _("Return") action [MainMenu(confirm=False), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar")]
 
 label levels_good:
-    $ levels_score + 1
+    $ levels_score =  (levels_score + 1)
     jump minigame_levels_start 
 label levels_bad:
-    $ levels_score - 1
+    $ levels_score = (levels_score - 1)
     jump minigame_levels_start
 
 

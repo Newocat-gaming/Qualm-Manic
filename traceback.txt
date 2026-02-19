@@ -1,30 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/1_backend_scripts/minigame.rpy", line 399, in script
-    $ levels_score - 1
-  File "game/1_backend_scripts/minigame.rpy", line 399, in <module>
-    $ levels_score - 1
-      ^^^^^^^^^^^^    
-NameError: name 'levels_score' is not defined. Did you mean: 'levels_scroe'?
+  File "game/1_backend_scripts/minigame.rpy", line 405, in script
+    $ levels_score = (level_score - 1)
+  File "game/1_backend_scripts/minigame.rpy", line 405, in <module>
+    $ levels_score = (level_score - 1)
+                      ^^^^^^^^^^^     
+NameError: name 'level_score' is not defined. Did you mean: 'levels_score'?
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/1_backend_scripts/minigame.rpy", line 399, in script
-    $ levels_score - 1
+  File "game/1_backend_scripts/minigame.rpy", line 405, in script
+    $ levels_score = (level_score - 1)
   File "renpy/ast.py", line 1187, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1273, in py_exec_bytecode
     exec(bytecode, globals, locals)
     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/1_backend_scripts/minigame.rpy", line 399, in <module>
-    $ levels_score - 1
-      ^^^^^^^^^^^^    
-NameError: name 'levels_score' is not defined. Did you mean: 'levels_scroe'?
+  File "game/1_backend_scripts/minigame.rpy", line 405, in <module>
+    $ levels_score = (level_score - 1)
+                      ^^^^^^^^^^^     
+NameError: name 'level_score' is not defined. Did you mean: 'levels_score'?
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.2.26010301
 Qualm;Manic 0.5.0.4.1
-Wed Feb 18 17:27:45 2026
+Wed Feb 18 19:55:56 2026
