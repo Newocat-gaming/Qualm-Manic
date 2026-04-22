@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/minigame.rpy", line 363: 'background' is not a keyword argument or valid child of the screen statement.
-    background
-              ^
+File "game/1_backend_scripts/minigame.rpy", line 75: transform statement expects a non-empty block.
+    transform minigame_point_move(frp):
+                                       ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Mon Feb 16 14:16:54 2026
+Wed Apr 22 18:03:12 2026

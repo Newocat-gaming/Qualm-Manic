@@ -1,4 +1,4 @@
-define config.mouse = {}
+define config.mouse = { }
 define config.mouse['default'] = [("gui/custom_mouse/normal/mouse_cursor.png", 0, 0)]
 define config.mouse['menu'] = [("gui/custom_mouse/menu/mouse_cursor.png", 16, 16)]
 define config.mouse['button'] = [

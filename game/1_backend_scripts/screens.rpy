@@ -278,7 +278,7 @@ screen quick_menu():
 
             xalign 0.5
             yalign 1.0
-
+            
             textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
@@ -411,7 +411,7 @@ screen main_menu():
         textbutton _("Load") action ShowMenu("load") 
 
         if persistent.minigame_levels_unlock == True:
-            textbutton _("Minigame") action Start("minigame_levels_start")
+            textbutton _("Minigame") action [SetVariable("minigame_levels_active", True), Start("minigame_levels_start")]
         else:
             text "{color=#000000}Minigame{/color}" size 45 xalign 0.5
 

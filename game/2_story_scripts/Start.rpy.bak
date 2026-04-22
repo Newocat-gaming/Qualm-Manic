@@ -22,11 +22,11 @@ transform leftsidestill:
 
 
 label start:
+
     ###############################
     # jump test
     ##################################
 
-   
 
     stop music fadeout 4
     scene bg blank
@@ -266,7 +266,7 @@ label start:
     kit "It's not..."
     kit "Because I have a plan, all we have to do is make people read a paper we put out and the school will automatically accept us."
     jay "Ok..."
-    jay "That almost makes sense..."
+    jay "That makes sense..."
     jay "But what could we write about to ever make people read the paper?" 
     andrea "That would require us to do work though..."
     vida "What is there even to write about in this school?"
@@ -299,7 +299,7 @@ label start:
     $ kit_pose = "armscrossed" 
     show kit_model normal at rightside
 
-    nar "Kit leans in my direction and slowly turns his head to also face me."
+    nar "Kit leans in the direction of Jay and slowly turns his head to also face him."
     nar "He whispers..."
     kit "The Human Kebab..."
 
@@ -323,7 +323,7 @@ label start:
 
     kit "Just think about it... it's the talk of the town... so everyone will read the paper!"
     kit "Also we can't get in trouble for covering it because we can force an outcry from the students if the teachers try to take it down..."
-    kit "It's almost guaranteed to garner attention for the club!"
+    kit "It's almost guaranteed to garner attention to the club!"
 
     $ kit_pose = "armscrossed"
     show kit_model at rightside
@@ -351,7 +351,7 @@ label start:
 
     ###############################
 
-    call minigame_tutorial from _call_minigame_tutorial
+    call minigame_tutorial
 
 
     $ minigame_char = None
@@ -414,7 +414,7 @@ label hear_what_kit_has_to_say:
     show kit_model normal at rightside
 
     jay "What was it?" 
-    kit "I saw a road sign in the background that had a sticker on it."
+    kit "I saw a sign in the background that had a sticker on it."
 
     $ kit_pose = "gesture"
     show bird_sticker:
@@ -606,7 +606,7 @@ label wait_for_vida:
     vida "You walked out all of a sudden..."
     jay "Y-yeah... I'm alright, just needed a second to think."
     vida "Is it about the murder?"
-    jay "Y-yeah… I'm alright, I just needed a second to think."
+    jay "Yes. I'm just a little concerned about covering it."
 
     $ vida_pose = "explaining"
 

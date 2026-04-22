@@ -5,8 +5,8 @@ label test:
     $ manic_pose = "armscrossed"
     show manic_model at middle
 
-    i "Target: [levels_choice] Score: [levels_score]"
-
+    
+    i "aaaaaa aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa"
     manic "test"
     jay "holy hell" 
     manic "I know right"
@@ -74,9 +74,9 @@ define random_text = "test"
     
 transform minigame_point_move(frp):
     xpos frp
-    subpixel True
+    subpixel True 
     anchor(0.5, 1.0)
-    ypos 510 
+    ypos 510  
               
 transform minigame_result_text:
     xalign 0.75
@@ -96,8 +96,6 @@ init python:
 
 
 label minigame_start:
-
-    
 
     $ random_text = random.randint(1, 7) 
 
@@ -133,35 +131,38 @@ label minigame_end:
     else:
         show screen minigame_error
 
+# text "test: length [bar_choice_num]" align(0.5, 0.1)
+# text "test: [minigame_point_pos]"
+# text "test: speed [minigame_speed_text]" align(0.5, 0.2)
+# text "test: timer [test_text]" align(0.5, 0.3)
+# timer 1.0 repeat True action IncrementVariable("test_text")
+
 
 screen minigame_control:
-    
-    # text "test: length [bar_choice_num]" align(0.5, 0.1)
-    # text "test: speed [minigame_speed_text]" align(0.5, 0.2)
-    # text "test: timer [test_text]" align(0.5, 0.3)
-    # timer 1.0 repeat True action IncrementVariable("test_text")
-
 
     if minigame_difficulty == 1:
         timer 7.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
         if minigame_grace_period == False:
             if minigame_speed <= 40:
                 timer 4.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+
     if minigame_difficulty == 2:
         timer 6.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
         if minigame_grace_period == False:
-            timer 3.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+            if minigame_speed <= 45:
+                timer 3.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+
     if minigame_difficulty == 3:
         timer 5.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
         if minigame_grace_period == False:
-            timer 2.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+            if minigame_speed <= 50:
+                timer 2.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
+
     if minigame_difficulty == 4:
         timer 3.0 action [SetVariable("minigame_grace_period", False), IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
         if minigame_grace_period == False:
-            timer 1.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
-
-
-    
+            if minigame_speed <= 50:
+                timer 1.0 repeat True action [IncrementVariable("minigame_speed"), IncrementVariable("minigame_speed_text")]
 
     if bar_choice_num == 1:
         if minigame_point_pos >= 360 and minigame_point_pos <= 1560:
@@ -215,10 +216,10 @@ screen minigame_control:
 
 
 screen timer_left:
-    timer 0.0001 repeat True action [If(minigame_point_pos >= 360, SetVariable("minigame_point_pos", minigame_point_pos - minigame_speed)),If(minigame_point_pos <= 360, Hide("timer_left"), Show("timer_right"))]
+    timer 0.05 repeat True action [If(minigame_point_pos >= 360, SetVariable("minigame_point_pos", minigame_point_pos - minigame_speed)), If(minigame_point_pos <= 360, (Hide("timer_left"), Show("timer_right")))]
 screen timer_right:
-    timer 0.0001 repeat True action [If(minigame_point_pos <= 1560, SetVariable("minigame_point_pos", minigame_point_pos + minigame_speed)),If(minigame_point_pos >= 1560, Hide("timer_right"), Show("timer_left"))]
-
+    timer 0.05 repeat True action [If(minigame_point_pos <= 1560, SetVariable("minigame_point_pos", minigame_point_pos + minigame_speed)), If(minigame_point_pos >= 1560, (Hide("timer_right"), Show("timer_left")))]
+   
 screen minigame_pointer:
     add "minigame_pointer" at minigame_point_move(minigame_point_pos)
 
@@ -244,7 +245,6 @@ screen minigame_choice_bar:
                     ysize 100
                     xfill True
                     
-
                     if bar_choice_num == 1:
                         xmaximum 1200
                     elif bar_choice_num == 2:
@@ -337,12 +337,12 @@ define levels_choice = 1
 define levels_score = 0
 
 label minigame_levels_start:
-    $ minigame_levels_active = True
-    show screen minigame_levels
+    $ quick_menu = False
+    show screen minigame_levels_background
+    show screen minigame_levels_exit
     $ minigame_char = None
-    #$ minigame_text = "Target: [levels_choice] Score: [levels_score]"
-
-    $ minigame_difficulty = 1
+    
+    $ minigame_difficulty = 4
 
     $ bar_choice_num = 4
    
@@ -385,9 +385,8 @@ label minigame_levels_start:
     show screen minigame_pointer
     call screen minigame_control
 
-screen minigame_levels:
-    tag menu
-    add "images/bg/bg cafeteria 1.png"
+screen minigame_levels_exit:
+    zorder 100
     vbox:
         style_prefix "navigation"
 
@@ -396,10 +395,13 @@ screen minigame_levels:
 
         spacing gui.navigation_spacing
 
-        textbutton _("Return") action [MainMenu(confirm=False), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar")]
+        textbutton _("Return") action [MainMenu(confirm=False), SetVariable("quick_menu", True), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar"), Hide("minigame_levels_background")]
 
+screen minigame_levels_background:
+    add "images/bg/bg cafeteria 1.png"
+    
 label levels_good:
-    $ levels_score =  (levels_score + 1)
+    $ levels_score = (levels_score + 1)
     jump minigame_levels_start 
 label levels_bad:
     $ levels_score = (levels_score - 1)
