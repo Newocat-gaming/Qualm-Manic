@@ -1,28 +1,4 @@
-﻿screen character_UI():
-
-    ## Ensure this appears on top of other screens.
-    zorder 100
-
-    if character_button:
-
-        vbox:
-            style_prefix "quick"
-
-            align (1.0, 0.0)
-            offset (-10, 10)
-
-            textbutton "Characters" action ShowMenu('character_screen')
-
-define character_button = False
-
-## This code ensures that the quick_menu screen is displayed in-game, whenever
-## the player has not explicitly hidden the interface.
-
-init python:
-    config.overlay_screens.append("character_UI")
-
-
-
+﻿
 ## Character UI
 screen character_screen():
     tag menu

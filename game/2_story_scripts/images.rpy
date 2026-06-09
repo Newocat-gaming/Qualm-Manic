@@ -4,3 +4,4 @@ image bird_sticker:
 image tutorial_background:
     "gui/overlay/confirm.png"
 
+

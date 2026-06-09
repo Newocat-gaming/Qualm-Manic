@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/minigame.rpy", line 75: transform statement expects a non-empty block.
-    transform minigame_point_move(frp):
-                                       ^
+File "game/2_story_scripts/Start.rpy", line 34: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "It's that damn dream again."
+    ^
 
-Ren'Py Version: Ren'Py 8.5.2.26010301
-Wed Apr 22 18:03:12 2026
+Ren'Py Version: Ren'Py 8.5.3.26051504
+Mon Jun  8 19:55:19 2026

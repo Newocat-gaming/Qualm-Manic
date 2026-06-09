@@ -6,7 +6,7 @@ label test:
     show manic_model at middle
 
     
-    i "aaaaaa aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa"
+    i "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa"
     manic "test"
     jay "holy hell" 
     manic "I know right"
@@ -226,10 +226,9 @@ screen minigame_pointer:
 screen minigame_choice_bar:
     if minigame_levels_active == True:
         use minigame_say(who= None, what="Target: [levels_choice] Score: [levels_score]")
-    elif minigame_char is not None:
-        use minigame_say(who= "[minigame_char]", what="[minigame_text]")
     else:
-        use minigame_say(who= None, what="[minigame_text]")
+        use minigame_say(who= minigame_char, what= minigame_text)
+   
 
 
     if bar_choice_num == 0:

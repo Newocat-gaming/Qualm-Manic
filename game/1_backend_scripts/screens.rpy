@@ -96,7 +96,6 @@ style frame:
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
 screen say(who, what):
-    style_prefix "say"
 
     window:
         id "window"
@@ -162,11 +161,10 @@ style say_dialogue:
 
     adjust_spacing False
 
-
 ## Minigame Say Screen ##########################################################
 
 screen minigame_say(who, what):
-
+    style_prefix "say"
     window:
         id "window"
 
@@ -274,6 +272,121 @@ screen quick_menu():
     if quick_menu:
 
         hbox:
+            align (0.0, 1.0)
+            vbox:
+                align (0.0, 1.0)
+                
+                # party
+                imagebutton:
+                    if quickbutton_party_unlock == True:
+                        auto "gui/quick_button/quickbutton_party_%s.webp"
+                        if quickbutton_party == True: 
+                            action ShowMenu('character_screen')
+                        else:
+                            sensitive False
+                            action NullAction()
+                    else:
+                        idle "gui/quick_button/quickbutton_locked.webp"
+                        action NullAction()
+                
+                # history
+                imagebutton:
+                    auto "gui/quick_button/quickbutton_history_%s.webp"
+                    if quickbutton_history == True: 
+                        action ShowMenu('history')
+                    else:
+                        sensitive False
+                        action NullAction()
+
+                # save
+                imagebutton:
+                    auto "gui/quick_button/quickbutton_save_%s.webp"
+                    if quickbutton_save == True: 
+                        action ShowMenu('save')
+                    else:
+                        sensitive False
+                        action NullAction()
+
+                # quick save
+                imagebutton:
+                    auto "gui/quick_button/quickbutton_qsave_%s.webp"
+                    if quickbutton_Qsave == True: 
+                        action QuickSave()
+                    else:
+                        sensitive False
+                        action NullAction()  
+                
+            vbox:
+                align (0.0, 1.0)
+            
+                #inventory
+                imagebutton:
+                    if quickbutton_party_unlock == True:
+                        auto "gui/quick_button/quickbutton_inventory_%s.webp"
+                        if quickbutton_party == True: 
+                            action ShowMenu('inventory')
+                        else:
+                            sensitive False
+                            action NullAction()
+                    else:
+                        idle "gui/quick_button/quickbutton_locked.webp"
+                        action NullAction()
+                
+                # back
+                imagebutton:
+                    auto "gui/quick_button/quickbutton_back_%s.webp"
+                    if quickbutton_back == True: 
+                        action Rollback()
+                    else:
+                        sensitive False
+                        action NullAction()  
+
+                # options
+                imagebutton:
+                    auto "gui/quick_button/quickbutton_options_%s.webp"
+                    if quickbutton_options == True: 
+                        action ShowMenu('preferences')
+                    else:
+                        sensitive False
+                        action NullAction()  
+
+                # quick load
+                imagebutton:
+                    auto "gui/quick_button/quickbutton_qload_%s.webp"
+                    if quickbutton_Qload == True: 
+                        action QuickLoad()
+                    else:
+                        sensitive False
+                        action NullAction()  
+
+                
+
+        hbox:
+            align (1.0, 1.0)
+            vbox:
+                align (0.0, 1.0)
+            
+                imagebutton auto "gui/quick_button/quickbutton_base_%s.webp" action NullAction() 
+                imagebutton auto "gui/quick_button/quickbutton_base_%s.webp" action NullAction() 
+                imagebutton auto "gui/quick_button/quickbutton_base_%s.webp" action NullAction() 
+                imagebutton auto "gui/quick_button/quickbutton_base_%s.webp" action NullAction() 
+
+
+            vbox:
+                align (0.0, 1.0)
+            
+                imagebutton auto "gui/quick_button/quickbutton_base_%s.webp" action NullAction() 
+                imagebutton auto "gui/quick_button/quickbutton_base_%s.webp" action NullAction() 
+                imagebutton auto "gui/quick_button/quickbutton_base_%s.webp" action NullAction() 
+                imagebutton auto "gui/quick_button/quickbutton_base_%s.webp" action NullAction() 
+
+
+
+
+
+
+
+        hbox:
             style_prefix "quick"
 
             xalign 0.5
@@ -340,7 +453,7 @@ screen navigation():
         textbutton _("Load") action ShowMenu("load")
 
         
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Options") action ShowMenu("preferences")
         
         if _in_replay:
 
@@ -809,7 +922,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("Options"), scroll="viewport"):
 
         vbox:
 
@@ -824,12 +937,12 @@ screen preferences():
                         textbutton _("Window") action Preference("display", "window")
                         textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
-                vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                # vbox:
+                #     style_prefix "check"
+                #     label _("Skip")
+                #     textbutton _("Unseen Text") action Preference("skip", "toggle")
+                #     textbutton _("After Choices") action Preference("after choices", "toggle")
+                #     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
                 vbox:
                     style_prefix "radio"
@@ -854,9 +967,9 @@ screen preferences():
 
                     bar value Preference("text speed")
 
-                    label _("Auto-Forward Time")
+                    # label _("Auto-Forward Time")
 
-                    bar value Preference("auto-forward time")
+                    # bar value Preference("auto-forward time")
 
                 vbox:
 

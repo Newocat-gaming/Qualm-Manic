@@ -1,47 +1,49 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/1_backend_scripts/minigame.rpy", line 386, in script
-    call screen minigame_control
-  File "game/1_backend_scripts/minigame.rpy", line 388, in execute
-    screen minigame_levels_exit:
-  File "game/1_backend_scripts/minigame.rpy", line 388, in execute
-    screen minigame_levels_exit:
-  File "game/1_backend_scripts/minigame.rpy", line 390, in execute
+  File "game/2_story_scripts/Start.rpy", line 425, in script
+    nar "Kit reaches into his pocket and pulls out a sticker with a bird emblem on it."
+  File "game/1_backend_scripts/screens.rpy", line 267, in execute
+    screen quick_menu():
+  File "game/1_backend_scripts/screens.rpy", line 267, in execute
+    screen quick_menu():
+  File "game/1_backend_scripts/screens.rpy", line 272, in execute
+    if quick_menu:
+  File "game/1_backend_scripts/screens.rpy", line 274, in execute
+    hbox:
+  File "game/1_backend_scripts/screens.rpy", line 276, in execute
     vbox:
-  File "game/1_backend_scripts/minigame.rpy", line 398, in execute
-    textbutton _("Return") action [MainMenu(confirm=False), SrtVariable("quick_menu", True), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar"), Hide("minigame_levels_background")]
-  File "game/1_backend_scripts/minigame.rpy", line 398, in keywords
-    textbutton _("Return") action [MainMenu(confirm=False), SrtVariable("quick_menu", True), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar"), Hide("minigame_levels_background")]
-  File "game/1_backend_scripts/minigame.rpy", line 398, in <module>
-    textbutton _("Return") action [MainMenu(confirm=False), SrtVariable("quick_menu", True), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar"), Hide("minigame_levels_background")]
-                                                            ^^^^^^^^^^^                                                                                                                                                                                                                                 
-NameError: name 'SrtVariable' is not defined. Did you mean: 'SetVariable'?
+  File "game/1_backend_scripts/screens.rpy", line 311, in execute
+    imagebutton:
+Exception: Imagebutton does not have a idle image. (auto='gui/quick_button/quickbutton_q_%s.webp').
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/1_backend_scripts/minigame.rpy", line 386, in script
-    call screen minigame_control
-  File "renpy/ast.py", line 2241, in execute
-    self.call("execute")
-    ~~~~~~~~~^^^^^^^^^^^
-  File "renpy/ast.py", line 2195, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/statements.py", line 381, in call
-    return method(parsed, *args, **kwargs)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/common/000statements.rpy", line 695, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/exports/statementexports.py", line 348, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/2_story_scripts/Start.rpy", line 425, in script
+    nar "Kit reaches into his pocket and pulls out a sticker with a bird emblem on it."
+  File "renpy/ast.py", line 2935, in execute
+    Say.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "renpy/ast.py", line 994, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/sayexports.py", line 129, in say
+    who(what, *args, **kwargs)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 1565, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 1220, in do_display
+    display_say(who, what, self.do_show, **display_args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 902, in display_say
+    rv = renpy.ui.interact(mouse="say", type=type, roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/ui.py", line 306, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 2154, in interact
+  File "renpy/display/core.py", line 2163, in interact
     repeat, rv = self.interact_core(
                  ~~~~~~~~~~~~~~~~~~^
         preloads=preloads,
@@ -51,22 +53,23 @@ Traceback (most recent call last):
         ^^^^^^^^^
     )
     ^
-  File "renpy/display/core.py", line 2700, in interact_core
+  File "renpy/display/core.py", line 2709, in interact_core
     root_widget.visit_all(lambda d: d.per_interact())
     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 457, in visit_all
+  File "renpy/display/displayable.py", line 460, in visit_all
     d.visit_all(callback, seen)
     ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 457, in visit_all
+  File "renpy/display/displayable.py", line 460, in visit_all
     d.visit_all(callback, seen)
     ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 457, in visit_all
+  File "renpy/display/displayable.py", line 460, in visit_all
     d.visit_all(callback, seen)
     ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[Previous line repeated 1 more time]
   File "renpy/display/screen.py", line 503, in visit_all
     callback(self)
     ~~~~~~~~^^^^^^
-  File "renpy/display/core.py", line 2700, in <lambda>
+  File "renpy/display/core.py", line 2709, in <lambda>
     root_widget.visit_all(lambda d: d.per_interact())
                                     ~~~~~~~~~~~~~~^^ 
   File "renpy/display/screen.py", line 514, in per_interact
@@ -75,28 +78,26 @@ Traceback (most recent call last):
   File "renpy/display/screen.py", line 715, in update
     self.screen.function(**self.scope)
     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
-  File "game/1_backend_scripts/minigame.rpy", line 388, in execute
-    screen minigame_levels_exit:
-  File "game/1_backend_scripts/minigame.rpy", line 388, in execute
-    screen minigame_levels_exit:
-  File "game/1_backend_scripts/minigame.rpy", line 390, in execute
+  File "game/1_backend_scripts/screens.rpy", line 267, in execute
+    screen quick_menu():
+  File "game/1_backend_scripts/screens.rpy", line 267, in execute
+    screen quick_menu():
+  File "game/1_backend_scripts/screens.rpy", line 272, in execute
+    if quick_menu:
+  File "game/1_backend_scripts/screens.rpy", line 274, in execute
+    hbox:
+  File "game/1_backend_scripts/screens.rpy", line 276, in execute
     vbox:
-  File "game/1_backend_scripts/minigame.rpy", line 398, in execute
-    textbutton _("Return") action [MainMenu(confirm=False), SrtVariable("quick_menu", True), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar"), Hide("minigame_levels_background")]
-  File "game/1_backend_scripts/minigame.rpy", line 398, in keywords
-    textbutton _("Return") action [MainMenu(confirm=False), SrtVariable("quick_menu", True), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar"), Hide("minigame_levels_background")]
-  File "renpy/python.py", line 1305, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1298, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/1_backend_scripts/minigame.rpy", line 398, in <module>
-    textbutton _("Return") action [MainMenu(confirm=False), SrtVariable("quick_menu", True), SetVariable("minigame_levels_active", False), Hide("timer_left"), Hide("timer_right"), Hide("minigame_control"), Hide("minigame_pointer"), Hide("minigame_choice_bar"), Hide("minigame_levels_background")]
-                                                            ^^^^^^^^^^^                                                                                                                                                                                                                                 
-NameError: name 'SrtVariable' is not defined. Did you mean: 'SetVariable'?
+  File "game/1_backend_scripts/screens.rpy", line 311, in execute
+    imagebutton:
+  File "renpy/ui.py", line 963, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 957, in choice
+    raise Exception("Imagebutton does not have a %s image. (auto=%r)." % (name, auto))
+Exception: Imagebutton does not have a idle image. (auto='gui/quick_button/quickbutton_q_%s.webp').
 
 Windows-11-10.0.26200-SP0 AMD64
-Ren'Py 8.5.2.26010301
-Qualm;Manic 0.5.0.4.2
-Wed Apr 22 18:30:14 2026
+Ren'Py 8.5.3.26051504
+Qualm;Manic 0.5.0.4.3
+Mon Jun  8 19:35:17 2026
