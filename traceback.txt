@@ -1,45 +1,41 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/2_story_scripts/Start.rpy", line 425, in script
-    nar "Kit reaches into his pocket and pulls out a sticker with a bird emblem on it."
-  File "game/1_backend_scripts/screens.rpy", line 267, in execute
-    screen quick_menu():
-  File "game/1_backend_scripts/screens.rpy", line 267, in execute
-    screen quick_menu():
-  File "game/1_backend_scripts/screens.rpy", line 272, in execute
-    if quick_menu:
-  File "game/1_backend_scripts/screens.rpy", line 274, in execute
-    hbox:
-  File "game/1_backend_scripts/screens.rpy", line 276, in execute
-    vbox:
-  File "game/1_backend_scripts/screens.rpy", line 311, in execute
+  File "game/1_backend_scripts/map.rpy", line 84, in script
+    call screen MapUI
+  File "game/1_backend_scripts/map.rpy", line 4, in execute
+    screen MapUI:
+  File "game/1_backend_scripts/map.rpy", line 4, in execute
+    screen MapUI:
+  File "game/1_backend_scripts/map.rpy", line 37, in execute
     imagebutton:
-Exception: Imagebutton does not have a idle image. (auto='gui/quick_button/quickbutton_q_%s.webp').
+  File "game/1_backend_scripts/map.rpy", line 37, in keywords
+    imagebutton:
+  File "game/1_backend_scripts/map.rpy", line 38, in <module>
+    at block_3_location
+       ^^^^^^^^^^^^^^^^
+NameError: name 'block_3_location' is not defined. Did you mean: 'block_1_location'?
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/2_story_scripts/Start.rpy", line 425, in script
-    nar "Kit reaches into his pocket and pulls out a sticker with a bird emblem on it."
-  File "renpy/ast.py", line 2935, in execute
-    Say.execute(self)
-    ~~~~~~~~~~~^^^^^^
-  File "renpy/ast.py", line 994, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/exports/sayexports.py", line 129, in say
-    who(what, *args, **kwargs)
-    ~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 1565, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 1220, in do_display
-    display_say(who, what, self.do_show, **display_args)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 902, in display_say
-    rv = renpy.ui.interact(mouse="say", type=type, roll_forward=roll_forward)
-         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/1_backend_scripts/map.rpy", line 84, in script
+    call screen MapUI
+  File "renpy/ast.py", line 2251, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2205, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 698, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 341, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/ui.py", line 306, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -78,26 +74,26 @@ Traceback (most recent call last):
   File "renpy/display/screen.py", line 715, in update
     self.screen.function(**self.scope)
     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
-  File "game/1_backend_scripts/screens.rpy", line 267, in execute
-    screen quick_menu():
-  File "game/1_backend_scripts/screens.rpy", line 267, in execute
-    screen quick_menu():
-  File "game/1_backend_scripts/screens.rpy", line 272, in execute
-    if quick_menu:
-  File "game/1_backend_scripts/screens.rpy", line 274, in execute
-    hbox:
-  File "game/1_backend_scripts/screens.rpy", line 276, in execute
-    vbox:
-  File "game/1_backend_scripts/screens.rpy", line 311, in execute
+  File "game/1_backend_scripts/map.rpy", line 4, in execute
+    screen MapUI:
+  File "game/1_backend_scripts/map.rpy", line 4, in execute
+    screen MapUI:
+  File "game/1_backend_scripts/map.rpy", line 37, in execute
     imagebutton:
-  File "renpy/ui.py", line 963, in _imagebutton
-    idle = choice(idle, idle_image, "idle", required=True)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/ui.py", line 957, in choice
-    raise Exception("Imagebutton does not have a %s image. (auto=%r)." % (name, auto))
-Exception: Imagebutton does not have a idle image. (auto='gui/quick_button/quickbutton_q_%s.webp').
+  File "game/1_backend_scripts/map.rpy", line 37, in keywords
+    imagebutton:
+  File "renpy/python.py", line 1308, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1301, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/1_backend_scripts/map.rpy", line 38, in <module>
+    at block_3_location
+       ^^^^^^^^^^^^^^^^
+NameError: name 'block_3_location' is not defined. Did you mean: 'block_1_location'?
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.3.26051504
 Qualm;Manic 0.5.0.4.3
-Mon Jun  8 19:35:17 2026
+Wed Jun 10 20:26:54 2026

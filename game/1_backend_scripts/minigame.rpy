@@ -1,43 +1,43 @@
 
-label test:
-    stop music
-    scene bg classroom 2 reverse
-    $ manic_pose = "armscrossed"
-    show manic_model at middle
+# label test:
+#     stop music
+#     scene bg classroom 2 reverse
+#     $ manic_pose = "armscrossed"
+#     show manic_model at middle
 
     
-    i "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa"
-    manic "test"
-    jay "holy hell" 
-    manic "I know right"
+#     i "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaa"
+#     manic "test"
+#     jay "holy hell" 
+#     manic "I know right"
 
-    hide manic_model
+#     hide manic_model
 
 
-    #############################
+#     #############################
 
-    $ minigame_char = None
-    $ minigame_text = "test"
+#     $ minigame_char = None
+#     $ minigame_text = "test"
         
 
-    $ minigame_difficulty = 4
+#     $ minigame_difficulty = 4
 
-    $ bar_choice_num = 3
+#     $ bar_choice_num = 3
    
-    $ choice_1 = "walk_out_of_the_room"
-    $ choice_text_1 = "Hear what Kit has to say."
+#     $ choice_1 = "walk_out_of_the_room"
+#     $ choice_text_1 = "Hear what Kit has to say."
 
-    $ choice_2 = "walk_out_of_the_room"
-    $ choice_text_2 = "Hear what Kit has to say."
+#     $ choice_2 = "walk_out_of_the_room"
+#     $ choice_text_2 = "Hear what Kit has to say."
 
-    $ choice_3 = "wait_for_vida"
-    $ choice_text_3 = "Hear what Kit has to say."
+#     $ choice_3 = "wait_for_vida"
+#     $ choice_text_3 = "Hear what Kit has to say."
 
-    $ choice_4 = None
-    $ choice_text_4 = "test4"
+#     $ choice_4 = None
+#     $ choice_text_4 = "test4"
 
 
-    jump minigame_start
+#     jump minigame_start
 
 
 #########################################################################

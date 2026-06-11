@@ -1,4 +1,53 @@
-﻿
+﻿screen party_screen:
+    tag menu
+
+    use game_menu("Party"):
+
+        vbox:
+            xsize 1400
+            ysize 850
+            frame:
+                xsize 1400
+                ysize 500
+                hbox:
+                    yalign 0.5
+                    style "party_spacing"
+                    frame:
+                        xsize 275
+                    frame:
+                        xsize 275
+                    frame:
+                        xsize 275
+                    frame:
+                        xsize 275
+                    frame:
+                        xsize 275
+
+
+
+            frame:
+                xsize 1400
+                ysize 300
+                hbox:
+                    style "party_spacing"
+                    yalign 0.5
+                    frame:
+                        xsize 275
+                        ysize 275
+
+
+                    
+
+
+
+
+style party_spacing:
+    spacing 3
+
+
+
+
+
 ## Character UI
 screen character_screen():
     tag menu

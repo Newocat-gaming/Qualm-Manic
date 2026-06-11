@@ -8,7 +8,11 @@ define quickbutton_back = False
 define quickbutton_options = True
 define quickbutton_Qload = False
 
-#unlock quickbuttons
+# unlock quickbuttons
 define quickbutton_party_unlock = False
 define quickbutton_inventory_unlock = False
 
+# battle state
+
+
+# vn state

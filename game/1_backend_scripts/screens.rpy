@@ -281,7 +281,7 @@ screen quick_menu():
                     if quickbutton_party_unlock == True:
                         auto "gui/quick_button/quickbutton_party_%s.webp"
                         if quickbutton_party == True: 
-                            action ShowMenu('character_screen')
+                            action ShowMenu('party_screen')
                         else:
                             sensitive False
                             action NullAction()
@@ -386,20 +386,20 @@ screen quick_menu():
 
 
 
-        hbox:
-            style_prefix "quick"
+        # hbox:
+        #     style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+        #     xalign 0.5
+        #     yalign 1.0
             
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+        #     textbutton _("Back") action Rollback()
+        #     textbutton _("History") action ShowMenu('history')
+        #     textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+        #     textbutton _("Auto") action Preference("auto-forward", "toggle")
+        #     textbutton _("Save") action ShowMenu('save')
+        #     textbutton _("Q.Save") action QuickSave()
+        #     textbutton _("Q.Load") action QuickLoad()
+        #     textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -444,7 +444,9 @@ screen navigation():
             textbutton _("Start") action Start()
 
         else:
-            textbutton _("Characters") action ShowMenu("character_screen")
+            textbutton _("Party") action ShowMenu("party_screen")
+
+            textbutton _("Characters") action ShowMenu("character_screen") #temp
 
             textbutton _("History") action ShowMenu("history")
 
@@ -1180,7 +1182,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Help"), scroll="viewport"):
+    use game_menu(_("Controls"), scroll="viewport"):
 
         style_prefix "help"
 
