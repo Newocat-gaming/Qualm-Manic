@@ -1,26 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/1_backend_scripts/map.rpy", line 84, in script
-    call screen MapUI
-  File "game/1_backend_scripts/map.rpy", line 4, in execute
-    screen MapUI:
-  File "game/1_backend_scripts/map.rpy", line 4, in execute
-    screen MapUI:
-  File "game/1_backend_scripts/map.rpy", line 37, in execute
-    imagebutton:
-  File "game/1_backend_scripts/map.rpy", line 37, in keywords
-    imagebutton:
-  File "game/1_backend_scripts/map.rpy", line 38, in <module>
-    at block_3_location
-       ^^^^^^^^^^^^^^^^
-NameError: name 'block_3_location' is not defined. Did you mean: 'block_1_location'?
+Executing ATL code at game/1_backend_scripts/map_scripts/map_1.rpy:224
+  File "game/1_backend_scripts/map_scripts/map_1.rpy", line 51, in script
+    call screen map_1
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+ValueError: not enough values to unpack (expected 2, got 0)
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/1_backend_scripts/map.rpy", line 84, in script
-    call screen MapUI
+  File "game/1_backend_scripts/map_scripts/map_1.rpy", line 51, in script
+    call screen map_1
   File "renpy/ast.py", line 2251, in execute
     self.call("execute")
     ~~~~~~~~~^^^^^^^^^^^
@@ -49,51 +50,68 @@ Traceback (most recent call last):
         ^^^^^^^^^
     )
     ^
-  File "renpy/display/core.py", line 2709, in interact_core
-    root_widget.visit_all(lambda d: d.per_interact())
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 460, in visit_all
-    d.visit_all(callback, seen)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 460, in visit_all
-    d.visit_all(callback, seen)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/displayable.py", line 460, in visit_all
-    d.visit_all(callback, seen)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
-[Previous line repeated 1 more time]
-  File "renpy/display/screen.py", line 503, in visit_all
-    callback(self)
-    ~~~~~~~~^^^^^^
-  File "renpy/display/core.py", line 2709, in <lambda>
-    root_widget.visit_all(lambda d: d.per_interact())
-                                    ~~~~~~~~~~~~~~^^ 
-  File "renpy/display/screen.py", line 514, in per_interact
-    self.update()
-    ~~~~~~~~~~~^^
-  File "renpy/display/screen.py", line 715, in update
-    self.screen.function(**self.scope)
-    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
-  File "game/1_backend_scripts/map.rpy", line 4, in execute
-    screen MapUI:
-  File "game/1_backend_scripts/map.rpy", line 4, in execute
-    screen MapUI:
-  File "game/1_backend_scripts/map.rpy", line 37, in execute
-    imagebutton:
-  File "game/1_backend_scripts/map.rpy", line 37, in keywords
-    imagebutton:
-  File "renpy/python.py", line 1308, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1301, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/1_backend_scripts/map.rpy", line 38, in <module>
-    at block_3_location
-       ^^^^^^^^^^^^^^^^
-NameError: name 'block_3_location' is not defined. Did you mean: 'block_1_location'?
+  File "renpy/display/core.py", line 2842, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1279, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/transform.py", line 1091, in render
+    self.update_state()
+    ~~~~~~~~~~~~~~~~~^^
+  File "renpy/display/transform.py", line 1271, in update_state
+    fr = self.execute(self, fst, fat)
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/atl.py", line 721, in execute
+    action, arg, pause = block.execute(trans, timebase, self.atl_state, events)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/atl.py", line 962, in execute
+    action, arg, pause = stmt.execute(trans, target - start, child_state, events)
+                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/atl.py", line 1420, in execute
+    setattr(newts, k, v)
+    ~~~~~~~^^^^^^^^^^^^^
+  File "renpy/display/transform.py", line 550, in set_pos
+    self.xpos, self.ypos = value
+    ^^^^^^^^^^^^^^^^^^^^        
+ValueError: not enough values to unpack (expected 2, got 0)
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.3.26051504
 Qualm;Manic 0.5.0.4.3
-Wed Jun 10 20:26:54 2026
+Fri Jun 12 14:08:51 2026

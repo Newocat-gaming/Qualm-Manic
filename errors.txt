@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/map.rpy", line 55: the at keyword argument was not given a value.
-    add "player_id" at
-                       ^
+File "game/1_backend_scripts/map_scripts/map_1.rpy", line 31: invalid syntax
+    active_player.icon_last_pos = .icon_pos
+                                        ^
 
 Ren'Py Version: Ren'Py 8.5.3.26051504
-Wed Jun 10 20:27:52 2026
+Fri Jun 12 13:55:16 2026
