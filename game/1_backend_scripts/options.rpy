@@ -225,5 +225,8 @@ init python:
 # define build.itch_project = "renpytom/test-project"
 
 
+init python:
+    config.keymap['dismiss'].append('K_t')
+
 
 

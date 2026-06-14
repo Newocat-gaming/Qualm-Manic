@@ -2,9 +2,20 @@
 errors listed below, and try again.
 
 
-File "game/1_backend_scripts/map_scripts/map_1.rpy", line 31: invalid syntax
-    active_player.icon_last_pos = .icon_pos
-                                        ^
+The label attack is defined twice, at File "game/1_backend_scripts/map_scripts/attacking.rpy", line 1:
+and File "game/1_backend_scripts/map_scripts/map_attacking.rpy", line 1:
+label attack:
 
-Ren'Py Version: Ren'Py 8.5.3.26051504
-Fri Jun 12 13:55:16 2026
+
+The label enemies_start is defined twice, at File "game/1_backend_scripts/map_scripts/enemies.rpy", line 28:
+and File "game/1_backend_scripts/map_scripts/map_enemies.rpy", line 28:
+label enemies_start:
+
+
+The label turn_order_start is defined twice, at File "game/1_backend_scripts/map_scripts/map_players.rpy", line 59:
+label turn_order_start():
+and File "game/1_backend_scripts/map_scripts/players.rpy", line 59:
+
+
+Ren'Py Version: Ren'Py 8.5.4.26061203+nightly
+Sun Jun 14 14:40:15 2026

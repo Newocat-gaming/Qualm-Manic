@@ -25,9 +25,9 @@ label start:
     ###############################
     jump test
     ##################################
-
    
-
+    
+    call vn_start
     stop music fadeout 4
     scene bg blank
     "I wake up with a start." 
@@ -40,13 +40,15 @@ label start:
 
     scene bg street_summer_day
     play music "audio/vntrack01.mp3" volume 0.5 fadein 2.0 
-
     "Soon, I'm dashing down the street, the wind brushing against my white dress-shirt and black pants. My shoes clop on the ground as I run over the crosswalk, dodging out of the way of an oncoming car that misses me by about an inch."
     "I barely pay any attention to the honking cars, however, as my one and only focus is getting to the high school on time. If I get caught by any of the teachers for being late, I will most certainly be sent to detention after school, and that would be catastrophic, not even just for the normal reasons." 
     "Detention doesn't matter to me; all I care about is my club."
     "I'm part of the newspaper club, where my only friends and I go around and write about anything notable we encounter. I don't actually care about reporting or writing; I just like to slack off with my friends." 
     "I do like reading though, or more accurately, I love reading ... too much for my own good, it turns out, as reading all night long is what threw off my sleep schedule and caused me to wake up later than usual."
-    
+    call vn_end
+    $ map_number = 1
+    jump turn_zero
+
 
     scene bg school_exterior
     "I arrive just in time at the front gates of the school. With a sigh of relief, I walk through the door of Leadville High."

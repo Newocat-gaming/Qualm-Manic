@@ -446,11 +446,11 @@ screen navigation():
         else:
             textbutton _("Party") action ShowMenu("party_screen")
 
-            textbutton _("Characters") action ShowMenu("character_screen") #temp
-
             textbutton _("History") action ShowMenu("history")
-
-            textbutton _("Save") action ShowMenu("save")
+            if in_combat == True:
+                textbutton "{color=#000000}Save{/color}" action NullAction()
+            else:
+                textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
 

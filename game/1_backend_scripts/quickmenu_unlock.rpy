@@ -1,18 +1,44 @@
-define quickbutton_party = False
-define quickbutton_history = True
-define quickbutton_save = False
-define quickbutton_Qsave = False
+default quickbutton_party = False
+default quickbutton_history = True
+default quickbutton_save = False
+default quickbutton_Qsave = False
 
-define quickbutton_inventory = False
-define quickbutton_back = False
-define quickbutton_options = True
-define quickbutton_Qload = False
+default quickbutton_inventory = False
+default quickbutton_back = False
+default quickbutton_options = True
+default quickbutton_Qload = False
 
 # unlock quickbuttons
-define quickbutton_party_unlock = False
-define quickbutton_inventory_unlock = False
+default quickbutton_party_unlock = False
+default quickbutton_inventory_unlock = False
 
 # battle state
+label battle_start:
+    $ in_combat = True
+    $ quickbutton_save = False
+    $ quickbutton_Qsave = False
+    $ quickbutton_Qload = False
+    $ renpy.block_rollback()
+    return
+
+label battle_end:
+    $ in_combat = False
+    $ quickbutton_save = True
+    $ quickbutton_Qsave = True
+    $ quickbutton_Qload = True
+    $ renpy.block_rollback()
+    return
 
 
 # vn state
+label vn_start:
+    $ quickbutton_back = True
+    $ renpy.block_rollback()
+    $ config.rollback_enabled = True
+    return
+
+label vn_end:
+    $ quickbutton_back = False
+    $ renpy.block_rollback()
+    $ config.rollback_enabled = False
+    jump call_map
