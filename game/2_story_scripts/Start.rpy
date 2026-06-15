@@ -23,7 +23,7 @@ transform leftsidestill:
 
 label start:
     ###############################
-    jump test
+    jump turn_zero
     ##################################
    
     

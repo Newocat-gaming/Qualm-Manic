@@ -1,5 +1,4 @@
 label attack:
-    #show screen map_tiles
+    "attack does nothing"
     $ attack_turns += 1
-    "stop"
     jump turn

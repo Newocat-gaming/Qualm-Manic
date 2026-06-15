@@ -15,7 +15,7 @@ label turn_zero:
         $ tile_8 = map_1_tile_8
 
         ######################################
-        $ map_1_exits = [tile_8]
+        $ map_exits = [tile_8.name]
         ######################################
 
         $ player_1.icon_pos = tile_1.icon_pos

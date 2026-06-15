@@ -12,6 +12,8 @@ default quickbutton_Qload = False
 default quickbutton_party_unlock = False
 default quickbutton_inventory_unlock = False
 
+default skipping_disabled = False
+
 # battle state
 label battle_start:
     $ in_combat = True
@@ -32,13 +34,15 @@ label battle_end:
 
 # vn state
 label vn_start:
+    $ skipping_disabled = False
     $ quickbutton_back = True
     $ renpy.block_rollback()
     $ config.rollback_enabled = True
     return
 
 label vn_end:
+    $ skipping_disabled = True
     $ quickbutton_back = False
     $ renpy.block_rollback()
     $ config.rollback_enabled = False
-    jump call_map
+    return

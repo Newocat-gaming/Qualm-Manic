@@ -1,15 +1,15 @@
 
-default enemy_void = Player(name = "Void", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True, icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
-default enemy_empty = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True, icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
+default enemy_void = Player(name = "Void", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True, icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
+default enemy_empty = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True, icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
 
-default enemy_void3 = Player(name = "Void3", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True, icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
-default enemy_void2 = Player(name = "Void2", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True, icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
-default enemy_1 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
-default enemy_2 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
-default enemy_3 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
-default enemy_4 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
-default enemy_5 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
-default enemy_6 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, icon_move = True, history = [])
+default enemy_void3 = Player(name = "Void3", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True, icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
+default enemy_void2 = Player(name = "Void2", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True, icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
+default enemy_1 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
+default enemy_2 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
+default enemy_3 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
+default enemy_4 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
+default enemy_5 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
+default enemy_6 = Player(name = "", image = "", hp = 100, stanima = 2, strength = 1, mana = 10, hostile = True,  icon_pos = (), icon_last_pos = (), icon = "enemy_dot", icon_show = True, history = [])
 
 
 
@@ -26,7 +26,6 @@ default enemies_list_names = []
 default empty_enemies = []
 
 label enemies_start:
-
     if map_number == 1:
         $ enemies_spawn = random.randint(1,3)
         if enemies_spawn == 1:
@@ -89,9 +88,7 @@ label enemies_start:
 
     $ x = 0
     while x < enemies_spawn:
-
         $ enemies_list_names.append(enemies_list[x].name)
-
         $ x += 1
     
 
